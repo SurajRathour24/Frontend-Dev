@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - Media player | HTML test</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      nav {
+        background-color: bisque;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+      }
+      nav ul li {
+        display: inline-block;
+        padding: 0px 20px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #000;
+      }
+      header {
+        height: 50vh;
+        background-color: rgba(124, 224, 255, 0.418);
+      }
+      #header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+      }
+      section {
+        padding: 80px 50px 0px 50px;
+      }
+      #audio-list {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      #audio-list li {
+        padding-bottom: 20px;
+      }
+      #video-list {
+        display: flex;
+        padding: 0px 50px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      #video-list li{
+       margin: 20px;  
+       list-style: none;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-logo">
+          <strong>LOGO</strong>
+        </div>
+        <div id="navbar">
+          <ul>
+            <li class="nav-items"><a href="#">Menu 1</a></li>
+            <li class="nav-items"><a href="#">Menu 2</a></li>
+            <li class="nav-items"><a href="#">Menu 3</a></li>
+            <li class="nav-items"><a href="#">Menu 4</a></li>
+            <li class="nav-items"><a href="#">Menu 5</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="header-content">
+        <h1>Audio Video Player</h1>
+      </div>
+    </header>
+    <section id="audio-section">
+      <h2>Audio List</h2>
+      <ul id="audio-list">
+        <li>
+          <audio
+            src="https://cdn.pixabay.com/audio/2024/10/18/audio_883a8b2ed8.mp3"
+            controls
+          >
+            Play Audio 1
+          </audio>
+        </li>
+        <li>
+          <audio
+            src="https://cdn.pixabay.com/audio/2024/07/30/audio_09a1a55404.mp3"
+            controls
+          ></audio>
+        </li>
+        <li>
+          <audio
+            src="https://cdn.pixabay.com/audio/2024/06/25/audio_7bfb8d2ab0.mp3"
+            controls
+          ></audio>
+        </li>
+        <li>
+          <audio
+            src="https://cdn.pixabay.com/audio/2024/05/24/audio_46382ae035.mp3"
+            controls
+          ></audio>
+        </li>
+      </ul>
+    </section>
+
+    <section id="video-section">
+      <h2>Video List</h2>
+      <ul id="video-list">
+        <li>
+          <video
+            width="300px"
+            src="https://pixabay.com/static/videos/hero3.mp4"
+            controls
+          ></video>
+        </li>
+        <li>
+          <video
+            width="300px"
+            src="https://pixabay.com/static/videos/hero3.mp4"
+            controls
+          ></video>
+        </li>
+        <li>
+          <video
+            width="300px"
+            src="https://pixabay.com/static/videos/hero3.mp4"
+            controls
+          ></video>
+        </li>
+        <li>
+          <video
+            width="300px"
+            src="https://pixabay.com/static/videos/hero3.mp4"
+            controls
+          ></video>
+        </li>
+        <li>
+          <video
+            width="300px"
+            src="https://pixabay.com/static/videos/hero3.mp4"
+            controls
+          ></video>
+        </li>
+      </ul>
+    </section>
+
+    <footer style="text-align: center; background-color: chocolate; padding: 10px 0px; color: #fff;">
+        <p>copyright 2024 | @Suraj rathaur</p>
+    </footer>
+  </body>
+</html>
