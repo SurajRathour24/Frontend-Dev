@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector - 2024</title>
+    <style>
+
+/*******This is universal selector**********/
+        *{
+            background-color: #000;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color:blanchedalmond
+        }
+
+/*** Class selctor ***/
+ .text-color-red{
+    color: darkgoldenrod;
+ }
+
+/********* Color with ID selector ************/        
+        #text-background-red{
+            background-color: brown;
+            color: #fff;
+            margin: 20px 0px;
+        }
+
+/********** Style with Child selector *******/
+    .text-color-pink > p {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: x-large;
+        color: pink;
+    }
+
+/** Descendant selector ***/
+
+.descentant-selector p{
+        color: tan;
+    }
+    .descentant-selector h5{
+        background-color: yellow;
+        padding: 10px;
+    } 
+    
+/****** Pseudo Selector ******/
+.site-link a:visited{
+   color: rgb(6, 189, 0);
+}
+
+    </style>
+</head>
+<body>
+    <h1>CSS Selector</h1>
+
+    <div class="text-color-red">This is my red paragraph colored with class</div>
+
+    <div id="text-background-red">
+       This paragraph colored with the help of ID selector
+    </div>
+
+    <div class="text-color-pink">
+        <p>This paragraph styled with the help of child selector</p>
+    </div>
+
+    <div class="descentant-selector">
+        <h5>ANother heading to see the use case of the desecendant selector</h5>
+        <span>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nisi qui, expedita iste nostrum tempora odit aperiam modi. Officia, reiciendis aut, soluta at consequuntur, eveniet provident modi voluptatem facere id ab a repellat doloribus alias exercitationem deserunt atque autem odio.</p>
+        </span>
+    </div>
+
+    <div class="site-link">
+        <a href="https://www.googles.com" target="_blank">Go to google</a>
+    </div>
+</body>
+</html>
