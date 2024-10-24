@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Box Model | 2024 </title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .box1{
+            padding: 20px;
+            border: 5px solid #000;
+        }
+
+
+    </style>
 </head>
 <body>
     <div class="box-model">
         This is content of the box
     </div>
+
+    <div class="box1">
+        This is first box
+    </div>
 </body>
 </html>
+
+<!--
+1. Box-sizing help us to manage site layout , like we can give margin, padding and border to element within the div height widt, 
+
+BUT
+
+If we will not give box sizing border box then padding, bordert-margin will count after the box height width.
+
+
+2. Margin collapse => Margin always stays whos number or value high and ignore other one
+
+
+-->
