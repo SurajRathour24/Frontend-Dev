@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sepcificity | HTML5 CSS3 </title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .text-color-blue{
+            color: blue;
+        }
+        .text-color-red{
+            color: rgb(204, 84, 84);
+        }
+        .important-text{
+            font-size: x-large;
+            color: rgb(255, 102, 0);
+        }
+
+        [data-y=test]{
+            background-color: aquamarine;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Order of specificity</h1>
+
+    <strong class="important-text">Inline Style > ID Selector > Class ord Attribute Selector > Elementor Selector > Universal Selector </strong>
+
+    <!--- Example 1--->
+    <h2 class="text-color-red text-color-blue">
+        Text for css Sepcificity
+    </h2>
+
+    <!------- Example 2 attribute Selector -->
+
+    <h3 id="attribute-selector" data-y="test">This is for attribute Selection example</h3>
+
+    <!----Specificity Calculation ------>
+    <h4 class="specificity-cal">Order of Sepcificity given below:</h4>
+    <ul>
+        <li>Universal Selector : 0</li>
+        <li>Element Selector and psuedo-elements: 1</li>
+        <li>Class selector, Attribute Selector  and pseudo - classes : 10</li>
+        <li>ID selectors : 100</li>
+        <li>Inline Selector : 1000</li>
+    </ul>
+
+    <em>Example if you want to calculate the specificity of <b>h1.color-red </b> then you can add 1 + 10  = 11</em>
+
+    <summary style="padding-top: 20px;"><i>Add all the parts to calculate the combine specificity of elements</i></summary>
+
+
+</body>
+</html>
+
+
+<!----
+
+Basic order of sepecificity =>
+
+
+Rules for specificity
+
+1. Order of appearance => If the tag/class/elementor same selected then CSS will apply according to the order of appearence //in simples jo last mai css hogi voh chlegi 
+Test in example 1
+
+2. 
+
+--->
