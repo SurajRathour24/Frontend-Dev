@@ -1904,10 +1904,6 @@ body {
 .left:hover+.right {
   margin-left: 215px;
 }
-.strike {
-  // text-decoration: line-through;
-  color: lighten($black, 60%);
-}
 hr {
   border-top: 1px solid lighten($black, 90%);
   margin: 10px 0;
