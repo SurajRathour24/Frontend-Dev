@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Variables - Usefull tip for website design</title>
+    <style>
+        :root{
+            --primaryColor : rgba(0, 165, 14, 0.74);
+            --darkcolor: #000;
+            --whitecolor: #fff;
+           --blue : rgb(0, 135, 224);
+        }
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            background-color: var(--darkcolor);
+            color: var(--whitecolor);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .d-flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+        }
+        nav ul li{
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="d-flex container">
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Our Services</li>
+            <li>Blogs</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+</body>
+</html>
