@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS - Float and Clear</title>
-</head>
-<body>
-    
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>CSS float</title>
+        <style>  
+            /* show basic CSS card design */  
+            .card {  
+            box-shadow: 2px 6px 8px 2px rgba(0,0,0,0.2);  
+            transition: 0.2s;  
+            width: 35%;  
+            background-color: white;  
+            margin: 10px;  
+            }  
+            .main_div {  
+            background-color: #F9F1F1;  
+            height:380px;  
+            }  
+            .container {  
+            padding: 2px 16px;  
+            }  
+            </style>
+    </head>
+
+    <body>
+        <div class="parent">
+            <img
+                src="https://www.seekpng.com/png/detail/109-1093815_doraemon-png-png-images-doraemon-png.png"
+                alt="A flying Doremon image"
+            />
+            <p>
+                Doraemon is a beloved cartoon character adored by kids all over
+                the world. He is a robotic cat from the future who travels back
+                in time to help a young boy named Nobita. With his magical
+                gadgets and clever solutions, Doraemon always manages to turn
+                Nobita's troubles into exciting adventures.
+            </p>
+        </div>
+
+
+        <div class = "main_div">  
+            <h2> CSS Card Design </h2>  
+            <p> Create Basic and Single Card Design </p>  
+            <!-- basic card container tag -->  
+            <div class = "card">  
+            <!-- card information -->  
+            <img src = "https://images.pexels.com/photos/11035386/pexels-photo-11035386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt = "Avatar" style = "width:100%">  
+            <div class = "container">  
+            <h4>  
+            <b> JavaTpoint Website </b>  
+            </h4>  
+            <p> Online CSS Tutorial </p>  
+            </div>  
+            </div>  
+            </div>
+    </body>
+
 </html>

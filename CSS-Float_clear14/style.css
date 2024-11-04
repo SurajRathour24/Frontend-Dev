@@ -1,0 +1,11 @@
+img {
+    /* default value */
+    float: none;
+
+    width: 100px;
+    height: 120px;
+}
+
+div.parent {
+    border: 2px solid black;
+}
