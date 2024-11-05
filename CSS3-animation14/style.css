@@ -120,3 +120,163 @@
     --wheel-depth: calc(var(--size) * 0.4);
     --leg-height: calc(var(--size) * 6.4);
   }
+  
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: hsl(210 20% 88%);
+  }
+  
+  [for=speed] {
+    cursor: pointer;
+    position: fixed;
+    bottom: 2rem;
+    right: 2.24rem;
+    z-index: 10;
+    font-family: sans-serif, system-ui;
+    transform: translate3d(0, 0, 500vmin);
+  }
+  
+  #speed {
+    position: fixed;
+    bottom: 2.2rem;
+    right: 1rem;
+    z-index: 10;
+    transform: translate3d(0, 0, 500vmin);
+  }
+  
+  :root:has(#speed:checked) {
+    --transition-speed: 2s;
+  }
+  
+  #speed:checked ~ .scene-jumper {
+    --transition-speed: 2s;
+  }
+  
+  .scene {
+    position: relative;
+  }
+  
+  
+  
+  .optimus * {
+    position: absolute;
+  }
+  
+  /* Remember: The core is based on 3.5 x 6 so percentages can base off that. */
+  
+  .optimus__core {
+    width: calc(var(--size) * 1vmin);
+    aspect-ratio: 3 / 1;
+    translate: -50% -50%;
+  }
+  
+  .core {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .optimus__torso {
+    width: 100%;
+    height: 400%;
+    bottom: 50%;
+  }
+  
+  .optimus__grill {
+    --color: var(--grey-1);
+    width: 100%;
+    bottom: 100%;
+    height: var(--grill-height);
+    --depth: calc(var(--torso-depth) * 1);
+  }
+  .optimus__grill .cuboid {
+  /*  transform: translate3d(0, 0, calc(var(--torso-depth) * 0.1vmin));*/
+  }
+  .optimus__grill .cuboid__side:nth-of-type(6),
+  .optimus__grill .cuboid__side:nth-of-type(5) {
+    background: repeating-linear-gradient(var(--grey-1) 0 10%, var(--grey-5) 15% 15%);
+  }
+  
+  .optimus__top {
+    width: var(--cab-width);
+    height: var(--cab-height);
+    bottom: 100%;
+    left: 50%;
+    translate: -50% 0;
+  }
+  
+  @keyframes breathe {
+    50% {
+      transform: translateY(-2%);
+    }
+  }
+  
+  .reference-box {
+    height: 100%;
+    width: 100%;
+    --depth: var(--torso-depth);
+    --color: hsl(0 100% 50% / 0.25);
+  }
+  
+  .reference-box .cuboid__side {
+    border: 1px solid white;
+  }
+  
+  .exhaust {
+    height: 200%;
+    bottom: 10%;
+    width: calc(var(--fist-width) * 0.2);
+    --depth: calc(var(--fist-dimension) * 0.2);
+    --color: var(--grey-3);
+  }
+  .arm--right .exhaust {
+    left: 100%;
+  }
+  .arm--left .exhaust {
+    right: 100%;
+  }
+  .chest {
+    height: 100%;
+    width: 100%;
+    transform: translate3d(0, 0, calc(var(--torso-depth) * 0.1vmin));
+    --depth: var(--chest-depth);
+    --color: var(--red-1);
+  }
+  
+  .chest > .cuboid > .cuboid__side:nth-of-type(1) {
+    --h-stop-one: calc(50% - (var(--fist-width) * 0.5));
+    --h-stop-two: calc(50% + (var(--fist-width) * 0.5));
+    --v-stop-one: calc(var(--torso-depth) * 0.1vmin);
+    --v-stop-two: calc(100% - (var(--torso-depth) * 0.1vmin));
+    filter: none;
+    background:
+      linear-gradient(90deg, var(--red-1) 0 var(--h-stop-one), transparent var(--h-stop-one) var(--h-stop-two), var(--red-1) var(--h-stop-two)),
+      linear-gradient(var(--red-1) 0 var(--v-stop-one), transparent var(--v-stop-one) var(--v-stop-two), var(--red-1) var(--v-stop-two));
+  }
+  
+  .chest > .cuboid > .cuboid__side:nth-of-type(2),
+  .chest > .cuboid > .cuboid__side:nth-of-type(4) {
+    background: linear-gradient(var(--red-1) 80%, var(--grey-1) 80%);
+  }
+  
+  .chest > .cuboid > .cuboid__side:nth-of-type(2):after,
+  .chest > .cuboid > .cuboid__side:nth-of-type(4):after {
+    content: "";
+    height: 60%;
+    left: 4%;
+    top: 10%;
+    position: absolute;
+    background: var(--blue-5);
+    border: calc(var(--torso-depth) * 0.05vmin) solid var(--grey-3);
+  }
+  
+  .logo {
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0.8;
+  }
+  
