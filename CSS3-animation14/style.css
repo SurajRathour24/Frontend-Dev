@@ -1553,3 +1553,18 @@ body {
     animation: blink 6s -2s infinite;
   }
   
+  
+@keyframes mouth-breathe {
+    50% {
+      translate: -50% 5%;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 46%, 48%, 50%, 100% {
+      scale: 1 1;
+    }
+    47%, 49% {
+      scale: 1 0.01;
+    }
+  }
