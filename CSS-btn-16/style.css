@@ -11,3 +11,66 @@
 #button1:hover {
     background: linear-gradient(45deg, #2575fc, #6a11cb);
 }
+
+#button2 {
+    background-color: transparent;
+    color: #00e0ff;
+    padding: 12px 24px;
+    border: 2px solid #00e0ff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+#button2:hover {
+    background-color: #00e0ff;
+    color: black;
+    box-shadow: 0 0 15px #00e0ff;
+}
+
+#button3 {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 6px #2980b9;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#button3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px #2980b9;
+}
+
+#button4 {
+    background-color: transparent;
+    color: #e74c3c;
+    padding: 10px 22px;
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+#button4::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #e74c3c;
+    transition: left 0.3s;
+    z-index: -1;
+}
+#button4:hover {
+    color: white;
+}
+#button4:hover::before {
+    left: 0;
+}
