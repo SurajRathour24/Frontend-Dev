@@ -74,3 +74,19 @@
 #button4:hover::before {
     left: 0;
 }
+
+button5 {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 12px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+#button5:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
