@@ -24,33 +24,132 @@
     }
     
 
-    /* Slider 2 - Circular Navigation */
-#slider-2 {
-    background-color: #f8f8f8;
-  }
-  
-  #slider-2-nav {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-  }
-  
-  .dot {
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .dot:hover {
-    background-color: #717171;
-  }
-  
-  .dot.active {
-    background-color: #717171;
-  }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      /* Slider Container */
+      .slider {
+        width: 80%;
+        max-width: 1200px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+      
+      /* Slider Container for all designs */
+      .slider-container {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      
+      .slide {
+        width: 100%;
+        height: 500px;
+        position: relative;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      
+      /* Controls (Dots or Thumbnails) */
+      .slider-controls, .thumbnails {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .slider-dot {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 0 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .slider-dot:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      
+      input[type="radio"] {
+        display: none;
+      }
+      
+      input[type="radio"]:nth-of-type(1):checked ~ #slider-1-container {
+        transform: translateX(0%);
+      }
+      
+      input[type="radio"]:nth-of-type(2):checked ~ #slider-1-container {
+        transform: translateX(-100%);
+      }
+      
+      input[type="radio"]:nth-of-type(3):checked ~ #slider-1-container {
+        transform: translateX(-200%);
+      }
+      
+      /* Thumbnails for Slider 3 */
+      .thumbnails {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .thumb {
+        width: 100px;
+        height: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+      }
+      
+      .thumb:hover {
+        opacity: 1;
+      }
+      
+      .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* Responsive Styling */
+      @media screen and (max-width: 768px) {
+        .slider {
+          width: 95%;
+        }
+      
+        .slide {
+          height: 300px;
+        }
+      
+        .caption {
+          font-size: 1.5rem;
+        }
+      }
