@@ -119,3 +119,51 @@ body {
     background-color: #FF5722;
     transform: rotateY(180deg);
   }
+
+
+   /* Card 4 - Slide Up on Hover */
+   .card4 {
+    width: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .card4-content {
+    padding: 20px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card4:hover .card4-content {
+    transform: translateY(-20px);
+  }
+
+  .card4:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #ff6f61, #ff9068);
+    z-index: 1;
+    opacity: 0.2;
+    transition: opacity 0.3s;
+  }
+
+  .card4:hover:before {
+    opacity: 0.5;
+  }
+
+  .card4 h3 {
+    color: #333;
+    margin-top: 0;
+  }
+
+  .card4 p {
+    color: #666;
+  }
