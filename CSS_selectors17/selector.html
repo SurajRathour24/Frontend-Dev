@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on css selectos | HTML CSS</title>
+    <style>
+        :root{
+            --bg-dark: #000;
+            --white-text: #fff;
+        }
+        *{
+            background-color: var(--bg-dark);
+            color: var(--white-text);
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            padding: 50px;
+        }
+        .box:first-child{
+            background-color: rgb(66, 38, 0);
+        }
+        .box3::first-line{
+            color: pink;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box box1">Hey I am box1</div>
+        <div class="box box2">I am box2</div>
+        <div class="box box3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi dolorem illo est rem delectus expedita nobis vero voluptatibus? Beatae quam cumque eaque reprehenderit adipisci eligendi recusandae accusantium quibusdam ex similique dignissimos eum, consequatur suscipit quis quidem illo fugit debitis nesciunt praesentium? Nemo omnis ex debitis et accusamus, iste quibusdam commodi, asperiores incidunt numquam sit! Minus impedit incidunt hic pariatur culpa porro molestiae iure iusto odit ad? Illo reiciendis adipisci exercitationem, veniam nemo vero ducimus suscipit.</div>
+    </div>
+</body>
+</html>
