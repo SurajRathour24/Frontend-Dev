@@ -13,7 +13,10 @@
           height: 80vh;
           display: flex;
           justify-content: center;
-          align-items: center;
+          /* align-items: center; */
+          align-content:center;
+          flex-wrap: wrap;
+          
         }
         .item{
             background-color: brown;
@@ -21,19 +24,33 @@
             width: 50px;
             margin: 20px;
         }
+        .item1{
+            order: 0;
+            align-self: flex-start;
+        }
+        .item2{
+            order: 1;
+        }
     </style>
 </head>
 <body>
     <section id="grid-style">
         <div class="grid-container">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+            <div class="item item6">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
         </div>
     </section>
 </body>
