@@ -1,0 +1,66 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--dark-black);
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+}
+
+/********* Flexbox**********/
+.net-flex{
+    display: flex;
+}
+
+.net-justify-between{
+    justify-content: space-between;
+}
+.net-align-center{
+    align-items: center;
+}
+.net-gap-2{
+    gap: 2rem;
+}
+
+.net-gap-1{
+    gap: 1rem;
+}
+.net-gap-2{
+    gap: 2rem;
+}
+
+
+/********* Colors pallet **********/
+
+:root{
+    --dark-black : #000;
+    --primary-color: #E50914;
+    --white-color : #fff;
+    --gray-color : #414141;
+}
+
+/*********** Button design **********/
+#primary-btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+#secondary-btn{
+    background-color: transparent;
+    color: #fff;
+    padding: 15px 30px;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+}
+
+
+/************** Header design******************/
+#main-nav {
+    padding: 10px 0px;
+}
