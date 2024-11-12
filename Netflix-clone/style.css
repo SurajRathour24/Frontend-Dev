@@ -62,5 +62,29 @@ body{
 
 /************** Header design******************/
 #main-nav {
-    padding: 10px 0px;
+    padding: 15px 0px;
+}
+.rightnav-box button{
+    cursor: pointer;
+}
+header{
+    background: url('images/banner-img.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+header:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #0000001d;
+}
+#banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
