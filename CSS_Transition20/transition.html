@@ -5,20 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS | Transition animation</title>
     <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
         .container{
             background-color: aqua;
             height: 500px;
-            width: 500px;
+            width: 100%;
+            position: relative;
         }
         .box{
             background-color: brown;
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
             transition: 2s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 100%;
+            animation: bounce 10s linear infinite;
         }
-        .translate{
-            transform: translateX(100px) translateY(50px);
+
+        @keyframes bounce{
+            0%{
+            top: 0%;
+            transform: translateX(0px);
+            }
+            20%{
+            top: 100%;
+            transform: translateX(150px);
+            }
+            40%{
+            top: 20%;
+    
+            transform: translateX(200px);
+            }
+            60%{
+            top: 80%;
+  
+            transform: translateX(300px);
+            }
+            80%{
+            top: 40%;
+            transform: translateX(500px);
+            }
+            100%{
+            top: 70%;
+            transform: translateX(800px);
+            }
         }
+        
+
     </style>
 </head>
 <body>
