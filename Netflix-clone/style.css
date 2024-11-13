@@ -42,8 +42,12 @@ body{
     --primary-color: #E50914;
     --white-color : #fff;
     --gray-color : #414141;
+    --section-gap : 2rem 0rem;
 }
 
+.global-section-gap{
+  margin: var(--section-gap);
+}
 /*********** Button design **********/
 #primary-btn{
     background-color: var(--primary-color);
@@ -161,4 +165,20 @@ nav{
     position: relative;
     height: 6.25rem;
     z-index: 1;
+}
+
+
+/******* Trending Card Container **********/
+.trending-card-container{
+    padding-top: 40px;
+}
+.trending-card-container .trending-card{
+    position: relative;
+}
+.trending-card-container .trending-number{
+    position: absolute;
+    left: -30px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 100px;
 }

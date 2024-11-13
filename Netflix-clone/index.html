@@ -4,37 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML CSS | Netflix Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <nav id="main-nav" class="top-navbar net-flex net-justify-between net-align-center">
-            <div class="logo-container"> 
-                     <img src="images/netflix-logo-red.png" alt="">
+        <nav
+          id="main-nav"
+          class="top-navbar net-flex net-justify-between net-align-center"
+        >
+          <div class="logo-container">
+            <img src="images/netflix-logo-red.png" alt="" />
+          </div>
+          <div
+            class="rightnav-box net-flex net-justify-between net-align-center net-gap-1"
+          >
+            <div class="nav-primary-btn">
+              <button id="secondary-btn">English</button>
             </div>
-            <div class="rightnav-box net-flex net-justify-between net-align-center net-gap-1">
-                <div class="nav-primary-btn">
-                    <button id="secondary-btn">English</button>
-                </div>
-                <div class="nav-secondary-btn">
-                    <button id="primary-btn">Sign Out</button>
-                </div>
+            <div class="nav-secondary-btn">
+              <button id="primary-btn">Sign Out</button>
             </div>
+          </div>
         </nav>
 
         <div id="banner-content">
-            <h1>Unlimited movies, TV shows, and more</h1>
-            <p class="">Starts at ₹149. Cancel anytime.
-            </p>
-            <button id="primary-btn">Finish Sign Up</button>
+          <h1>Unlimited movies, TV shows, and more</h1>
+          <p class="">Starts at ₹149. Cancel anytime.</p>
+          <button id="primary-btn">Finish Sign Up</button>
         </div>
       </div>
     </header>
     <section id="header-bottom-curve">
       <div class="curve-container">
-        <div class="curve-design">
-          
+        <div class="curve-design"></div>
+      </div>
+    </section>
+
+    <!----- Trending Now section ----->
+    <section id="trending-now" class="global-section-gap">
+      <div class="container">
+        <h2>Trending Now</h2>
+        <div class="trending-btn-box">
+          <div class="nav-secondary-btn">
+            <button id="secondary-btn">English</button>
+          </div>
+          <div class="nav-secondary-btn">
+            <button id="secondary-btn">Movies</button>
+          </div>
+        </div>
+        <div class="trending-card-container net-flex net-justify-between net-align-center net-gap-1">
+          <div class="trending-card">
+            <div class="trending-card-img">
+              <img src="images/trending-card-images/bhul-bhulaiya.webp" alt="">
+              <span class="trending-number">2</span>
+            </div>
+          </div>
+          <div class="trending-card">
+            <div class="trending-card-img">
+              <img src="images/trending-card-images/it-ends-with-us.webp" alt="">
+              <span class="trending-number">2</span>
+            </div>
+          </div>
+          <div class="trending-card">
+            <div class="trending-card-img">
+              <img src="images/trending-card-images/khel-khel-mein.webp" alt="">
+              <span class="trending-number">2</span>
+            </div>
+          </div>
+          <div class="trending-card">
+            <div class="trending-card-img">
+              <img src="images/trending-card-images/time-cut.webp" alt="">
+              <span class="trending-number">2</span>
+            </div>
+          </div>
+          <div class="trending-card">
+            <div class="trending-card-img">
+              <img src="images/trending-card-images/vijay-69.webp" alt="">
+              <span class="trending-number">2</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
