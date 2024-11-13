@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body{
     background-color: var(--dark-black);
@@ -59,7 +60,18 @@ body{
     border-radius: 5px;
 }
 
+/****Font size **********/
+h1{
+    font-size: 4rem;
+    line-height: normal;
+    color: var(--white-color);
+}
 
+p{
+    font-size: 1.1rem;
+    color: var(--white-color);
+    padding: 10px 0px;
+}
 /************** Header design******************/
 #main-nav {
     padding: 15px 0px;
