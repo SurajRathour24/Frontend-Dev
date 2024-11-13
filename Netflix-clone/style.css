@@ -8,7 +8,7 @@ body{
     background-color: var(--dark-black);
 }
 .container{
-    width: 1320px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -91,7 +91,7 @@ header:before{
     content: "";
     height: 100%;
     width: 100%;
-    background-color: #0000001d;
+    background-color: #00000081;
 }
 #banner-content {
     position: absolute;
@@ -99,4 +99,66 @@ header:before{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+#banner-content p{
+    padding: 25px 0px;
+}
+nav{
+    z-index: 9999;
+    position: relative;
+}
+
+/*******  Banner curve design*******/
+.curve-design {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: solid .25rem transparent;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-bottom: none;
+    background: radial-gradient(
+                    50% 500% at 50% -420%,
+                    rgba(64, 97, 231, 0.4) 80%,
+                    rgba(0, 0, 0, 0.1) 100%
+                ),black;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    width: 100%;
+}
+.curve-design:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -.25rem;
+    border-radius: inherit;
+    background: linear-gradient(
+                    to right,
+                    rgba(33, 13, 22, 1) 16%,
+                    rgba(184, 40, 105, 1),
+                    rgba(229, 9, 20, 1),
+                    rgba(184, 40, 105, 1),
+                    rgba(33, 13, 22, 1) 84%
+                );
+}
+#header-bottom-curve{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    height: 6.25rem;
+    z-index: 1;
 }
