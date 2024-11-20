@@ -105,3 +105,11 @@ body {
 .features p {
     font-size: 16px;
 }
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
