@@ -23,7 +23,11 @@ body {
     color: #fff;
     padding: 10px 0;
 }
-
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .header .logo {
     display: inline-block;
 }
@@ -50,7 +54,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=300') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -81,7 +85,7 @@ body {
 }
 
 /* Features Section */
-.features {
+.features .container{
     display: flex;
     justify-content: space-between;
     margin: 50px 0;
