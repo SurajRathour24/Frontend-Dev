@@ -191,3 +191,77 @@ body {
         opacity: 1;
     }
 }
+
+
+/******* Dark mod*********/
+/* Sticky Element Styles */
+.sticky-element {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-element p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.sticky-element button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sticky-element button:hover {
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+/* Light Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --button-bg: #2575fc;
+    --button-text: #ffffff;
+    --button-hover-bg: #6a11cb;
+    --button-hover-text: #ffffff;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --bg-color: #2b2b2b;
+    --text-color: #f5f5f5;
+    --button-bg: #6a11cb;
+    --button-text: #ffffff;
+    --button-hover-bg: #2575fc;
+    --button-hover-text: #ffffff;
+}
+
+/* Sticky Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
