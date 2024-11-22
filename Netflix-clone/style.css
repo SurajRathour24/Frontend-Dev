@@ -187,11 +187,10 @@ nav{
 }
 .trending-card-container .trending-number {
     left: -30px;
-    right: 0px;
-    bottom: 0px;
-    font-size: 100px;
+    bottom: 20px;
+    font-size: 5rem;
     line-height: 1;
-    position: relative;
+    position: absolute;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.8);
     -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
@@ -207,7 +206,12 @@ nav{
 
 /****** Reason to choose section*****/
 #reason-to-choose .icon-box i {
-    color: var(--primary-color);
+    background: linear-gradient(224deg, #ffd7d7, #e40914, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
 }
 .reason-box-containter {
     margin-top: 1.5rem;
