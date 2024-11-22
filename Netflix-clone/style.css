@@ -42,25 +42,32 @@ body{
     --primary-color: #E50914;
     --white-color : #fff;
     --gray-color : #414141;
-    --section-gap : 2rem 0rem;
+    --section-gap : 3rem 0rem;
 }
 
 .global-section-gap{
   margin: var(--section-gap);
+}
+
+.net-white{
+    color: var(--white-color);
+}
+.net-black{
+    color: var(--dark-black);
 }
 /*********** Button design **********/
 #primary-btn{
     background-color: var(--primary-color);
     color: #fff;
     padding: 15px 30px;
-    border: 1px solid var(--primary-color);
+    border: 1.5px solid var(--primary-color);
     border-radius: 5px;
 }
 #secondary-btn{
     background-color: transparent;
     color: #fff;
     padding: 15px 30px;
-    border: 1px solid var(--gray-color);
+    border: 1.5px solid var(--gray-color);
     border-radius: 5px;
 }
 
@@ -75,6 +82,9 @@ p{
     font-size: 1.1rem;
     color: var(--white-color);
     padding: 10px 0px;
+}
+.cursor-pointer{
+    cursor: pointer;
 }
 /************** Header design******************/
 #main-nav {
@@ -175,10 +185,22 @@ nav{
 .trending-card-container .trending-card{
     position: relative;
 }
-.trending-card-container .trending-number{
-    position: absolute;
+.trending-card-container .trending-number {
     left: -30px;
     right: 0px;
     bottom: 0px;
     font-size: 100px;
+    line-height: 1;
+    position: relative;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+.top-movies-btn{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-movies-btn:hover{
+    background-color: var(--primary-color);
 }

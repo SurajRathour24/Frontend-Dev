@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML CSS | Netflix Website</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header>
@@ -45,19 +46,19 @@
     <section id="trending-now" class="global-section-gap">
       <div class="container">
         <h2>Trending Now</h2>
-        <div class="trending-btn-box">
+        <div class="trending-btn-box net-flex net-gap-1">
           <div class="nav-secondary-btn">
-            <button id="secondary-btn">English</button>
+            <button id="secondary-btn" class="cursor-pointer top-movies-btn">English</button>
           </div>
           <div class="nav-secondary-btn">
-            <button id="secondary-btn">Movies</button>
+            <button id="secondary-btn" class="cursor-pointer top-movies-btn">Movies</button>
           </div>
         </div>
         <div class="trending-card-container net-flex net-justify-between net-align-center net-gap-1">
           <div class="trending-card">
             <div class="trending-card-img">
               <img src="images/trending-card-images/bhul-bhulaiya.webp" alt="">
-              <span class="trending-number">2</span>
+              <span class="trending-number">1</span>
             </div>
           </div>
           <div class="trending-card">
@@ -69,23 +70,40 @@
           <div class="trending-card">
             <div class="trending-card-img">
               <img src="images/trending-card-images/khel-khel-mein.webp" alt="">
-              <span class="trending-number">2</span>
+              <span class="trending-number">3</span>
             </div>
           </div>
           <div class="trending-card">
             <div class="trending-card-img">
               <img src="images/trending-card-images/time-cut.webp" alt="">
-              <span class="trending-number">2</span>
+              <span class="trending-number">4</span>
             </div>
           </div>
           <div class="trending-card">
             <div class="trending-card-img">
               <img src="images/trending-card-images/vijay-69.webp" alt="">
-              <span class="trending-number">2</span>
+              <span class="trending-number">5</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!----More Reason to Join -------->
+
+    <section class="global-section-gap">
+      <div class="container">
+        <h2 class="net-white">More Reason to Join</h2>
+        <div class="reason-box d-flex net-align-center net-justify-between">
+           <div class="story-teller">
+            <h3>Stories tailored to your taste</h3>
+            <span class="icon-box">
+              <i class="fa-solid fa-heart"></i>
+            </span>
+           </div>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
