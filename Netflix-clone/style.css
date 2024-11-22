@@ -204,3 +204,21 @@ nav{
 .top-movies-btn:hover{
     background-color: var(--primary-color);
 }
+
+/****** Reason to choose section*****/
+#reason-to-choose .icon-box i {
+    color: var(--primary-color);
+}
+.reason-box-containter {
+    margin-top: 1.5rem;
+    padding: 2rem;
+    background: #282828;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(64 64 64 / 30%);
+}
+#reason-to-choose .icon-box {
+    display: block;
+    text-align: right;
+    padding-top: 20px;
+}
