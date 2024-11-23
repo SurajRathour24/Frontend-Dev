@@ -1,0 +1,106 @@
+/* Default (Global Styles for All Devices) */
+
+/* Extra Small Devices (Portrait Phones) */
+@media only screen and (max-width: 576px) {
+    /* Styles for devices with max width of 576px */
+}
+
+/* Small Devices (Landscape Phones) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* Styles for devices between 576px and 767px */
+}
+
+/* Medium Devices (Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles for devices between 768px and 991px */
+}
+
+/* Large Devices (Desktops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for devices between 992px and 1199px */
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    /* Styles for devices between 1200px and 1399px */
+}
+
+/* Ultra Large Devices (4K Screens or Above) */
+@media only screen and (min-width: 1400px) {
+    /* Styles for devices larger than 1400px */
+}
+
+/* Orientation: Portrait */
+@media only screen and (orientation: portrait) {
+    /* Styles for portrait orientation */
+}
+
+/* Orientation: Landscape */
+@media only screen and (orientation: landscape) {
+    /* Styles for landscape orientation */
+}
+
+/* High-Resolution Screens (e.g., Retina Display) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Styles for high-resolution screens */
+}
+
+/* iPhone Specific Queries */
+/* iPhone SE, iPhone 5 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+    /* Styles for iPhone SE/5 Portrait */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+    /* Styles for iPhone SE/5 Landscape */
+}
+
+/* iPhone 6/7/8 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+    /* Styles for iPhone 6/7/8 Portrait */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+    /* Styles for iPhone 6/7/8 Landscape */
+}
+
+/* iPhone X, 11 Pro */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+    .net-flex{
+        flex-wrap: wrap;
+    }
+    #main-nav .logo-container img {
+        width: 100px;
+    }
+    #secondary-btn, #primary-btn {
+        padding: 10px 20px;
+    }
+    h1 {
+        font-size: 2.8rem;
+    }
+    .curve-design {
+        height: 30%;
+    }
+    #header-bottom-curve {
+        height: 0.25rem;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+    /* Styles for iPhone X, 11 Pro Landscape */
+}
+
+/* iPad Specific Queries */
+/* iPad Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles for iPad Portrait */
+}
+
+/* iPad Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles for iPad Landscape */
+}
+
+/* Custom Queries */
+/* Add any additional breakpoints or styles below */
+

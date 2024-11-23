@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML CSS | Netflix Website</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="responsive.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -21,10 +28,10 @@
             class="rightnav-box net-flex net-justify-between net-align-center net-gap-1"
           >
             <div class="nav-primary-btn">
-              <button id="secondary-btn">English</button>
+              <button id="secondary-btn"> <i class="fa-solid fa-language"></i>  English</button>
             </div>
             <div class="nav-secondary-btn">
-              <button id="primary-btn">Sign Out</button>
+              <button id="primary-btn"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</button>
             </div>
           </div>
         </nav>
@@ -32,7 +39,9 @@
         <div id="banner-content">
           <h1>Unlimited movies, TV shows, and more</h1>
           <p class="">Starts at ₹149. Cancel anytime.</p>
-          <button id="primary-btn" class="cursor-pointer">Finish Sign Up</button>
+          <button id="primary-btn" class="cursor-pointer">
+            <i class="fa-solid fa-user-plus"></i> Finish Sign Up
+          </button>
         </div>
       </div>
     </header>
@@ -48,40 +57,55 @@
         <h2>Trending Now</h2>
         <div class="trending-btn-box net-flex net-gap-1">
           <div class="nav-secondary-btn">
-            <button id="secondary-btn" class="cursor-pointer top-movies-btn">English</button>
+            <button id="secondary-btn" class="cursor-pointer top-movies-btn">
+              <i class="fa-solid fa-language"></i> English
+            </button>
           </div>
           <div class="nav-secondary-btn">
-            <button id="secondary-btn" class="cursor-pointer top-movies-btn">Movies</button>
+            <button id="secondary-btn" class="cursor-pointer top-movies-btn">
+              <i class="fa-solid fa-video"></i> Movies
+            </button>
           </div>
         </div>
-        <div class="trending-card-container net-flex net-justify-between net-align-center net-gap-1">
+        <div
+          class="trending-card-container net-flex net-justify-between net-align-center net-gap-1"
+        >
           <div class="trending-card">
             <div class="trending-card-img">
-              <img src="images/trending-card-images/bhul-bhulaiya.webp" alt="">
+              <img
+                src="images/trending-card-images/bhul-bhulaiya.webp"
+                alt=""
+              />
               <span class="trending-number">1</span>
             </div>
           </div>
           <div class="trending-card">
             <div class="trending-card-img">
-              <img src="images/trending-card-images/it-ends-with-us.webp" alt="">
+              <img
+                src="images/trending-card-images/it-ends-with-us.webp"
+                alt=""
+              />
               <span class="trending-number">2</span>
             </div>
           </div>
           <div class="trending-card">
             <div class="trending-card-img">
-              <img src="images/trending-card-images/khel-khel-mein.webp" alt="">
+              <img
+                src="images/trending-card-images/khel-khel-mein.webp"
+                alt=""
+              />
               <span class="trending-number">3</span>
             </div>
           </div>
           <div class="trending-card">
             <div class="trending-card-img">
-              <img src="images/trending-card-images/time-cut.webp" alt="">
+              <img src="images/trending-card-images/time-cut.webp" alt="" />
               <span class="trending-number">4</span>
             </div>
           </div>
           <div class="trending-card">
             <div class="trending-card-img">
-              <img src="images/trending-card-images/vijay-69.webp" alt="">
+              <img src="images/trending-card-images/vijay-69.webp" alt="" />
               <span class="trending-number">5</span>
             </div>
           </div>
@@ -95,30 +119,30 @@
       <div class="container">
         <h2 class="net-white">More Reason to Join</h2>
         <div class="reason-box net-flex net-align-center net-justify-between">
-           <div class="story-teller reason-box-containter">
+          <div class="story-teller reason-box-containter">
             <h3 class="net-white">Stories tailored to your taste</h3>
             <span class="icon-box">
               <i class="fa-solid fa-heart"></i>
             </span>
-           </div>
-           <div class="cancel-anytime reason-box-containter">
+          </div>
+          <div class="cancel-anytime reason-box-containter">
             <h3 class="net-white">Cancel or switch plans anytime</h3>
             <span class="icon-box">
               <i class="fa-solid fa-ban"></i>
             </span>
-           </div>
-           <div class="for-kids-block reason-box-containter">
+          </div>
+          <div class="for-kids-block reason-box-containter">
             <h3 class="net-white">A place just for kids</h3>
             <span class="icon-box">
               <i class="fa-solid fa-gamepad"></i>
             </span>
-           </div>
-           <div class="for-phone-tab reason-box-containter">
+          </div>
+          <div class="for-phone-tab reason-box-containter">
             <h3 class="net-white">For your phone, tablet, laptop and TV</h3>
             <span class="icon-box">
               <i class="fa-solid fa-mobile-screen-button"></i>
             </span>
-           </div>
+          </div>
         </div>
       </div>
     </section>
@@ -135,7 +159,14 @@
             </span>
           </div>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis rerum, quasi inventore ex odit quia nihil est expedita maxime, laudantium magni ipsam fugit. Quis nam, sequi harum, dolore tempora incidunt quam quaerat exercitationem provident omnis veniam! Ut perferendis rem, aperiam debitis voluptas doloremque fugit hic soluta impedit iste, saepe quod?</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          rerum, quasi inventore ex odit quia nihil est expedita maxime,
+          laudantium magni ipsam fugit. Quis nam, sequi harum, dolore tempora
+          incidunt quam quaerat exercitationem provident omnis veniam! Ut
+          perferendis rem, aperiam debitis voluptas doloremque fugit hic soluta
+          impedit iste, saepe quod?
+        </p>
 
         <div id="question-accordion">
           <div class="question-card net-flex net-justify-between">
@@ -173,7 +204,68 @@
       </div>
     </section>
 
-  <!---- Newsletter Get Started section ------>
+    <!---- Newsletter Get Started section ------>
+    <section id="get-started">
+      <div class="container">
+        <div class="get-started-wrapper">
+          <button id="primary-btn" class="cursor-pointer get-started-plan">
+            Finish Sign Up
+          </button>
+          <p>Create or restart your membership</p>
+        </div>
+      </div>
+    </section>
 
+    <!---- Footer ----->
+
+    <footer id="net-footer-main" class="global-section-gap">
+      <div class="container">
+        <div class="quick-call-row">
+          <p>Questions? Call 000-800-919-1694</p>
+        </div>
+        <div id="footer-menu-wrapper" class="net-flex net-justify-between">
+          <div id="menu-block-1" class="footer-menu-block">
+            <ul>
+              <li class="footer-menu-item"><a href="#" class="net-white">FAQ</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Investor Relations</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Privacy</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Speed Test</a></li>
+            </ul>
+          </div>
+          <div id="menu-block-2" class="footer-menu-block">
+            <ul>
+              <li class="footer-menu-item"><a href="#" class="net-white">Help Center</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Jobs</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Cookie Preferences</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Legal Notices</a></li>
+            </ul>
+          </div>
+          <div id="menu-block-3" class="footer-menu-block">
+            <ul>
+              <li class="footer-menu-item"><a href="#" class="net-white">Account</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Ways to Watch</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Corporate Information</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Only on Netflix</a></li>
+            </ul>
+          </div>
+          <div id="menu-block-4" class="footer-menu-block">
+            <ul>
+              <li class="footer-menu-item"><a href="#" class="net-white">Media Center</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Terms of Use</a></li>
+              <li class="footer-menu-item"><a href="#" class="net-white">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-btn-box">
+          <div class="nav-secondary-btn">
+            <button id="secondary-btn" class="cursor-pointer top-movies-btn">
+              <i class="fa-solid fa-language"></i>  English
+            </button>
+          </div>
+          <h5 id="footer-netflix-mark" class="net-white">Netflix India</h5>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

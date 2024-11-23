@@ -85,6 +85,10 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
 }
+a{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .9rem;
+}
 .cursor-pointer{
     cursor: pointer;
 }
@@ -245,4 +249,29 @@ nav{
 #frequently-asked-qns p {
     background-color: #474747;
     padding: 20px;
+}
+
+/***** Get started section ********/
+#get-started .get-started-wrapper{
+    text-align: center;
+}
+
+
+/**** netflix Footer *******/
+#net-footer-main{
+    background-color: #030303;
+    padding: 30px 0px;
+}
+
+#footer-menu-wrapper .footer-menu-item{
+    padding: 8px 0px;
+}
+
+.footer-btn-box{
+    padding-top: 30px;
+}
+
+#footer-netflix-mark{
+    padding-top: 30px;
+    font-size: 1.3rem;
 }
