@@ -79,9 +79,11 @@ h1{
 }
 
 p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--white-color);
     padding: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
 }
 .cursor-pointer{
     cursor: pointer;
@@ -225,4 +227,22 @@ nav{
     display: block;
     text-align: right;
     padding-top: 20px;
+}
+
+/***** Accordion Section *********/
+#question-accordion{
+    backdrop-filter: blur(10px);
+    background-color: #cecdcd44;
+    margin: 15px 0px;
+}
+#question-accordion .question-card{
+    padding: 20px;
+}
+#question-accordion h3{
+  color: #fff;
+  font-weight: 400;
+}
+#frequently-asked-qns p {
+    background-color: #474747;
+    padding: 20px;
 }
