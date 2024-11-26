@@ -35,3 +35,78 @@ header .icons i, header .icons img {
     margin: 0 10px;
     cursor: pointer;
 }
+
+/* Sidebar Section */
+.sidebar {
+    width: 25%;
+    padding: 20px;
+}
+
+.sidebar .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .user-info img {
+    border-radius: 50%;
+}
+
+.sidebar .suggestions p {
+    font-weight: bold;
+}
+
+/* Feed Section */
+.feed {
+    width: 50%;
+}
+
+.feed .post {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.feed .post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.feed .post-header img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.feed .post-image img {
+    width: 100%;
+    display: block;
+}
+
+.feed .post-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.feed .post-description {
+    padding: 10px;
+}
+
+/* Stories Section */
+.stories {
+    width: 25%;
+    padding: 20px;
+}
+
+.stories .story {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stories .story img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
