@@ -1,0 +1,33 @@
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav .search-bar input {
+        width: 60%;
+    }
+
+    .stories {
+        flex-wrap: nowrap;
+    }
+
+    .feed .post {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav .search-bar input {
+        width: 50%;
+    }
+
+    nav .nav-icons i {
+        font-size: 0.9rem;
+    }
+
+    .stories .story img {
+        width: 50px;
+        height: 50px;
+    }
+}
