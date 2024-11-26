@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram UI - Clone</title>
+    <title>Instagram Home Page UI</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+    <!-- Navigation Bar -->
+    <nav>
         <div class="container">
             <div class="logo">
                 <h1>Instagram</h1>
@@ -18,40 +18,34 @@
             <div class="search-bar">
                 <input type="text" placeholder="Search">
             </div>
-            <div class="icons">
+            <div class="nav-icons">
                 <i class="fas fa-home"></i>
                 <i class="fas fa-paper-plane"></i>
+                <i class="fas fa-plus-square"></i>
                 <i class="fas fa-compass"></i>
                 <i class="fas fa-heart"></i>
                 <img src="https://via.placeholder.com/40" alt="Profile Picture" class="profile-pic">
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main Content Section -->
+    <!-- Main Content -->
     <main>
         <div class="container">
-            <!-- Left Sidebar -->
-            <div class="sidebar">
-                <div class="user-info">
-                    <img src="https://via.placeholder.com/80" alt="User Profile">
-                    <div class="user-details">
-                        <p class="username">username</p>
-                        <p class="fullname">Full Name</p>
-                    </div>
+            <!-- Stories Section -->
+            <div class="stories">
+                <div class="story">
+                    <img src="https://via.placeholder.com/60" alt="Story">
+                    <p>username</p>
                 </div>
-                <div class="suggestions">
-                    <p>Suggestions For You</p>
-                    <div class="suggested-user">
-                        <img src="https://via.placeholder.com/40" alt="User">
-                        <p>other_user</p>
-                        <button>Follow</button>
-                    </div>
-                    <!-- Add more suggested users here -->
+                <!-- Add more stories -->
+                <div class="story">
+                    <img src="https://via.placeholder.com/60" alt="Story">
+                    <p>user2</p>
                 </div>
             </div>
 
-            <!-- Main Feed -->
+            <!-- Feed Section -->
             <div class="feed">
                 <!-- Repeatable Post Structure -->
                 <div class="post">
@@ -68,21 +62,137 @@
                         <i class="far fa-paper-plane"></i>
                         <i class="far fa-bookmark"></i>
                     </div>
-                    <div class="post-description">
+                    <div class="post-likes">
+                        <p><strong>10,000 likes</strong></p>
+                    </div>
+                    <div class="post-caption">
                         <p><strong>username</strong> A beautiful caption for the post.</p>
+                    </div>
+                    <div class="post-comments">
+                        <p>View all 50 comments</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <p>username</p>
+                    </div>
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="Post Image">
+                    </div>
+                    <div class="post-actions">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                    <div class="post-likes">
+                        <p><strong>10,000 likes</strong></p>
+                    </div>
+                    <div class="post-caption">
+                        <p><strong>username</strong> A beautiful caption for the post.</p>
+                    </div>
+                    <div class="post-comments">
+                        <p>View all 50 comments</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <p>username</p>
+                    </div>
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="Post Image">
+                    </div>
+                    <div class="post-actions">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                    <div class="post-likes">
+                        <p><strong>10,000 likes</strong></p>
+                    </div>
+                    <div class="post-caption">
+                        <p><strong>username</strong> A beautiful caption for the post.</p>
+                    </div>
+                    <div class="post-comments">
+                        <p>View all 50 comments</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <p>username</p>
+                    </div>
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="Post Image">
+                    </div>
+                    <div class="post-actions">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                    <div class="post-likes">
+                        <p><strong>10,000 likes</strong></p>
+                    </div>
+                    <div class="post-caption">
+                        <p><strong>username</strong> A beautiful caption for the post.</p>
+                    </div>
+                    <div class="post-comments">
+                        <p>View all 50 comments</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <p>username</p>
+                    </div>
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="Post Image">
+                    </div>
+                    <div class="post-actions">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                    <div class="post-likes">
+                        <p><strong>10,000 likes</strong></p>
+                    </div>
+                    <div class="post-caption">
+                        <p><strong>username</strong> A beautiful caption for the post.</p>
+                    </div>
+                    <div class="post-comments">
+                        <p>View all 50 comments</p>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <p>username</p>
+                    </div>
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="Post Image">
+                    </div>
+                    <div class="post-actions">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                    <div class="post-likes">
+                        <p><strong>10,000 likes</strong></p>
+                    </div>
+                    <div class="post-caption">
+                        <p><strong>username</strong> A beautiful caption for the post.</p>
+                    </div>
+                    <div class="post-comments">
+                        <p>View all 50 comments</p>
                     </div>
                 </div>
                 <!-- Add more posts here -->
-            </div>
-
-            <!-- Right Sidebar (Optional Stories Section) -->
-            <div class="stories">
-                <p>Stories</p>
-                <div class="story">
-                    <img src="https://via.placeholder.com/60" alt="Story">
-                    <p>username</p>
-                </div>
-                <!-- Add more stories -->
             </div>
         </div>
     </main>

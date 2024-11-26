@@ -7,62 +7,76 @@ body {
 }
 
 .container {
-    display: flex;
     width: 90%;
     margin: 0 auto;
 }
 
-/* Header Section */
-header {
-    background: #fff;
+/* Navigation Bar */
+nav {
+    background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header .logo h1 {
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
     font-family: 'Arial Black', sans-serif;
     font-size: 1.5rem;
 }
 
-header .search-bar input {
-    width: 50%;
+nav .search-bar input {
+    width: 40%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-header .icons i, header .icons img {
+nav .nav-icons i, nav .nav-icons img {
     margin: 0 10px;
     cursor: pointer;
 }
 
-/* Sidebar Section */
-.sidebar {
-    width: 25%;
-    padding: 20px;
-}
-
-.sidebar .user-info {
+/* Stories Section */
+.stories {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
 }
 
-.sidebar .user-info img {
+.stories .story {
+    text-align: center;
+    margin-right: 15px;
+}
+
+.stories .story img {
     border-radius: 50%;
+    width: 60px;
+    height: 60px;
 }
 
-.sidebar .suggestions p {
-    font-weight: bold;
+.stories .story p {
+    font-size: 0.8rem;
+    color: #333;
+    margin-top: 5px;
 }
 
 /* Feed Section */
 .feed {
-    width: 50%;
+    margin-top: 20px;
 }
 
 .feed .post {
-    background: #fff;
+    background-color: #fff;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -72,6 +86,7 @@ header .icons i, header .icons img {
     display: flex;
     align-items: center;
     padding: 10px;
+    border-bottom: 1px solid #dbdbdb;
 }
 
 .feed .post-header img {
@@ -86,27 +101,20 @@ header .icons i, header .icons img {
 
 .feed .post-actions {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 10px;
 }
 
-.feed .post-description {
+.feed .post-actions i {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.feed .post-likes, .feed .post-caption, .feed .post-comments {
     padding: 10px;
 }
 
-/* Stories Section */
-.stories {
-    width: 25%;
-    padding: 20px;
-}
-
-.stories .story {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.stories .story img {
-    border-radius: 50%;
-    margin-right: 10px;
+.feed .post-comments {
+    color: #8e8e8e;
+    font-size: 0.9rem;
 }
