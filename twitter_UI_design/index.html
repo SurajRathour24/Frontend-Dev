@@ -30,7 +30,141 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <ul class="menu">
+                <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fa-solid fa-list"></i> Lists</a></li>
+                <li><a href="#"><i class="fa-solid fa-bookmark"></i> Bookmarks</a></li>
+                <li><a href="#"><i class="fa-solid fa-cogs"></i> Settings</a></li>
+            </ul>
+        </aside>
 
+        <!-- Feed Section -->
+        <section class="feed">
+            <!-- Tweet Box -->
+            <div class="tweet-box">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <textarea placeholder="What's happening?" class="tweet-input"></textarea>
+                <button class="btn-tweet">Tweet</button>
+            </div>
+
+            <!-- Tweet 1: Standard Post -->
+            <div class="tweet">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <div class="tweet-content">
+                    <h3>John Doe <span>@johndoe</span></h3>
+                    <p>Exploring new UI trends with pure HTML5 and CSS3. This journey is incredible! 🌟</p>
+                    <div class="tweet-actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet 2: Image Post -->
+            <div class="tweet">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <div class="tweet-content">
+                    <h3>Jane Smith <span>@janesmith</span></h3>
+                    <p>Check out this stunning sunset I captured last night! 🌅</p>
+                    <img src="https://source.unsplash.com/random/400x300" alt="Post Image" class="post-image">
+                    <div class="tweet-actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet 3: Retweet -->
+            <div class="tweet">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <div class="tweet-content">
+                    <h3>Retweeted by Sarah Lee</h3>
+                    <div class="retweeted">
+                        <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                        <div class="tweet-content">
+                            <h3>Tom Clark <span>@tomclark</span></h3>
+                            <p>CSS Grid is an absolute game changer for layouts! Here's how I use it for modern designs.</p>
+                            <div class="tweet-actions">
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-comment"></i>
+                                <i class="fa-solid fa-retweet"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet 4: Poll -->
+            <div class="tweet">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <div class="tweet-content">
+                    <h3>Emily Brown <span>@emilybrown</span></h3>
+                    <p>What's your favorite CSS framework?</p>
+                    <div class="poll">
+                        <div><input type="radio" name="poll" id="option1"> Bootstrap</div>
+                        <div><input type="radio" name="poll" id="option2"> Tailwind</div>
+                        <div><input type="radio" name="poll" id="option3"> Bulma</div>
+                        <div><input type="radio" name="poll" id="option4"> Foundation</div>
+                    </div>
+                    <div class="tweet-actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet 5: Promoted Content -->
+            <div class="tweet promoted">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <div class="tweet-content">
+                    <h3>Promoted by TechCorp</h3>
+                    <p>Unlock your potential with our new AI-powered development tools. Get started today!</p>
+                    <a href="#" class="promoted-link">Learn More</a>
+                    <div class="tweet-actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tweet 6: Video Post -->
+            <div class="tweet">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <div class="tweet-content">
+                    <h3>Alex Carter <span>@alexc</span></h3>
+                    <p>Watch this amazing HTML5 video animation I created! 🎥</p>
+                    <video controls class="post-video">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="tweet-actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <h3>What's happening</h3>
+            <ul class="trending">
+                <li>#WebDevelopment</li>
+                <li>#CSS3</li>
+                <li>#FrontendDesign</li>
+                <li>#HTML5</li>
+                <li>#ResponsiveDesign</li>
+            </ul>
+        </aside>
     </main>
 </body>
 </html>

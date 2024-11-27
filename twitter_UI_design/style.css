@@ -49,3 +49,56 @@ header {
     cursor: pointer;
 }
 
+.content {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Sidebar Styles */
+.left-sidebar, .right-sidebar {
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Feed Section */
+.feed {
+    width: 60%;
+}
+
+.tweet-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.tweet-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.tweet {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.tweet img {
+    border-radius: 50%;
+}
+
+.tweet-content h3 {
+    font-size: 16px;
+}
+
+.tweet-actions i {
+    margin-right: 10px;
+    cursor: pointer;
+}
