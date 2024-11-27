@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Twitter Layout</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#"><i class="fa-solid fa-hashtag"></i> Explore</a></li>
+                <li><a href="#"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope"></i> Messages</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+            </ul>
+            <button class="btn-tweet">Tweet</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <ul class="menu">
+                <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fa-solid fa-list"></i> Lists</a></li>
+                <li><a href="#"><i class="fa-solid fa-bookmark"></i> Bookmarks</a></li>
+                <li><a href="#"><i class="fa-solid fa-cogs"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Feed Section -->
+        <section class="feed">
+            <div class="tweet-box">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <textarea placeholder="What's happening?" class="tweet-input"></textarea>
+                <button class="btn-tweet">Tweet</button>
+            </div>
+            <!-- Sample Tweets -->
+            <div class="tweet">
+                <img src="https://source.unsplash.com/random/50x50" alt="User" class="user-img">
+                <div class="tweet-content">
+                    <h3>John Doe <span>@johndoe</span></h3>
+                    <p>This is a sample tweet with some amazing content. #HTML5 #CSS3</p>
+                    <div class="tweet-actions">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more tweets for long content -->
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <h3>What's happening</h3>
+            <ul class="trending">
+                <li>#WebDevelopment</li>
+                <li>#CSS3</li>
+                <li>#FrontendDesign</li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>
