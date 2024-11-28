@@ -1,0 +1,48 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Centering the container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Adjust content within container */
+}
+
+/* Header styles */
+.login-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4267B2;
+    color: white;
+}
+
+.login-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: lowercase;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    font-size: 14px;
+}
+
