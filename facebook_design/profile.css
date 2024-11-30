@@ -127,3 +127,69 @@ body {
     background: #e4e6eb;
     color: #1c1e21;
 }
+
+/* Main Content Section */
+.profile-content {
+    padding: 20px;
+}
+
+.about-section {
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #606770;
+}
+
+.photo-gallery {
+    margin-bottom: 20px;
+}
+
+.photo-gallery h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.photos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.photos img {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info {
+        margin-left: 0;
+    }
+
+    .actions {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .photos img {
+        max-width: 100px;
+        height: 100px;
+    }
+}
