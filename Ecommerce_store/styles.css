@@ -42,3 +42,33 @@ body {
     padding: 0.5rem 1.5rem;
     text-decoration: none;
   }
+  
+  /* Sections */
+  section {
+    margin: 2rem 0;
+  }
+  .products, .categories, .featured, .newsletter {
+    text-align: center;
+  }
+  .product-grid, .category-grid, .featured-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .product, .category, .featured-item {
+    flex: 1 1 calc(33.333% - 1rem);
+    text-align: center;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
