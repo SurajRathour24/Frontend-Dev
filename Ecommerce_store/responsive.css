@@ -3,5 +3,14 @@
     .product-grid, .category-grid, .featured-grid {
       flex-direction: column;
     }
+    .cart-table th, .cart-table td {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+    .checkout-form {
+      padding: 1rem;
+    }
+    .checkout-form .btn {
+      font-size: 1rem;
+    }
   }
-  
