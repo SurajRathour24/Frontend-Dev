@@ -147,6 +147,42 @@ body {
 
 
 
+/* Cart Page */
+.cart {
+  padding: 2rem 0;
+}
+.cart h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.cart-table th, .cart-table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+.cart-table th {
+  background-color: #f4f4f4;
+}
+.cart-summary {
+  text-align: right;
+}
+.btn-remove {
+  background-color: #f76c6c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn-remove:hover {
+  background-color: #ff4d4d;
+}
+
 
 
 
