@@ -3,53 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Homepage</title>
+    <title>Modern Homepage Design</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">MyBrand</div>
+        <div class="logo">Modern<span>Brand</span></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="cta">Sign Up</button>
+        <button class="cta">Join Us</button>
     </header>
 
-    <section class="hero" id="home">
-        <h1>Welcome to MyBrand</h1>
-        <p>Your solution to a better web experience.</p>
-        <button class="cta">Get Started</button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Innovate Your Digital Journey</h1>
+            <p>Transform your ideas into reality with ModernBrand's cutting-edge solutions.</p>
+            <button class="cta">Get Started</button>
+        </div>
+        <img 
+            src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMzA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" 
+            alt="Hero Background" class="hero-image">
     </section>
 
-    <section class="features" id="features">
-        <h2>Our Features</h2>
-        <div class="features-grid">
-            <div class="feature">
-                <h3>Feature 1</h3>
-                <p>Description of feature 1.</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>Who We Are</h2>
+            <p>We are a team of passionate developers, designers, and strategists delivering modern digital experiences.</p>
+        </div>
+        <img 
+            src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1080&h=750&dpr=1" 
+            alt="About Us" class="about-image">
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Build responsive and dynamic websites tailored to your needs.</p>
             </div>
-            <div class="feature">
-                <h3>Feature 2</h3>
-                <p>Description of feature 2.</p>
+            <div class="service">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Craft intuitive and aesthetic user experiences.</p>
             </div>
-            <div class="feature">
-                <h3>Feature 3</h3>
-                <p>Description of feature 3.</p>
+            <div class="service">
+                <i class="fas fa-chart-line"></i>
+                <h3>SEO Optimization</h3>
+                <p>Boost your online presence with data-driven strategies.</p>
             </div>
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <img 
+                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMzA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" 
+                alt="Project 1">
+            <img 
+                src="https://images.pexels.com/photos/374720/pexels-photo-374720.jpeg?auto=compress&cs=tinysrgb&w=1080&h=750&dpr=1" 
+                alt="Project 2">
+            <img 
+                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMzA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" 
+                alt="Project 3">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 MyBrand. All rights reserved.</p>
+        <p>&copy; 2024 ModernBrand. All rights reserved.</p>
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 </body>
