@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background: #f9f9f9;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -19,6 +20,9 @@ header {
     padding: 1rem 2rem;
     background-color: #333;
     color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo span {
@@ -35,6 +39,11 @@ header .logo span {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
 }
 
 .cta {
@@ -42,6 +51,7 @@ header .logo span {
     background-color: #00bcd4;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -55,24 +65,204 @@ header .logo span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 4rem 2rem;
     background: #f4f4f4;
 }
 
+.hero-content {
+    max-width: 50%;
+}
+
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
     color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.hero-image {
+    max-width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
 .about {
     display: flex;
     align-items: center;
-    padding: 2rem;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.about-image {
+    max-width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Services Section */
+.services {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
 .service-cards {
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
+}
+
+.service {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0097a7;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer .social-links a {
+    margin: 0 0.5rem;
+    color: #00bcd4;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #fff;
 }
