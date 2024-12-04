@@ -1,0 +1,41 @@
+/* Responsive Styles */
+
+/* Mobile Devices (Max Width 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+}
