@@ -247,6 +247,99 @@ header .logo span {
     background-color: #0097a7;
 }
 
+
+
+
+
+
+/* Values Section */
+.values {
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.values h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.value {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.value i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+}
+
+/* Team Section */
+.team {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.team-member {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
     padding: 2rem;
