@@ -498,7 +498,21 @@ iframe {
 
 
 
+/* Portfolio Hero Section */
+.portfolio-hero {
+    position: relative;
+    text-align: center;
+    background: #f9f9f9;
+}
 
+.portfolio-hero .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
 
 
 
