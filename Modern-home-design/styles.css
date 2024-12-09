@@ -514,6 +514,56 @@ iframe {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Portfolio Grid Section */
+.portfolio-grid {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+}
+
+.portfolio-grid h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.grid-item {
+    background: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 1rem 1rem;
+}
+
+
 
 
 
