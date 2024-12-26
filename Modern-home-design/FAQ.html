@@ -44,6 +44,23 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll('.accordion-title').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isOpen = content.style.maxHeight;
+
+                document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+                document.querySelectorAll('.accordion-title span').forEach(s => s.textContent = '+');
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    button.querySelector('span').textContent = '-';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
  
