@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .faq h3 {
+            margin: 0;
+            padding: 10px;
+            background: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .faq p {
+            display: none;
+            padding: 10px;
+            margin: 0;
+            border: 1px solid #007BFF;
+            border-top: none;
+            background: #f1f1f1;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .faq h3.active + p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+    <div class="container">
+        <div class="faq">
+            <h3>What is your return policy?</h3>
+            <p>We accept returns within 30 days of purchase, provided the item is unused and in its original condition.</p>
+        </div>
+        <div class="faq">
+            <h3>How can I track my order?</h3>
+            <p>Once your order has shipped, you will receive a tracking number via email. Use it to track your order on our website.</p>
+        </div>
+        <div class="faq">
+            <h3>Do you offer international shipping?</h3>
+            <p>Yes, we ship to many countries worldwide. Shipping costs and times vary depending on your location.</p>
+        </div>
+        <div class="faq">
+            <h3>What payment methods do you accept?</h3>
+            <p>We accept major credit cards, PayPal, and other popular payment methods.</p>
+        </div>
+    </div>
+
+    <script>
+        const faqHeaders = document.querySelectorAll('.faq h3');
+
+        faqHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+                const content = header.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
