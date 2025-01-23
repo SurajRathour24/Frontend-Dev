@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops Notes</title>
+  
+</head>
+<body>
+    <header>
+        <h1>JavaScript Loops - A Complete Guide</h1>
+    </header>
+
+    <section>
+        <h2>1. For Loop</h2>
+        <p>The <code>for</code> loop is used to execute a block of code a specific number of times.</p>
+        <div class="example">
+            <h3>Example:</h3>
+            <code>
+                for (let i = 0; i < 5; i++) {
+                    console.log(i);
+                }
+            </code>
+        </div>
+
+        <h2>2. While Loop</h2>
+        <p>The <code>while</code> loop executes as long as the specified condition evaluates to <code>true</code>.</p>
+        <div class="example">
+            <h3>Example:</h3>
+            <code>
+                let i = 0;
+                while (i < 5) {
+                    console.log(i);
+                    i++;
+                }
+            </code>
+        </div>
+
+        <h2>3. Do-While Loop</h2>
+        <p>The <code>do-while</code> loop will execute the code block at least once, then repeat as long as the condition evaluates to <code>true</code>.</p>
+        <div class="example">
+            <h3>Example:</h3>
+            <code>
+                let i = 0;
+                do {
+                    console.log(i);
+                    i++;
+                } while (i < 5);
+            </code>
+        </div>
+
+        <h2>4. For...of Loop</h2>
+        <p>The <code>for...of</code> loop iterates over iterable objects, such as arrays or strings.</p>
+        <div class="example">
+            <h3>Example:</h3>
+            <code>
+                const arr = [10, 20, 30];
+                for (const num of arr) {
+                    console.log(num);
+                }
+            </code>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 JavaScript Notes by Code Enthusiast</p>
+    </footer>
+
+    <button class="btn-top" onclick="scrollToTop()">&#8593;</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
