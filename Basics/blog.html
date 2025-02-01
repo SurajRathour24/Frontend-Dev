@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read more about Blog Layout</title>
+    <title>Single Blog Layout</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, footer {
+            width: 100%;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+        }
+        .content-wrapper {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
         }
         .container {
-            width: 60%;
-            margin: 20px auto;
+            width: 70%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .sidebar {
+            width: 25%;
+            margin-left: 20px;
             background: white;
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -40,16 +64,57 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
+        .site-section {
+            margin-bottom: 20px;
+        }
+        .site-section h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .site-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .site-section ul li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="blog-title">The Art of T-Shirt Printing</h1>
-        <p class="blog-meta">Published on February 1, 2025 | By John Doe</p>
-        <img src="https://via.placeholder.com/800x400" alt="Blog Image" class="blog-image">
-        <p class="blog-content">
-            T-shirt printing is an exciting way to express creativity and promote brands. From screen printing to DTG (Direct to Garment), there are various methods to create stunning designs. Whether you're starting a T-shirt business or looking to personalize your wardrobe, understanding different printing techniques can help you achieve high-quality results.
-        </p>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <div class="content-wrapper">
+        <div class="container">
+            <h1 class="blog-title">The Art of T-Shirt Printing</h1>
+            <p class="blog-meta">Published on February 1, 2025 | By John Doe</p>
+            <img src="https://via.placeholder.com/800x400" alt="Blog Image" class="blog-image">
+            <p class="blog-content">
+                T-shirt printing is an exciting way to express creativity and promote brands. From screen printing to DTG (Direct to Garment), there are various methods to create stunning designs. Whether you're starting a T-shirt business or looking to personalize your wardrobe, understanding different printing techniques can help you achieve high-quality results.
+            </p>
+        </div>
+        <div class="sidebar">
+            <div class="site-section">
+                <h2>Recent Posts</h2>
+                <ul>
+                    <li><a href="#">How to Choose the Right T-Shirt Material</a></li>
+                    <li><a href="#">Top 5 Printing Techniques for Beginners</a></li>
+                    <li><a href="#">Trendy T-Shirt Designs for 2025</a></li>
+                </ul>
+            </div>
+            <div class="site-section">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#">T-Shirt Printing</a></li>
+                    <li><a href="#">Design Tips</a></li>
+                    <li><a href="#">Marketing</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+    <footer>
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
 </body>
 </html>
