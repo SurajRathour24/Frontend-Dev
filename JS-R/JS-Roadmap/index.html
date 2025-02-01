@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #850712, #ff5f6d);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #fff;
+            transform: translateX(-50%);
+            animation: growLine 2s ease;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1.2s ease, fadeInItem 1.5s ease;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 0%;
+            transform: translateX(100%);
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            animation: fadeInText 1s ease;
+        }
+
+        .timeline-item p {
+            margin: 10px 0 0;
+            line-height: 1.6;
+            animation: fadeInText 1.2s ease;
+        }
+
+        .timeline-item .week {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #ffdfdf;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-150%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInItem {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes growLine {
+            from {
+                height: 0;
+            }
+            to {
+                height: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline-item {
+                width: 100%;
+                left: 0;
+                transform: translateX(0);
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2-Month JavaScript Learning Roadmap</h1>
+        </div>
+        <ul class="timeline">
+            <!-- Week 1 -->
+            <li class="timeline-item">
+                <h3>Week 1: JavaScript Basics</h3>
+                <span class="week">Focus:</span>
+                <p>- Learn what JavaScript is and how it works with HTML & CSS.</p>
+                <p>- Understand variables, data types, and operators.</p>
+                <p>- Explore basic DOM manipulation using querySelector.</p>
+            </li>
+            <!-- Week 2 -->
+            <li class="timeline-item">
+                <h3>Week 2: Control Flow & Functions</h3>
+                <span class="week">Focus:</span>
+                <p>- Master conditionals (if/else, switch).</p>
+                <p>- Learn loops (for, while, forEach).</p>
+                <p>- Write reusable functions and understand function scope.</p>
+            </li>
+            <!-- Week 3 -->
+            <li class="timeline-item">
+                <h3>Week 3: DOM Manipulation</h3>
+                <span class="week">Focus:</span>
+                <p>- Deep dive into DOM structure and navigation.</p>
+                <p>- Learn event listeners and event delegation.</p>
+                <p>- Practice creating interactive web components.</p>
+            </li>
+            <!-- Week 4 -->
+            <li class="timeline-item">
+                <h3>Week 4: ES6+ Features</h3>
+                <span class="week">Focus:</span>
+                <p>- Understand let, const, and template literals.</p>
+                <p>- Learn arrow functions, destructuring, and spread/rest operators.</p>
+                <p>- Get comfortable with promises and async/await.</p>
+            </li>
+            <!-- Week 5 -->
+            <li class="timeline-item">
+                <h3>Week 5: Object-Oriented Programming</h3>
+                <span class="week">Focus:</span>
+                <p>- Learn about objects, classes, and prototypes.</p>
+                <p>- Understand inheritance and encapsulation.</p>
+                <p>- Build small projects like a to-do list or calculator.</p>
+            </li>
+            <!-- Week 6 -->
+            <li class="timeline-item">
+                <h3>Week 6: Fetch API & JSON</h3>
+                <span class="week">Focus:</span>
+                <p>- Explore API communication with fetch().</p>
+                <p>- Understand JSON parsing and data usage.</p>
+                <p>- Practice by building a weather app or user search app.</p>
+            </li>
+            <!-- Week 7 -->
+            <li class="timeline-item">
+                <h3>Week 7: Advanced Topics</h3>
+                <span class="week">Focus:</span>
+                <p>- Learn closures, callbacks, and the event loop.</p>
+                <p>- Get familiar with module bundlers (like Webpack).</p>
+                <p>- Explore ES6 modules and code splitting.</p>
+            </li>
+            <!-- Week 8 -->
+            <li class="timeline-item">
+                <h3>Week 8: Final Projects</h3>
+                <span class="week">Focus:</span>
+                <p>- Build a complete project (e.g., e-commerce product page).</p>
+                <p>- Review and refactor code for best practices.</p>
+                <p>- Prepare for advanced JavaScript frameworks (React/Vue).</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
