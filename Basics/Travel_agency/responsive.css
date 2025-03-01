@@ -1,0 +1,66 @@
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .destinations-container,
+    .packages-container,
+    .reviews-container,
+    .blog-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+    }
+    
+    .destination-card,
+    .package-card,
+    .review-card,
+    .blog-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .hero {
+        height: 70vh;
+    }
+    
+    .hero h1 {
+        font-size: 20px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .contact input, .contact textarea {
+        width: 100%;
+    }
+}
