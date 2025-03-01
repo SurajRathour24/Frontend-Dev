@@ -43,6 +43,24 @@ h2 {
     to { opacity: 1; }
 }
 
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: contents;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    list-style: none;
+}
 /* Destinations Section */
 .destinations-container {
     display: flex;
