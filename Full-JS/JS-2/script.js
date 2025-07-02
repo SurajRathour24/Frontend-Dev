@@ -31,6 +31,15 @@ Primitive
 
 
 */
-
-
+//Bigint  
 let a = Number.MAX_SAFE_INTEGER;
+// JS have this max value from which we cant increase value 
+
+// To get more high valuie then it then we can write 'm'
+
+let bignumber = 12124234234234234234234234234234n;
+console.log(bignumber);
+
+
+// JS is the Dynamic type Value 
+console.log(typeof bignumber );
