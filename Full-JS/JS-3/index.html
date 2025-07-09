@@ -23,9 +23,56 @@
    console.log(a instanceof Array);  // This will work 
 
 //    But if we will try this with primitive DT;
-let num = 12;
-console.log(num instanceof Number);  // This will give you an false ;
+// let num = 12;
+// console.log(num instanceof Number);  // This will give you an false ;
 
+
+// Practice 
+// let x = 10;
+
+// let y = 20;
+
+// if (x > 5 || y < 25){
+//     console.log("A");
+// }
+// else{
+//     console.log("B");
+// }
+
+
+
+// let temp = 35;
+
+// if (!(temp < 30 )){
+//     console.log("HOT")
+// }
+// else{
+//     console.log("Pleasant");
+// }
+
+
+// let NumVal = 0;
+// if (NumVal){
+//     console.log("truthy Value");
+// } 
+// else{
+//     console.log("Falsy Value");
+// }
+
+
+let userName = 12;
+
+let authUser = userName === "12" ? "Authenticated" : userName == "12" ? "Almost Similar" : "Unauthorized Person"; 
+
+console.log(authUser);
+
+
+let userHavePass = true;
+let userHaveOTP = true;
+
+let userAccess = userHavePass && userHaveOTP === true ? "Access Granted" : "!!!!!!Access Deny Alert!!!!!!"
+
+console.log(userAccess);
     </script>
 </body>
 </html>
