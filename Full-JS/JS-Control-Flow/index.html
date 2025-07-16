@@ -61,6 +61,35 @@
                         console.log("Default Case loaded");
             }
 
+
+
+            //Practice (With Early Return Method)
+                function getGrade(score){
+                    if (score >= 90 && score < 100) return "A+";
+                    else if (score >= 80) return "A";
+                    else if (score >= 70)  return "B";
+                    else if (score >= 60) return "C";
+                    else if (score >= 33) return "D";
+                    else if (score < 32) return "Fail";
+                    else return "Anything Else"; 
+                }
+                console.log (getGrade(66));
+
+
+                // Rock Paper Scissor Logic
+
+
+                function getWinner (userVal, compVal){
+                    if (userVal == "R" && compVal == "P") return "User Win";
+                    if (userVal == "P" && compVal == "R") return "Computer Win";
+                    if (userVal == "R" && compVal == "S") return "User Win";
+                    if (userVal == "S" && compVal == "R") return "Computer Win";
+                    if (userVal == "S" && compVal == "P") return "User Win";
+                    if (userVal == "P" && compVal == "S") return "Computer Win";
+                }
+
+                let winner = getWinner ("R", "S");
+                console.log(winner);
     </script>
 </body>
 </html>
