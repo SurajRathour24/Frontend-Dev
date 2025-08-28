@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body style="background-color: black; display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+    <h1>Functions in JS</h1>
+    
+
+    <script>
+        console.log("Loops In JS");
+
+        // Function Statement
+        function LearnJs(){
+            console.log("Learn JS from Here");
+        }
+
+        // This is called function expression
+        let LearnPython = function(){
+            console.log("Learn Python from here!!!");
+        }
+
+        LearnPython();
+
+        // Fat Arrow Function 
+        let fatArrFunc = () => {
+            console.log("Fat Arrow Function");
+        }
+
+        // Parameter VS Arguments 
+
+        function paraArg (val1, Val2){
+            console.log(val1/Val2);
+        }
+
+        paraArg(5,10)   // Here 5, 10 are Arguments & on above in the function val1, val2 are parameters
+
+
+
+        function defaultVal(num1 = 0, num2 = 0){
+            console.log(num1 + num2);   //If we will not give any number here during function call then we will get (NAN) because if we add both undefined values then it will give us NAN ///So we can give Default values
+        }
+
+        defaultVal(5, 10)
+    </script>
+</body>
+</html>
