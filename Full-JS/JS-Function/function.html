@@ -33,7 +33,7 @@
         // Parameter VS Arguments 
 
         function paraArg (val1, Val2){
-            console.log(val1/Val2);
+            // console.log(val1/Val2);
         }
 
         paraArg(5,10)   // Here 5, 10 are Arguments & on above in the function val1, val2 are parameters
@@ -41,10 +41,38 @@
 
 
         function defaultVal(num1 = 0, num2 = 0){
-            console.log(num1 + num2);   //If we will not give any number here during function call then we will get (NAN) because if we add both undefined values then it will give us NAN ///So we can give Default values
+            // console.log(num1 + num2);   //If we will not give any number here during function call then we will get (NAN) because if we add both undefined values then it will give us NAN ///So we can give Default values
         }
 
         defaultVal(5, 10)
+
+        function multiVal (a,b, ...others){
+            console.log("Here multiple values will show ", a, b, others)
+        }
+
+        multiVal(108,113,23,234,2342,34,23,4,23,42342342);
+
+        // Early return
+
+        let earlyFunc = (randomVal) =>{
+            return 444 + randomVal;
+        }
+        
+        let returnedVal = earlyFunc(5);
+        console.log(returnedVal);
+
+
+        let firstFnc = function(val1){
+            val1();
+        }
+
+    
+
+        let saveVal = firstFnc(function (){
+            console.log(100-2);
+        });
+        // console.log(saveVal);
+
     </script>
 </body>
 </html>
