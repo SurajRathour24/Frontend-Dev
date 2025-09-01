@@ -22,10 +22,46 @@
 
     <script>
         (function(){
-            console.log("IIFE");
+            // console.log("IIFE");
         });
 
         // With this function will automatically imvoked without call
+
+        // Question 1 
+        // 1. Diff btw function declearation and expression in terms of hoisting 
+        // In function declearation we can call function before create them. but in declearation its not allowed 
+
+    //    2. Convert provided function to arrow func ; 
+    // let arrFnc = function(a, b){
+    //     return a * b;
+    // }
+    // let ans = arrFnc(5,5);
+    // console.log(ans);
+
+    // 3. Fix function to Early Retun
+    
+    // let checkAge =  (age) => {
+    //     if (age < 18 ) return "kids";
+    //     else if (age > 18 && age < 30 ) return "adult";
+    //     else if (age > 30 && age < 70) return  "Matured";
+    //     else return "Old";
+    // }
+
+    // console.log(checkAge(22));
+
+
+    // 4. First class function = When we can use function as a value or like a value 
+
+    let firstFnc  = function (sumVal){
+        sumVal(10,10);
+    }
+
+    firstFnc(function(a,b){
+        console.log(a+b);
+    })
+
+    
+
 
     </script>
   </body>
