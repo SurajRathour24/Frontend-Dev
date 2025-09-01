@@ -52,17 +52,36 @@
 
     // 4. First class function = When we can use function as a value or like a value 
 
-    let firstFnc  = function (sumVal){
-        sumVal(10,10);
+    // let firstFnc  = function (sumVal){
+    //     sumVal(10,10);
+    // }
+
+    // firstFnc(function(a,b){
+    //     console.log(a+b);
+    // })
+
+
+    // 5. When any function will return a function or accept a function in parameter then that called Higher Order Function 
+// let fnc = function(){
+//     return function(){
+//         console.log("HOF Test");
+//     }
+// }
+// let dev = fnc();
+// console.log(dev);
+
+
+// 6. Closures 
+
+let ftFnc = () => {
+    let devVar = 12;
+    return function(){
+        console.log(devVar);
     }
+}
 
-    firstFnc(function(a,b){
-        console.log(a+b);
-    })
-
-    
-
-
+const ans = ftFnc();
+ans();
     </script>
   </body>
 </html>
