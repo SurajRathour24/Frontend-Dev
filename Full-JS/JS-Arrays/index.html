@@ -17,40 +17,78 @@
         console.log("Arrays in JS");
 
         let studentMarks = [45,56,67, 78, 45, 66, 80];
-        // console.log(studentMarks[3]);
+        console.log(studentMarks);
 
 
        
         // How to Modify array 
 
-        studentMarks[4] = 88;
+        // studentMarks[4] = 88;
 
-        console.log(studentMarks);
+        // console.log(studentMarks);
 
-        // Methods of Array
-            studentMarks.push(91);
-            console.log(studentMarks);
+        // // Methods of Array
+        //     studentMarks.push(91);
+        //     console.log(studentMarks);
 
-            studentMarks.pop();
+        //     studentMarks.pop();
 
-            console.log(studentMarks);
+        //     console.log(studentMarks);
 
 
             // UnShift is used to add soemthing in start 
 
-            studentMarks.unshift(26);
-            console.log(studentMarks);
+            // studentMarks.unshift(26);
+            // console.log(studentMarks);
 
             //Shift willl remove value from start 
 
-            studentMarks.shift();
-        console.log(studentMarks);
+            // studentMarks.shift();
+        // console.log(studentMarks);
 
-        // Splice 
-        studentMarks.splice(2,2);
+        // Splice  >> Changed a actual array 
+        // studentMarks.splice(2,2);
 
-        console.log(studentMarks);
+        // console.log(studentMarks);
+
+        // Slice >> Give new array
+            // let updatedMarks = studentMarks.slice(0,3)
+            // console.log(updatedMarks);
+
+
+            //reverse
+
+            // studentMarks.reverse();
+            // console.log(studentMarks);
+
+
+            // sort can short value in accending and decending order 
+
+            // let shortArr = studentMarks.sort(function(val1, val2){
+            //     // return val1 - val2;
+            //     return val2 - val1;
+            // });
+
+            // console.log(shortArr);
+
             
+
+
+            // Map Filter and reduce 
+
+            let arr1  = [1,2,3,4,5,6];
+
+            arr1.forEach(function(arraVal) {
+                console.log(arraVal);
+            })
+
+            // MAP 
+
+            let newArr = arr1.map(function(val){
+                // return(val+2);
+                
+            })
+            console.log(newArr);
 
 
 
