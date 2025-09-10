@@ -29,6 +29,47 @@
 
     // console.log(fruits);
 
+
+// let value = [1,2,3,4,5,6];
+// // value.pop();
+// // console.log(value);
+
+// let newVal = value.slice(0, 4);
+// console.log(newVal);
+
+// let colors = ["Green", "Yellow"];
+
+
+// let names = ["Zuby", "Arjun", "Monika", "Bhavna"];
+
+// names.sort();
+// names.reverse();
+// console.log(names);
+
+let num = [1,2,3,4];
+
+let doubleArr = num.map(function(num1){
+    return num1 * num1
+})
+// console.log(doubleArr);
+
+
+let greaterNum = [5,12];
+
+// let ans = greaterNum.filter(function(num){
+//     return num > 10;
+// });
+
+// console.log(ans);
+
+let sumOfArray = greaterNum.reduce((acc, val) => {
+    return acc + val;
+}, 0);
+
+
+console.log(sumOfArray);
+
+
 </script>
     </body>
     </html>
