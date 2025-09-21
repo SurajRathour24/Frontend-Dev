@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 
-</head>
-<body style="background-color: black; display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <style>
+        .heading3-design{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: brown;
+            color:beige;
+            font-style: italic;
+            text-transform: capitalize;
+        }
+    </style>
 
-    <h1 id="page-heading">DOM in Js </h1>
+</head>
+<body style="background-color: black; flex-direction: column; display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+
+    <h1 id="page-heading">DOM in Js : Lets learn with styles</h1>
+
+    <a href="">Go to google</a>
+
 
 
 
@@ -30,16 +43,46 @@
     // let getQuery = document.querySelector('p');
     // console.dir(getQuery);
 
-    let pageIntro = document.querySelector('h1');
+//     let pageIntro = document.querySelector('h1');
 
-    pageIntro.innerText = "This is Document Object Model Updated Dynamically";
-    pageIntro.innerHTML = "<i>This is Document Object Model Updated Dynamically By InnerHTML</i>";
+//     pageIntro.innerText = "This is Document Object Model Updated Dynamically";
+//     pageIntro.innerHTML = "<i>This is Document Object Model Updated Dynamically By InnerHTML</i>";
 
 
 
-    // DOM Attribute Update
+//     // DOM Attribute Update
     
+//     let linkData = document.querySelector("a");
+//     // console.dir(linkData);
+//     // linkData.href = "https://www.google.com";
+//     // linkData.target = "_blank";
+
+//     // Get Attribute , Set Attribute, Remove attribute
+
+//     linkData.setAttribute('href', "https://www.google.com");
     
+
+//     let StoreVal = linkData.getAttribute("href");
+// // console.log(StoreVal);
+
+// linkData.removeAttribute("href");
+
+
+// let h3 = document.createElement("H3");
+// h3.innerText = "Hey Buddy I'm coming with JS";
+// document.querySelector("body").prepend(h3);
+
+
+let aColor = document.querySelector("a");
+console.dir(aColor);
+
+// aColor.style.color = "Yellow";
+// aColor.style.textDecoration = "none";
+
+let headStyle = document.querySelector("h1");
+headStyle.style.padding = "10px 20px";
+headStyle.classList.add("heading3-design");
+console.dir(headStyle);
 
 
 
