@@ -20,6 +20,11 @@
             margin: 15px;
             display: inline-block;
         }
+
+        .dynamic-btn{
+            background-color: cadetblue;
+            color: #fff;
+        }
     </style>
 
 </head>
@@ -49,8 +54,13 @@
         // console.dir(TS);
         // TS.classList.add("heading-style1");
 
-        let selectBtn = document.querySelectorAll("buy-now");
-        console.dir(selectBtn);
+        let selectBtn = document.querySelectorAll(".buy-now");
+        // console.log(selectBtn);
+        selectBtn.forEach((btn) => {
+            console.dir(btn);
+            btn.classList.add("dynamic-btn");
+            btn.style.cursor = "pointer";
+        });
 
     </script>
 </body>
