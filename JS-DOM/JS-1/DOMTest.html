@@ -38,9 +38,10 @@
     <h2 class="heading-2">This is Heading 2</h2>
 
     <a href="" class="download-btn">Download Now</a>
+    <img src="" alt="Dummy Img">
 
 
-    <button class="buy-now">Buy Now</button>
+    <button class="buy-now" id="custom-ID">Buy Now</button>
     <button class="buy-now">Buy Now</button>
     <button class="buy-now">Buy Now</button>
     <button class="buy-now">Buy Now</button>
@@ -56,12 +57,22 @@
 
         let selectBtn = document.querySelectorAll(".buy-now");
         // console.log(selectBtn);
-        selectBtn.forEach((btn) => {
-            console.dir(btn);
-            btn.classList.add("dynamic-btn");
-            btn.style.cursor = "pointer";
-        });
+        // selectBtn.forEach((btn) => {
+        //     console.dir(btn);
+        //     btn.classList.add("dynamic-btn");
+        //     btn.style.cursor = "pointer";
+        // });
 
+        let newImg = document.querySelector(".buy-now");
+        console.log(newImg)
+
+        let getImg = document.querySelector("img");
+        console.dir(getImg);
+        getImg.setAttribute("src", "https://images.pexels.com/photos/162539/architecture-building-amsterdam-blue-sky-162539.jpeg")
+
+        let ID = document.getElementById("custom-ID");
+        ID.removeAttribute("id");
+        console.dir(ID);
     </script>
 </body>
 </html>
