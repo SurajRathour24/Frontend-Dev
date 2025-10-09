@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        img{
+        /* img{
             width: 100%;
             height: 100%;
-        }
+        } */
         .paragraph{
             color: beige;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -39,6 +39,12 @@
     </ul>
 
 
+    <div class="image-wrapper">
+        <img src="https://images.pexels.com/photos/34212896/pexels-photo-34212896.jpeg" alt="">
+    </div>
+
+    <button class="download-now" disabled>Download Now</button>
+
     <script>
         console.log("DDM");
 
@@ -59,17 +65,50 @@
 
 
         let listItem = document.querySelectorAll(".list-item");
-        console.log(listItem);
+        // console.log(listItem);
 
         // listItem.forEach(function(item) {
         //     console.log(item.textContent);
         // })
 
         for (let i = 0; i < listItem.length; i++){
-            console.log(listItem[i].innerHTML);
+            // console.log(listItem[i].innerHTML);
         }
 
-        
+        para.innerHTML = "{/* <b> Updated </b> by Javascript */}";
+
+
+        let getImg = document.querySelector("img");
+        console.log(getImg.getAttribute("src"));
+
+        getImg.setAttribute("width", "300px");
+        getImg.setAttribute("height", "200px");
+        getImg.setAttribute("alt", "this is default attribute added by JS");
+
+
+        let btn = document.querySelector(".download-now");
+        btn.removeAttribute("disabled");
+
+
+
+        let addFooter = document.createElement("footer");
+        console.log(addFooter);
+        addFooter.innerHTML = "<i>Copyright 2025 by @Suraj</i>";
+
+        document.querySelector("body").appendChild(addFooter);
+
+document.querySelector(".image-wrapper img").remove();
+
+
+
+
+let ul = document.querySelector("ul");
+let newElems = document.createElement("li");
+newElems.textContent = "Other";
+ul.appendChild(newElems);
+
+
+
     </script>
 </body>
 </html>
