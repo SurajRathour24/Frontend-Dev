@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .paragraph{
+            color: beige;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 400;
+        }
+        .bg-red{
+            background-color: red;;
+        }
+    </style>
+</head>
+<body style="background-color: black; flex-direction: column; display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    
+
+    <h1 class="bg-red">Heading 1</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam praesentium deleniti voluptates laborum id, cum natus facilis temporibus beatae vitae quos at dignissimos. Eius, illo? Omnis quis officia ipsa alias blanditiis, debitis porro unde natus consequuntur repellat, eius at vero!
+    </p>
+    
+
+    <ul>
+        <li class="list-item">C</li>
+        <li class="list-item">C++</li>
+        <li class="list-item">Python</li>
+        <li class="list-item">Javascript</li>
+        <li class="list-item">PHP</li>
+        <li class="list-item">HTML</li>
+        <li class="list-item">CSS</li>
+    </ul>
+
+
+    <script>
+        console.log("DDM");
+
+        // let addImg = document.createElement("img");
+        // console.dir(addImg);
+        // // addImg.setAttribute("src", "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg");
+
+        // document.querySelector("body").prepend(addImg);
+
+        let para = document.querySelector("p");
+        para.classList.add('paragraph');
+
+        // para.classList.remove("paragraph");
+
+        let heading1 = document.querySelector("h1");
+        heading1.classList.toggle("bg-red");
+
+
+
+        let listItem = document.querySelectorAll(".list-item");
+        console.log(listItem);
+
+        // listItem.forEach(function(item) {
+        //     console.log(item.textContent);
+        // })
+
+        for (let i = 0; i < listItem.length; i++){
+            console.log(listItem[i].innerHTML);
+        }
+
+        
+    </script>
+</body>
+</html>
