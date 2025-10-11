@@ -17,6 +17,9 @@
         .bg-red{
             background-color: red;;
         }
+        .highlight{
+            background-color: blanchedalmond;
+        }
     </style>
 </head>
 <body style="background-color: black; flex-direction: column; display: flex; justify-content: center; align-items: center; height: 100vh; color: #fff; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
@@ -39,12 +42,21 @@
     </ul>
 
 
+     <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, error?
+    </p>
+<!-- 
+
     <div class="image-wrapper">
         <img src="https://images.pexels.com/photos/34212896/pexels-photo-34212896.jpeg" alt="">
-    </div>
+    </div> -->
 
     <button class="download-now" disabled>Download Now</button>
 
+
+     <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, veniam repudiandae! Tempore ratione porro veniam.
+    </p>
     <script>
         console.log("DDM");
 
@@ -54,60 +66,82 @@
 
         // document.querySelector("body").prepend(addImg);
 
-        let para = document.querySelector("p");
-        para.classList.add('paragraph');
+        // let para = document.querySelector("p");
+        // para.classList.add('paragraph');
 
-        // para.classList.remove("paragraph");
+        // // para.classList.remove("paragraph");
 
-        let heading1 = document.querySelector("h1");
-        heading1.classList.toggle("bg-red");
-
-
-
-        let listItem = document.querySelectorAll(".list-item");
-        // console.log(listItem);
-
-        // listItem.forEach(function(item) {
-        //     console.log(item.textContent);
-        // })
-
-        for (let i = 0; i < listItem.length; i++){
-            // console.log(listItem[i].innerHTML);
-        }
-
-        para.innerHTML = "{/* <b> Updated </b> by Javascript */}";
-
-
-        let getImg = document.querySelector("img");
-        console.log(getImg.getAttribute("src"));
-
-        getImg.setAttribute("width", "300px");
-        getImg.setAttribute("height", "200px");
-        getImg.setAttribute("alt", "this is default attribute added by JS");
-
-
-        let btn = document.querySelector(".download-now");
-        btn.removeAttribute("disabled");
+        // let heading1 = document.querySelector("h1");
+        // heading1.classList.toggle("bg-red");
 
 
 
-        let addFooter = document.createElement("footer");
-        console.log(addFooter);
-        addFooter.innerHTML = "<i>Copyright 2025 by @Suraj</i>";
+        // let listItem = document.querySelectorAll(".list-item");
+        // // console.log(listItem);
 
-        document.querySelector("body").appendChild(addFooter);
+        // // listItem.forEach(function(item) {
+        // //     console.log(item.textContent);
+        // // })
 
-document.querySelector(".image-wrapper img").remove();
+        // for (let i = 0; i < listItem.length; i++){
+        //     // console.log(listItem[i].innerHTML);
+        // }
 
-
-
-
-let ul = document.querySelector("ul");
-let newElems = document.createElement("li");
-newElems.textContent = "Other";
-ul.appendChild(newElems);
+        // para.innerHTML = "{/* <b> Updated </b> by Javascript */}";
 
 
+        // let getImg = document.querySelector("img");
+        // console.log(getImg.getAttribute("src"));
+
+        // getImg.setAttribute("width", "300px");
+        // getImg.setAttribute("height", "200px");
+        // getImg.setAttribute("alt", "this is default attribute added by JS");
+
+
+        // let btn = document.querySelector(".download-now");
+        // btn.removeAttribute("disabled");
+
+
+
+//         let addFooter = document.createElement("footer");
+//         console.log(addFooter);
+//         addFooter.innerHTML = "<i>Copyright 2025 by @Suraj</i>";
+
+//         document.querySelector("body").appendChild(addFooter);
+
+// document.querySelector(".image-wrapper img").remove();
+
+
+
+
+// let ul = document.querySelector("ul");
+// let newElems = document.createElement("li");
+// newElems.textContent = "Other";
+// ul.appendChild(newElems);
+
+
+
+// let first = document.querySelector("li");
+// ul.removeChild(first);
+
+
+
+
+let list = document.querySelectorAll("li");
+list.forEach((item, index) => {
+  if (index % 2 == 0) {
+    item.classList.add("highlight");
+  }
+});
+
+
+let allPara = document.querySelectorAll("p");
+console.log(allPara);
+
+allPara.forEach(function (i) {
+    console.log(i);
+    i.style.fontSize = "18px";
+})
 
     </script>
 </body>
