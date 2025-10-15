@@ -29,6 +29,15 @@
     <img alt="this is cyle image">
 
 
+    <h3>Select a Device</h3>
+    <select name="" id="">
+        <option value="Iphone">Iphone</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Oppo">Oppo</option>
+        <option value="Vivo">Vivo</option>
+    </select>
+
+
     <script>
         console.log('Events Handling');
 
@@ -64,6 +73,17 @@
         input.addEventListener("input", updateColor);
 
 
+        let slct = document.querySelector("select");
+
+        let h3 = document.querySelector("h3");
+
+        let val = (values) => {
+         
+                h3.innerHTML = values.target.value +  " Device Selected";
+             
+            // console.log(values.target.value);
+        }
+        slct.addEventListener("change", val)
 
 
     </script>
