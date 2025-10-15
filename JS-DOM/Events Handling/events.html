@@ -24,6 +24,8 @@
 
     <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium eius ullam est, ipsam velit quia inventore aut minus soluta repellendus doloremque iste culpa a quasi ex, enim eligendi dolores excepturi.</p>
 
+    <input type="text" placeholder="Name" style="margin: 20px; padding: 8px 10px;">
+
     <img alt="this is cyle image">
 
 
@@ -42,12 +44,26 @@
         // heading.removeEventListener("mouseover", addColor);
 
 
-        let paragraph = document.querySelector("paragraph");
+        let paragraph = document.querySelector(".paragraph");
 
         let addbBG = () =>{
             paragraph.style.backgroundColor = "red";
+            console.log("clicked");
         }
-        paragraph.addEventListner("click", addbBG);
+        paragraph.addEventListener("click", addbBG);
+        // paragraph.removeEventListener("click", addbBG);
+
+
+
+        let input = document.querySelector("input");
+        let updateColor = (values)=>{
+            input.style.backgroundColor = "black";
+            input.style.color = "#fff";
+            console.log("Typed...", values.data);
+        }
+        input.addEventListener("input", updateColor);
+
+
 
 
     </script>
