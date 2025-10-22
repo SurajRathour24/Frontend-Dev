@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change</title>
+</head>
+<body>
+
+    <h1>Change Event</h1>
+
+    <h2 style="color: chocolate; font-size: 20px;">Choose Your Favourite Mobile</h2>
+    <select name="change Event" id="">
+        <option disabled selected>Choose Your Option</option>
+        <option value="Iphone">Iphone</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Google">Google</option>
+        <option value="Oppo">Oppo</option>
+    </select>
+
+
+    <script>
+        console.log('Change');
+
+        let opt = document.querySelector('select');
+        
+        let selectedItem = (item) =>{
+            let heading = document.querySelector('h2');
+            let thankMsg = document.createElement("p");
+            thankMsg.textContent = "Thank you for choosing"
+            heading.appendChild(thankMsg);
+            heading.textContent = `Thank you for choosing ${item.target.value}`;
+            // console.log(item.target.value);
+
+        }
+        opt.addEventListener('change', selectedItem)
+    </script>
+</body>
+</html>

@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Click Event</title>
-</head>
-<body>
-    
-
-    <h1>Click Events</h1>
-
-    <button id="switch-btn">Change Image</button>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #222;
+        color: antiquewhite;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+      .content-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      button{
+        padding: 10px 15px;
+        background-color:burlywood;
+        border-radius: 3px;
+        border: 1px solid burlywood;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-wrapper">
+        <h1>Click Events</h1>
+        <button id="switch-btn">Change Image</button><br>
+        <img
+          src="https://images.pexels.com/photos/289869/pexels-photo-289869.jpeg"
+          alt="cycle Image"
+        />
+      </div>
+    </div>
 
     <script>
-        
+      console.log("Click Event");
+
+      let btn = document.querySelector("#switch-btn");
+
+        let changeImage = () =>{
+            let img = document.querySelector("img");
+            img.setAttribute("src", "https://images.pexels.com/photos/2377893/pexels-photo-2377893.jpeg");
+        }
+
+      btn.addEventListener("click", changeImage);
+      
     </script>
-</body>
+  </body>
 </html>

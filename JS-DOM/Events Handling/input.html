@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    
+    <h1>Input Event</h1>
+    <input type="text" placeholder="Enter Your Name ...">
+
+
+    <script>
+        console.log("Input Event");
+
+        let inpt = document.querySelector('input');
+        
+        function userInput (dt){
+            if (dt.data !==  null){
+                console.log(dt.data);
+            }
+        }
+        inpt.addEventListener('input', userInput);
+    </script>
+</body>
+</html>
