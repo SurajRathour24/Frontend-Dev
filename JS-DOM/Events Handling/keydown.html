@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown Event</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            background-color: #222;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+        .word{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: beige;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="word">Type Now...</h1>
+    </div>
+
+    <script>
+        console.log('User keydown Loaded');
+
+        let heading = document.querySelector('.word');
+
+
+        function getKeyword(input){
+            if(input.key == " "){
+                heading.textContent = 'SPACE';
+            }
+            else{
+                heading.textContent = input.key;
+            }
+            // heading.textContent= input.key;
+        }
+        window.addEventListener('keydown', getKeyword);
+    </script>
+</body>
+</html>
