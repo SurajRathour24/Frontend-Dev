@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Submit form- Handling</title>
     <style>
-        * {
+      * {
         box-sizing: border-box;
 
         margin: 0px;
@@ -20,39 +20,43 @@
         align-items: center;
         /* height: 100vh; */
         width: 100%;
-                background-color: #222;
+        background-color: #222;
       }
       .container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-      .form-container form{
+        width: 80%;
+        margin: 0 auto;
+      }
+      .form-container {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-wrap: wrap;
+      }
+      .form-container form {
         padding: 50px;
         background-color: #000;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        /* flex-wrap: wrap; */
       }
-      .form-inputs{
+      .form-inputs {
         padding: 15px 10px;
         border: 0px;
-
+        color: #000;
       }
-      #submit-btn{
+      #submit-btn {
         padding: 10px 20px;
         background-color: rgb(0, 144, 50);
         border: 1px solid rgb(0, 144, 50);
         border-radius: 5px;
-        width: 20%;
+        width: 50%;
         margin: 0 auto;
         cursor: pointer;
       }
-      #submit-btn:hover{
+      #submit-btn:hover {
         background-color: #000;
       }
       .card-container {
@@ -62,76 +66,135 @@
         gap: 30px;
         margin: 20px 0px;
       }
-     .card-container .card-box {
-    padding: 30px;
-    background-color: #030f1b;
-    text-align: center;
-    width: 300px;
-}
-      .card-box img{
+      .card-container .card-box {
+        padding: 30px;
+        background-color: #030f1b;
+        text-align: center;
+        width: 300px;
+        border-radius: 10px;
+      }
+      .card-box img {
         width: 180px;
         height: 180px;
         object-fit: cover;
         border-radius: 100%;
       }
       .profile-photo {
-    padding-bottom: 20px;
-}
-.card-box h4 {
-    font-size: 26px;
-    text-transform: capitalize;
-}
+        padding-bottom: 20px;
+      }
+      .card-box h4 {
+        font-size: 26px;
+        text-transform: capitalize;
+      }
 
-.card-box h5 {
-    font-size: 22px;
-    text-transform: capitalize;
-    color: #a75000;
-    padding: 10px 0px;
-}
+      .card-box h5 {
+        font-size: 22px;
+        text-transform: capitalize;
+        color: #a75000;
+        padding: 10px 0px;
+      }
 
-.card-box p {
-    font-size: 18px;
-}
+      .card-box p {
+        font-size: 18px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="form-container">
-            <form action="">
-                <input type="text" placeholder="Name" class="form-inputs">
-                <input type="email" placeholder="Email" class="form-inputs">
-                <input type="number" placeholder="Phone" class="form-inputs">
-                <input type="file"  class="form-inputs">
-                <input type="submit" id="submit-btn">
-            </form>
-        </div>
+      <div class="form-container">
+        <form action="">
+          <input type="text" placeholder="Name" class="form-inputs" />
+          <input type="email" placeholder="Email" class="form-inputs" />
+          <input type="number" placeholder="Age" class="form-inputs" />
+          <input
+            type="text"
+            class="form-inputs"
+            placeholder="Enter Image URL"
+          />
+          <input type="submit" id="submit-btn" />
+        </form>
+      </div>
 
-        <div class="card-container">
-            <div class="card-box">
-                <div class="profile-photo">
-                    <img src="https://images.unsplash.com/photo-1750535135593-3a8e5def331d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880" alt="">
-                </div>
-                <h4>User Name</h4>
-                <h5>Age</h5>
-                <p>Email ID</p>
-            </div>
+      <!-- <div class="card-container">
+        <div class="card-box">
+          <div class="profile-photo">
+            <img
+              src="https://images.unsplash.com/photo-1750535135593-3a8e5def331d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880"
+              alt=""
+            />
+          </div>
+          <h4>User Name</h4>
+          <h5>Age</h5>
+          <p>Email ID</p>
         </div>
+      </div> -->
     </div>
 
-
     <script>
-        let form = document.querySelector('form');
-        let submitBtn = document.querySelector('#submit-btn');
+      let form = document.querySelector("form");
+      let submitBtn = document.querySelector("#submit-btn");
 
-        let inputs = document.querySelectorAll('.form-inputs');
+      let inputs = document.querySelectorAll(".form-inputs");
 
-        
-        let controlForm = (dt) =>{
-            dt.preventDefault();
-            // console.log(dt);
-            console.log(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].target);
+      let formContainer = document.querySelector(".form-container");
+
+      let controlForm = (dt) => {
+        dt.preventDefault();
+        // console.log(dt);
+        // console.log(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].target);
+
+        let cardContainer = document.createElement("div");
+        cardContainer.classList.add("card-container");
+
+        let cardBox = document.createElement("div");
+        cardBox.classList.add("card-box");
+
+        let imgBox = document.createElement("div");
+        imgBox.classList.add("profile-photo");
+
+        let empImg = document.createElement("img");
+        if (inputs[3].value !== "") {
+          empImg.setAttribute("src", inputs[3].value);
+        } else {
+          empImg.setAttribute(
+            "src",
+            "https://images.unsplash.com/photo-1750535135593-3a8e5def331d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880"
+          );
         }
-        form.addEventListener('submit', controlForm)
+
+        imgBox.appendChild(empImg);
+
+        let empName = document.createElement("h4");
+        if (inputs[0].value !== "") {
+          empName.textContent = inputs[0].value;
+        } else {
+          empName.textContent = "User";
+        }
+        let empAge = document.createElement("h5");
+        if (inputs[2].value !== "") {
+          empAge.textContent = inputs[2].value;
+        } else {
+          empAge.textContent = "1";
+        }
+        let empEmail = document.createElement("p");
+        if (inputs[1].value !== "") {
+          empEmail.textContent = inputs[1].value;
+        } else {
+          empEmail.textContent = "user@gmail.com";
+        }
+
+        cardContainer.appendChild(cardBox);
+        cardBox.appendChild(imgBox);
+        cardBox.appendChild(empName);
+        cardBox.appendChild(empAge);
+        cardBox.appendChild(empEmail);
+
+        formContainer.appendChild(cardContainer);
+
+        console.log(dt);
+        // console.log(cardContainer);
+      };
+      form.addEventListener("submit", controlForm);
     </script>
-</body>
+  </body>
 </html>
