@@ -56,10 +56,16 @@
 
         uploadBtn.addEventListener('click' , callBtn);
 
-        let fileInfo = (dt)=>{
-            console.log(dt);
+        let fileInfo = (dt)=>{ 
+            // console.log(dt);
             // console.log(dt.target.files[0].name);
-            uploadBtn.textContent = dt.target.files[0].name;
+            let filename = dt.target.files[0];
+            if(filename){
+                uploadBtn.textContent = filename.name;
+            }
+            else{
+                console.log(dt);
+            }
         }
         file.addEventListener('change', fileInfo);
     </script>

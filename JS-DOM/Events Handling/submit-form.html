@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit form- Handling</title>
+    <style>
+        * {
+        box-sizing: border-box;
+
+        margin: 0px;
+        padding: 0px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: beige;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        width: 100%;
+                background-color: #222;
+      }
+      .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+      .form-container form{
+        padding: 50px;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .form-inputs{
+        padding: 15px 10px;
+        border: 0px;
+
+      }
+      #submit-btn{
+        padding: 10px 20px;
+        background-color: rgb(0, 144, 50);
+        border: 1px solid rgb(0, 144, 50);
+        border-radius: 5px;
+        width: 20%;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+      #submit-btn:hover{
+        background-color: #000;
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0px;
+      }
+     .card-container .card-box {
+    padding: 30px;
+    background-color: #030f1b;
+    text-align: center;
+    width: 300px;
+}
+      .card-box img{
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+      .profile-photo {
+    padding-bottom: 20px;
+}
+.card-box h4 {
+    font-size: 26px;
+    text-transform: capitalize;
+}
+
+.card-box h5 {
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #a75000;
+    padding: 10px 0px;
+}
+
+.card-box p {
+    font-size: 18px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form action="">
+                <input type="text" placeholder="Name" class="form-inputs">
+                <input type="email" placeholder="Email" class="form-inputs">
+                <input type="number" placeholder="Phone" class="form-inputs">
+                <input type="file"  class="form-inputs">
+                <input type="submit" id="submit-btn">
+            </form>
+        </div>
+
+        <div class="card-container">
+            <div class="card-box">
+                <div class="profile-photo">
+                    <img src="https://images.unsplash.com/photo-1750535135593-3a8e5def331d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880" alt="">
+                </div>
+                <h4>User Name</h4>
+                <h5>Age</h5>
+                <p>Email ID</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let form = document.querySelector('form');
+        let submitBtn = document.querySelector('#submit-btn');
+
+        let inputs = document.querySelectorAll('.form-inputs');
+
+        
+        let controlForm = (dt) =>{
+            dt.preventDefault();
+            // console.log(dt);
+            console.log(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].target);
+        }
+        form.addEventListener('submit', controlForm)
+    </script>
+</body>
+</html>
