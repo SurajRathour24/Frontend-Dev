@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Card Creation</title>
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .container {
+        width: 90%;
+        margin: 0 auto;
+        background-color: #222;
+        height: auto;
+        width: 100%;
+        padding: 50px 0px;
+      }
+      .form-wrapper {
+        text-align: center;
+      }
+      #card-form {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 10px;
+      }
+      h1 {
+        padding-top: 30px;
+        text-align: center;
+        color: #fff;
+      }
+      .form-wrapper input {
+        padding: 10px 10px;
+        color: #000;
+      }
+      #submit-btn {
+        cursor: pointer;
+        width: 15%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 15px;
+        background: #d1811b;
+        border: 1px solid #d1811b;
+        border-radius: 4px;
+        color: #fff;
+        display: block;
+      }
+      .card img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+      .main-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-wrapper {
+        padding-top: 30px;
+      }
+      .card {
+        text-align: center;
+        color: darkgrey;
+        border: 1px solid #fff18c;
+        padding: 30px;
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+      .card:hover {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transition: 0.5s;
+      }
+      .card h2 {
+        color: #fffa0e;
+        padding-top: 12px;
+        font-size: 18px;
+      }
+      .card h3 {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 0px;
+      }
+      .card h4 {
+        font-size: 15px;
+        font-weight: 500;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="form-wrapper">
+          <h1>Enter Employee Information</h1>
+          <form action="" id="card-form">
+            <input type="text" placeholder="Image URL" class="form-inputs" />
+            <input type="text" placeholder="Emp Name" class="form-inputs" />
+            <input type="text" placeholder="Emp ID" class="form-inputs" />
+            <input
+              type="number"
+              placeholder="Contact Number"
+              class="form-inputs"
+            />
+            <input type="email" placeholder="Email ID" class="form-inputs" />
+            <input type="submit" id="submit-btn" value="Create Card" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let form = document.querySelector("form");
+
+      let inputs = document.querySelectorAll(".form-inputs");
+
+      let container = document.querySelector(".container");
+      let mainCardBox = document.createElement("div");
+      mainCardBox.classList.add("main-wrapper");
+      container.appendChild(mainCardBox);
+
+      console.log(inputs);
+
+      let controlSubmit = (dets) => {
+        dets.preventDefault();
+        console.log(dets);
+
+        let cardWrapper = document.createElement("div");
+        cardWrapper.classList.add("card-wrapper");
+
+        let card = document.createElement("div");
+        card.classList.add("card");
+
+        let profile = document.createElement("div");
+        profile.classList.add("profile");
+
+        let img = document.createElement("img");
+        img.setAttribute("src", inputs[0].value);
+        // console.log(inputs[0].value);
+
+        let h2 = document.createElement("h2");
+        h2.textContent = inputs[1].value;
+
+        let h3 = document.createElement("h3");
+        h3.textContent = inputs[2].value;
+
+        let h4 = document.createElement("h4");
+        h4.textContent = inputs[3].value;
+
+        let h5 = document.createElement("h5");
+        h5.textContent = inputs[4].value;
+
+        profile.appendChild(img);
+        card.appendChild(profile);
+        card.appendChild(h2);
+        card.appendChild(h3);
+        card.appendChild(h4);
+        card.appendChild(h5);
+
+        cardWrapper.appendChild(card);
+        mainCardBox.appendChild(cardWrapper);
+
+        inputs.forEach(function(e){
+            e.value = "";
+        })
+      };
+
+      form.addEventListener("submit", controlSubmit);
+    </script>
+  </body>
+</html>
