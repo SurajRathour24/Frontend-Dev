@@ -12,11 +12,11 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
         body{
-            height: 100vh;
-            width: 100%;
-            display: flex;
+            /* height: 100vh;
+            width: 100%; */
+            /* display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center; */
             background-color: #222;
         }
         .container{
@@ -27,7 +27,8 @@
             width: 200px;
             border-radius: 100%;
             background-color: antiquewhite;
-            transition: .5s;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1);
+            position: absolute;
         }
     </style>
 </head>
@@ -41,11 +42,28 @@
     <script>
         let circle = document.querySelector('.circle');
 
-        let mouseMove = (mouse) => {
-            circle.style.width = '400px';
-            circle.style.backgroundColor = 'yellow';
+        // let mouseMove = (mouse) => {
+        //     circle.style.width = '400px';
+        //     circle.style.backgroundColor = 'yellow';
+        // }
+        // circle.addEventListener('mouseover', mouseMove);
+
+        // function mouseOut (mouse){
+        //     console.log(mouse);
+        //     circle.style.width = '200px';
+        //     circle.style.backgroundColor = 'antiquewhite';
+
+        // }
+        // circle.addEventListener('mouseout', mouseOut)
+
+
+        let mouseAction = (evnt)=>{
+            circle.style.top = evnt.clientY + 'px';
+            circle.style.left = evnt.clientX + 'px';
+            // console.log(evnt.clientX);
+            // console.log(evnt.clientY);
         }
-        circle.addEventListener('mouseover', mouseMove);
+        window.addEventListener('mousemove', mouseAction)
     </script>
 </body>
 </html>

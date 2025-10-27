@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyup Example</title>
+</head>
+<body>
+  <input type="text" id="username" placeholder="Type something..." />
+  <p id="display"></p>
+
+  <script>
+    let inputBox = document.querySelector("#username");
+    let display = document.querySelector("#display");
+
+    inputBox.addEventListener("keyup", function(event) {
+      display.textContent = "You typed: " + inputBox.value;
+      console.log("Key released:", event.key);
+    });
+  </script>
+</body>
+</html>
