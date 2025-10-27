@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+        }
+        .container{
+            color: beige;
+        }
+        .circle{
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            background-color: antiquewhite;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+        </div>
+    </div>
+    
+
+    <script>
+        let circle = document.querySelector('.circle');
+
+        let mouseMove = (mouse) => {
+            circle.style.width = '400px';
+            circle.style.backgroundColor = 'yellow';
+        }
+        circle.addEventListener('mouseover', mouseMove);
+    </script>
+</body>
+</html>
