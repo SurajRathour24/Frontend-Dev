@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist</title>
+    <style>
+        * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+      }
+      .container {
+        color: beige;
+      }
+      .test{
+        text-decoration: line-through;
+        color: #fff;
+      }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <ul>
+        <li>KTM</li>
+        <li>Royal Enfield</li>
+        <li>Pulsar</li>
+        <li>Hero</li>
+        <li>TVS</li>
+    </ul>
+    </div>
+
+    <script>
+        let ul = document.querySelector('ul');
+
+        ul.addEventListener('click', function(dets){
+            // console.log(dets.target);
+            let dt = dets.target
+            dt.classList.toggle('test');
+// console.log(dt);
+        })
+        
+
+       
+    </script>
+
+</body>
+</html>

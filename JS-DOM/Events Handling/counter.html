@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>counter</title>
     <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        body{
-           height: 100vh;
-            width: 100%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #222;
-        }
-        .container{
-            color: beige;
-        }
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+      }
+      .container {
+        color: beige;
+      }
+      input{
+        padding: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="counter-box" placeholder="Type something..." autocomplete="false"/>
+      <h3>Number of Characters left: <span>0</span></h3>
+    </div>
 
-    <input type="text" name="" id="content-box" placeholder="Enter You Text">
-    <h3>Number of Characters: <span>0</span> </h3>
-    
-</body>
+    <script>
+      let inp = document.querySelector("#counter-box");
+
+      let span = document.querySelector('span');
+
+      function counter (event){
+        console.log(inp.value.length);
+        let val = 22 - inp.value.length;
+        if (val >= 0){
+            span.textContent = val;
+            span.style.color = 'green'; 
+        }
+        else{
+            span.textContent = val;
+            span.style.color = 'red'; 
+        }
+
+      }
+      inp.addEventListener('input', counter)
+    </script>
+  </body>
 </html>
