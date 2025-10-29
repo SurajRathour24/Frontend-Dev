@@ -19,14 +19,14 @@
 
       /* Form Container */
       .form-container {
-    background: #2e2e2e;
-    padding: 20px 60px;
-    border-radius: 16px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    max-width: 450px;
-    transition: 0.3s ease;
-}
+        background: #2e2e2e;
+        padding: 20px 60px;
+        border-radius: 16px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 450px;
+        transition: 0.3s ease;
+      }
 
       .form-container:hover {
         transform: scale(1.01);
@@ -99,14 +99,21 @@
         box-shadow: 0 0 10px rgba(0, 173, 181, 0.4);
       }
       .two-col {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 60px;
-    align-items: center;
-}
-.form-msg{
-    display: none;
-}
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 60px;
+        align-items: center;
+      }
+      .form-msg {
+        display: none;
+      }
+      .small-error{
+        color: #f00;
+        font-size: 12px;
+        padding-top: 10px;
+        transition: .2s;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -117,30 +124,37 @@
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Enter your name" />
+            <div class="small-error">Please end valid username</div>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="Enter your email" />
+            <div class="small-error">Please end valid email</div>
           </div>
         </div>
 
-         <div class="two-col">
-             <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" placeholder="Enter your phone number" />
-        </div>
+        <div class="two-col">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+            <div class="small-error">Please end valid phone number</div>
+          </div>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Create a password"
-          />
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create a password"
+            />
+            <div class="small-error">Please end valid password</div>
+          </div>
         </div>
-         </div>
-       
 
         <div class="form-group">
           <label for="select">Select Option</label>
@@ -159,22 +173,51 @@
 
         <button type="submit">Submit</button>
 
-        <div class="form-msg" style="text-align: center; padding-top: 10px; color: green;">
-            Form Submitted Successfully
+        <div
+          class="form-msg"
+          style="text-align: center; padding-top: 10px; color: green"
+        >
+          Form Submitted Successfully
         </div>
       </form>
     </div>
 
-
-
     <script>
-        let form = document.querySelector('#userForm');
+      let form = document.querySelector("#userForm");
+      let userName = document.querySelector('#name');
+      let password = document.querySelector('#password');
+      let phone = document.querySelector('#phone')
+      let select = document.querySelector('select');
+      let error = document.querySelectorAll('.small-error')
 
-        let validateForm = (event) =>{
-            event.preventDefault();
-            console.log(event);
+      console.log(error);
+
+      let validateForm = (event) => {
+        event.preventDefault();
+        let usernameRegex = /^(?![_.])[a-zA-Z0-9._]{3,20}(?<![_.])$/;
+        let userAns = usernameRegex.test(userName.value);
+
+if (!userAns){
+          error[0].style.display = 'initial';
         }
-        form.addEventListener('submit', validateForm);
+        else{
+          error[0].style.display = 'none'                            ;
+        }
+
+
+        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let emailAns = emailRegex.test(email.value);   
+        
+
+        if (!emailAns){
+          error[1].style.display = 'initial';
+        }
+        else{
+          error[1].style.display = 'none'                            ;
+        }
+        // console.log(emailRegex);
+      };
+      form.addEventListener("submit", validateForm);
     </script>
   </body>
 </html>
