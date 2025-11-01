@@ -27,7 +27,16 @@
         // LocalStorage , sessionStorage, cookies;
 
         localStorage.setItem("Name", "Suraj");
+        let storeValue = localStorage.getItem('Name');
+        console.log(storeValue);
         
+        localStorage.setItem('Name', 'Bedi');
+        let value2 = localStorage.getItem('Name');
+        console.log(value2);
+
+        // localStorage.removeItem('Name');
+        localStorage.clear();
+
     </script>
 </body>
 </html>
