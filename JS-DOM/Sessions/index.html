@@ -25,9 +25,20 @@
     <script>
         // localStorage
 
-        localStorage.setItem('Age', '25');
-        let val = localStorage.getItem('Age');
-        console.log(val);
+        // localStorage.setItem('Age', '25');
+        // let val = localStorage.getItem('Age');
+        // console.log(val);
+
+
+        // cookies 
+
+        // document.cookie = 'email: surajrathaur@gmail.com';
+        localStorage.clear();
+
+        localStorage.setItem = ('friends', JSON.stringify(['Harsh', 'Akash', 'Pankaj']));
+
+        let friendList = localStorage.getItem('friends');
+        JSON.parse(['Harsh', 'Akash', 'Pankaj']);
     </script>
 </body>
 </html>
