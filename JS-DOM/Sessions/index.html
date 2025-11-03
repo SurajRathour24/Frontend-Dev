@@ -33,12 +33,16 @@
         // cookies 
 
         // document.cookie = 'email: surajrathaur@gmail.com';
-        localStorage.clear();
+        // localStorage.clear();
 
-        localStorage.setItem = ('friends', JSON.stringify(['Harsh', 'Akash', 'Pankaj']));
+        localStorage.setItem('fruits', JSON.stringify(['Apple', 'Banana', 'Guava']));
 
-        let friendList = localStorage.getItem('friends');
-        JSON.parse(['Harsh', 'Akash', 'Pankaj']);
+        let ans = localStorage.getItem('fruits');
+        // console.log(ans, typeof ans);
+        let fruits = JSON.parse(ans);
+        console.log(fruits, typeof fruits);
+        // JSON.parse(ans);
+
     </script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+        background: #222;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Test</h1>
+
+        <script>
+            // let ck = document.cookie = 'email:user@gmail.com';
+            // console.log(ck);
+
+            localStorage.setItem('Users', JSON.stringify([ 'Deepak' ,'Aman', 'Gourav', 'Naveen']));
+            let ans = localStorage.getItem('Users');
+            let parsedData = JSON.parse(ans);
+            console.log(parsedData, typeof parsedData);
+
+
+        </script>
+    </div>
+</body>
+</html>
