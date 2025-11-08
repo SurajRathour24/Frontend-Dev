@@ -1,0 +1,95 @@
+ 
+    /* ---------- Base (Light Theme Default) ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      transition: background-color 0.4s, color 0.4s;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color 0.4s;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .toggle-btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #0078ff;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background-color: #005ad4;
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+      transition: background-color 0.4s;
+    }
+
+    .card {
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background-color 0.4s, box-shadow 0.4s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #ffffff;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.4s;
+    }
+
+    /* ---------- Dark Mode Styles (when body has class "dark") ---------- */
+    body.dark {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    body.dark header {
+      background-color: #1e1e1e;
+      box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+    }
+
+    body.dark .card {
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+    }
+
+    body.dark footer {
+      background-color: #1e1e1e;
+      box-shadow: 0 -2px 5px rgba(255,255,255,0.05);
+    }
+
+    body.dark .toggle-btn {
+      background-color: #ffa31a;
+      color: #000;
+    }
+
+    body.dark .toggle-btn:hover {
+      background-color: #e68a00;
+    }
