@@ -25,11 +25,17 @@
             // let ck = document.cookie = 'email:user@gmail.com';
             // console.log(ck);
 
-            localStorage.setItem('Users', JSON.stringify([ 'Deepak' ,'Aman', 'Gourav', 'Naveen']));
-            let ans = localStorage.getItem('Users');
-            let parsedData = JSON.parse(ans);
-            console.log(parsedData, typeof parsedData);
+            // localStorage.setItem('Users', JSON.stringify([ 'Deepak' ,'Aman', 'Gourav', 'Naveen']));
+            // let ans = localStorage.getItem('Users');
+            // let parsedData = JSON.parse(ans);
+            // console.log(parsedData, typeof parsedData);
 
+
+             sessionStorage.setItem('treks', JSON.stringify(['Solan','Dharmshala', 'Manali', 'Leh' ]));
+
+            let storeVal = sessionStorage.getItem('treks');
+            let ans = JSON.parse(storeVal);
+            console.log(ans, typeof ans);
 
         </script>
     </div>
