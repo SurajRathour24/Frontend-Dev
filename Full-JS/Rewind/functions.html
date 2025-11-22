@@ -9,13 +9,23 @@
     <h1>Returns</h1>
 
     <script>
-        let func = function(val){
-            return val;
+        // let func = function(val){
+        //     return val;
+        // }
+
+
+        // let ans = func(24);
+        // console.log(ans);
+
+        // first class function 
+
+        let func = (add)=>{
+            add()
         }
 
-
-        let ans = func(24);
-        console.log(ans);
+        func(function(a, b){
+            console.log("Hey")
+        })
     </script>
 </body>
 </html> 
