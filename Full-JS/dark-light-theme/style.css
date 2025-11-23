@@ -1,0 +1,71 @@
+/* CSS VARIABLES */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --nav-bg: #f4f4f4;
+  --btn-bg: #222222;
+  --btn-text: #ffffff;
+}
+
+/* DARK THEME */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --nav-bg: #1f1f1f;
+  --btn-bg: #f0f0f0;
+  --btn-text: #121212;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  transition: 0.3s ease;
+}
+
+/* NAVBAR */
+nav {
+  background: var(--nav-bg);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 40px;
+  text-align: center;
+}
