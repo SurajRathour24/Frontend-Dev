@@ -25,43 +25,7 @@
       <p>Click the button to change theme. JS will be added by you!</p>
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 
-    <script>
-      let body = document.querySelector("body");
-      let btn = document.querySelector("#themeToggle");
-    //   let currentTheme = window.matchMedia("prefers-color-scheme:dark").matches;
-
-      let themeChange = function () {
-         let current = localStorage.getItem("theme");
-        if (current == "dark") {
-          body.classList.add("light");
-          body.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-        } else {
-          body.classList.add("dark");
-          body.classList.remove("light");
-          localStorage.setItem("theme", "dark");
-        }
-      };
-
-      if (localStorage.getItem("theme")) {
-        document.body.classList.add(localStorage.getItem("theme"));
-      } else {
-        let prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    localStorage.setItem("theme", prefersDark ? "dark" : "light");
-    body.classList.add(prefersDark ? "dark" : "light");
-      }
-
-      //   console.log(currentTheme);
-
-      btn.addEventListener("click", themeChange);
-      //   window
-      //     .matchMedia("prefers-color-scheme: dark")
-      //     .addEventListener("change", function () {
-      //       themeChange();
-      //       console.log("Changed");
-      //     });
-    </script>
   </body>
 </html>
