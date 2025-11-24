@@ -1,6 +1,5 @@
 let body = document.querySelector("body");
 let btn = document.querySelector("#themeToggle");
-//   let currentTheme = window.matchMedia("prefers-color-scheme:dark").matches;
 
 let themeChange = function () {
   let current = localStorage.getItem("theme");
