@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profile Card Layout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app-layout">
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+      <div id="sidebar-inner">
+        <!-- Search -->
+        <form id="search-form" class="fade-up-1">
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search..."
+              aria-label="Search profiles"
+            />
+          </div>
+        </form>
+
+        <!-- Add Card Panel -->
+        <section id="add-card-panel" class="fade-up-2">
+          <div id="add-card-panel-header">Add new profile card</div>
+          <form id="add-card-form">
+            <input
+              type="text" class="form-input" placeholder="Enter profile image URL" id="profile-url" class="form-input-data"
+            />
+            <input
+              type="text" class="form-input" placeholder="Enter name" id="profile-name" class="form-input-data"
+            />
+            <input
+              type="text" class="form-input" placeholder="Enter short bio" id="profile-bio" class="form-input-data"
+            />
+            <button type="submit" id="add-card-btn">Add Card</button>
+          </form>
+        </section>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <div id="card-grid" class="fade-up-3">
+        <!-- Example card – duplicate this article for more cards in the row -->
+        <article class="user-card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Elegant glass with drink"
+          />
+          <div class="user-card-content">
+            <h2 class="user-name">User 123</h2>
+            <p class="user-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quis.
+            </p>
+          </div>
+        </article>
+
+        <!-- Add more cards by copying the block above -->
+      </div>
+    </main>
+  </div>
+
+
+  <!-- <script src="script.js"></script> -->
+<script>
+  console.log("Dynamic Search filter");
+  let formInput = document.querySelectorAll(".form-input-data"); 
+  let addCardbtn = document.querySelector("#add-card-btn");
+  let form = document.querySelector("#user-form");
+
+  let createCard = (evnt) => {
+    evnt.preventDefault();
+    console.log("Form submission prevented!");
+  }
+
+  form.addEventListener("submit", createCard);
+</script>
+</body>
+</html>

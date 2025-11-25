@@ -1,0 +1,287 @@
+ /* ------------ RESET ------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #020202;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: #ffffff;
+    }
+
+    /* ------------ LAYOUT ------------ */
+    #app-layout {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 4rem;
+      padding: 3rem 3vw;
+    }
+
+    /* Sidebar (sticky) */
+    #sidebar {
+      flex: 0 0 340px;
+      position: relative;
+    }
+
+    #sidebar-inner {
+      position: sticky;
+      top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.7rem;
+    }
+
+    /* Main content */
+    #main-content {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    #card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.7rem;
+    }
+
+    /* ------------ ANIMATIONS ------------ */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up-1 {
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out 0.05s forwards;
+    }
+
+    .fade-up-2 {
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out 0.18s forwards;
+    }
+
+    .fade-up-3 {
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out 0.3s forwards;
+    }
+
+    /* ------------ SEARCH BOX ------------ */
+    #search-form {
+      width: 100%;
+    }
+
+    .search-box {
+      width: 100%;
+      background: #101010;
+      border-radius: 999px;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid #222;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: #f5f5f5;
+      font-size: 0.95rem;
+    }
+
+    .search-input::placeholder {
+      color: #777;
+    }
+
+    /* ------------ ADD CARD PANEL ------------ */
+    #add-card-panel {
+      width: 100%;
+      background: radial-gradient(circle at top left, #252525 0, #0a0a0a 45%, #050505 100%);
+      padding: 1.4rem 1.5rem 1.6rem;
+      border-radius: 22px;
+      border: 1px solid #262626;
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
+    }
+
+    #add-card-panel-header {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #d1d1d1;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    #add-card-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.7rem 0.95rem;
+      border-radius: 11px;
+      border: 1px solid #353535;
+      background: #050505;
+      color: #f8f8f8;
+      outline: none;
+      font-size: 0.88rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease,
+        transform 0.15s ease, background 0.15s ease;
+    }
+
+    .form-input::placeholder {
+      color: #777;
+    }
+
+    .form-input:focus {
+      border-color: #f5f5f5;
+      box-shadow: 0 0 0 1px #ffffff20, 0 0 24px rgba(255, 255, 255, 0.15);
+      transform: translateY(-1px);
+      background: #080808;
+    }
+
+    #add-card-btn {
+      margin-top: 0.25rem;
+      padding: 0.75rem 0;
+      border-radius: 999px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff, #d7d7d7);
+      color: #050505;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.9);
+      transition: transform 0.16s ease, box-shadow 0.16s ease,
+        filter 0.16s ease;
+    }
+
+    #add-card-btn:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.95);
+      filter: brightness(1.03);
+    }
+
+    #add-card-btn:active {
+      transform: translateY(1px) scale(0.99);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+    }
+
+    /* ------------ CARD STYLE ------------ */
+    .user-card {
+      position: relative;
+      width: 280px;
+      height: 300px; 
+      border-radius: 34px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
+      isolation: isolate;
+      background: #111;
+      transform-origin: center center;
+      transition: transform 0.26s ease, box-shadow 0.26s ease;
+    }
+
+    .user-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.03);
+      transition: transform 0.35s ease;
+    }
+
+    .user-card::after {
+      content: "";
+      position: absolute;
+      inset: 55% 0 0 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.35) 25%,
+        rgba(0, 0, 0, 0.95) 100%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .user-card-content {
+      position: absolute;
+      left: 1.3rem;
+      right: 1.3rem;
+      bottom: 1.7rem;
+      z-index: 2;
+    }
+
+    .user-name {
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+      font-size: 1.08rem;
+    }
+
+    .user-desc {
+      font-size: 0.86rem;
+      line-height: 1.45;
+      color: #e6e6e6;
+    }
+
+    .user-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 40px 110px rgba(0, 0, 0, 1);
+    }
+
+    .user-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* ------------ RESPONSIVE ------------ */
+    @media (max-width: 960px) {
+      #app-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2.4rem 1.5rem 3rem;
+      }
+
+      #sidebar {
+        width: min(100%, 420px);
+      }
+
+      #sidebar-inner {
+        position: static; /* Disable sticky on small screens */
+      }
+
+      #main-content {
+        width: 100%;
+        justify-content: center;
+      }
+
+      #card-grid {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .user-card {
+        width: min(100%, 320px);
+        height: 420px;
+      }
+    }
