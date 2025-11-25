@@ -27,13 +27,13 @@
           <div id="add-card-panel-header">Add new profile card</div>
           <form id="add-card-form">
             <input
-              type="text" class="form-input" placeholder="Enter profile image URL" id="profile-url" class="form-input-data"
+              type="text" class="form-input" placeholder="Enter profile image URL" id="profile-url"
             />
             <input
-              type="text" class="form-input" placeholder="Enter name" id="profile-name" class="form-input-data"
+              type="text" class="form-input" placeholder="Enter name" id="profile-name"
             />
             <input
-              type="text" class="form-input" placeholder="Enter short bio" id="profile-bio" class="form-input-data"
+              type="text" class="form-input" placeholder="Enter short bio" id="profile-bio"
             />
             <button type="submit" id="add-card-btn">Add Card</button>
           </form>
@@ -57,26 +57,70 @@
             </p>
           </div>
         </article>
-
-        <!-- Add more cards by copying the block above -->
       </div>
     </main>
   </div>
 
-
-  <!-- <script src="script.js"></script> -->
 <script>
-  console.log("Dynamic Search filter");
-  let formInput = document.querySelectorAll(".form-input-data"); 
+  let formInput = document.querySelectorAll(".form-input"); 
   let addCardbtn = document.querySelector("#add-card-btn");
-  let form = document.querySelector("#user-form");
+  let form = document.querySelector("#add-card-form");
+  let gridWrapper= document.querySelector("#card-grid");
+  let search = document.querySelector('.search-input');
+  // let profileName = formInput[1].value;
+ 
 
   let createCard = (evnt) => {
     evnt.preventDefault();
-    console.log("Form submission prevented!");
+    let card = document.createElement("article");
+    card.classList.add("user-card");
+
+    let profileURL = formInput[0].value;
+    let profileName = formInput[1].value;
+    let profileBio = formInput[2].value;
+
+    console.log(profileURL);
+    console.log(profileName);
+    console.log(profileBio);
+
+    let userProfile = document.createElement("img");
+    userProfile.setAttribute("src", profileURL);
+
+    let userDatabox = document.createElement("div");
+    userDatabox.classList.add("user-card-content");
+
+    let userName = document.createElement("h2");
+    userName.classList.add('user-name');
+    userName.innerText = profileName;
+
+    let userDesc = document.createElement("p");
+    userDesc.classList.add("user-desc"); 
+    userDesc.innerText = profileBio;
+
+    userDatabox.appendChild(userName);
+    userDatabox.appendChild(userDesc);
+    
+    console.log(userDatabox);
+
+    card.appendChild(userProfile);
+    card.appendChild(userDatabox);
+
+    console.log(card);
+    gridWrapper.appendChild(card);
+
+    form.reset();
+
   }
 
   form.addEventListener("submit", createCard);
+
+
+  let userFilter= (e) =>{
+    console.log(search.value);
+  };
+
+  search.addEventListener("input", userFilter);
+
 </script>
 </body>
 </html>
