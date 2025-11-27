@@ -110,7 +110,7 @@
         },
         {
           name: "Sia Mehta",
-          pic: "https://images.unsplash.com/photo-1582610285985-a42d9193f2fd",
+          pic: "https://images.pexels.com/photos/34927841/pexels-photo-34927841.jpeg",
           bio: "Loves exploring new places ✈ | sunset person 🌅",
         },
       ];
@@ -120,58 +120,95 @@
       let form = document.querySelector("#add-card-form");
       let gridWrapper = document.querySelector("#card-grid");
       let search = document.querySelector(".search-input");
+      let card = document.querySelector("#card-grid");
       // let profileName = formInput[1].value;
 
-      let createCard = (evnt) => {
-        evnt.preventDefault();
+      let showUser = (user) => {
+        user.forEach(function (e) {
+          let card = document.createElement("article");
+          card.classList.add("user-card");
 
-        // These will use when you want a form through which you want to add card
-        // let profileURL = formInput[0].value;
-        // let profileName = formInput[1].value;
-        // let profileBio = formInput[2].value;
+          let userProfile = document.createElement("img");
+          userProfile.setAttribute("src", `${e.pic}`);
 
-        let card = document.createElement("article");
-        card.classList.add("user-card");
+          let userDatabox = document.createElement("div");
+          userDatabox.classList.add("user-card-content");
 
-        console.log(profileURL);
-        console.log(profileName);
-        console.log(profileBio);
+          let userName = document.createElement("h2");
+          userName.classList.add("user-name");
+          userName.innerText = e.name;
 
-        let userProfile = document.createElement("img");
-        userProfile.setAttribute("src", profileURL);
+          let userDesc = document.createElement("p");
+          userDesc.classList.add("user-desc");
+          userDesc.innerText = e.bio;
 
-        let userDatabox = document.createElement("div");
-        userDatabox.classList.add("user-card-content");
+          userDatabox.appendChild(userName);
+          userDatabox.appendChild(userDesc);
 
-        let userName = document.createElement("h2");
-        userName.classList.add("user-name");
-        userName.innerText = profileName;
+          console.log(userDatabox);
 
-        let userDesc = document.createElement("p");
-        userDesc.classList.add("user-desc");
-        userDesc.innerText = profileBio;
+          card.appendChild(userProfile);
+          card.appendChild(userDatabox);
 
-        userDatabox.appendChild(userName);
-        userDatabox.appendChild(userDesc);
+          console.log(card);
 
-        console.log(userDatabox);
-
-        card.appendChild(userProfile);
-        card.appendChild(userDatabox);
-
-        console.log(card);
-        gridWrapper.appendChild(card);
-
-        form.reset();
+          gridWrapper.appendChild(card);
+        });
       };
 
-      form.addEventListener("submit", createCard);
+      showUser(users);
 
-      let userFilter = (e) => {
-        console.log(search.value);
-      };
+      search.addEventListener("input", function(val){
+        let filteredUsers = users.filter((usr)=>{
+          return usr.name.startsWith(search.value);
+        });
+        card.innerHTML = "";
+        showUser(filteredUsers);
+      });
+      // let createCard = (evnt) => {
+      //   evnt.preventDefault();
 
-      search.addEventListener("input", userFilter);
+      // These will use when you want a form through which you want to add card
+      // let profileURL = formInput[0].value;
+      // let profileName = formInput[1].value;
+      // let profileBio = formInput[2].value;
+
+      // let card = document.createElement("article");
+      // card.classList.add("user-card");
+
+      // console.log(profileURL);
+      // console.log(profileName);
+      // console.log(profileBio);
+
+      // let userProfile = document.createElement("img");
+      // userProfile.setAttribute("src", profileURL);
+
+      // let userDatabox = document.createElement("div");
+      // userDatabox.classList.add("user-card-content");
+
+      // let userName = document.createElement("h2");
+      // userName.classList.add("user-name");
+      // userName.innerText = profileName;
+
+      // let userDesc = document.createElement("p");
+      // userDesc.classList.add("user-desc");
+      // userDesc.innerText = profileBio;
+
+      // userDatabox.appendChild(userName);
+      // userDatabox.appendChild(userDesc);
+
+      // console.log(userDatabox);
+
+      // card.appendChild(userProfile);
+      // card.appendChild(userDatabox);
+
+      // console.log(card);
+      // gridWrapper.appendChild(card);
+
+      //   form.reset();
+      // };
+
+      // form.addEventListener("submit", createCard);
     </script>
   </body>
 </html>
