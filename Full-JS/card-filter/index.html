@@ -163,7 +163,42 @@
           return usr.name.startsWith(search.value);
         });
         card.innerHTML = "";
-        showUser(filteredUsers);
+        if (Object.keys(filteredUsers).length > 0){
+          showUser(filteredUsers);
+        }
+        else{
+          console.log("No User Found");
+          let card = document.createElement("article");
+          card.classList.add("user-card");
+
+          let userProfile = document.createElement("img");
+          userProfile.setAttribute("src", "https://images.pexels.com/photos/4065183/pexels-photo-4065183.jpeg");
+
+          let userDatabox = document.createElement("div");
+          userDatabox.classList.add("user-card-content");
+          userDatabox.classList.add("not-found");
+
+          let userName = document.createElement("h2");
+          userName.classList.add("user-name");
+          userName.innerText = "User Not Found";
+
+          let userDesc = document.createElement("p");
+          userDesc.classList.add("user-desc");
+          userDesc.innerText = "Nobody exist with this name";
+
+          userDatabox.appendChild(userName);
+          userDatabox.appendChild(userDesc);
+
+          console.log(userDatabox);
+
+          card.appendChild(userProfile);
+          card.appendChild(userDatabox);
+
+          console.log(card);
+
+          gridWrapper.appendChild(card);
+        }
+        
       });
       // let createCard = (evnt) => {
       //   evnt.preventDefault();
