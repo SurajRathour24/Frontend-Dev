@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Advance Part -3 </title>
+    <style>
+        *{
+            background-color: #1d1d1d;
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Advance JS - Encapsulation
+    </h1>
+    <button>Count on Click</button>
+    <p>Counter Value <span id="counter-val" style="color: brown;">0</span></p>
+
+    <script>
+        console.log('Advance JS course');
+
+
+        let clickTracker = (tracker) =>{
+            let click = 0;
+            let button = document.querySelector('button');
+            let counter = document.querySelector("#counter-val");
+            return function (){
+             button.addEventListener("click", function(){
+                click++;
+                console.log(click);
+                counter.innerText = click;
+             })   
+            }
+        }
+
+        let fnc = clickTracker();
+        fnc();
+    </script>
+</body>
+</html>
