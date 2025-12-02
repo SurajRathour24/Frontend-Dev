@@ -3,7 +3,9 @@ let profile = document.querySelector("#photo");
 let userName = document.querySelector("#name");
 let role = document.querySelector("#role");
 let bio = document.querySelector("#bio");
-
+ let removeUser = document.createElement("button");
+  removeUser.innerText = "Remove (-)"
+removeUser.className = "px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-blue-500/40 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-200";
 
 
 let userManagementBoard = {
@@ -26,9 +28,11 @@ let userManagementBoard = {
         this.renderUser();
     },
     renderUser : function(){
+         const container = document.querySelector('section[aria-label="Team members"]');
+          container.innerHTML = "";
         this.user.forEach(function(user){
             // Select the section container
-  const container = document.querySelector('section[aria-label="Team members"]');
+ 
 
   // Create article card
   const article = document.createElement("article");
@@ -63,17 +67,24 @@ let userManagementBoard = {
   desc.className = "mt-3 text-sm leading-relaxed text-slate-300";
   desc.textContent = user.bio;
 
+
+ 
+
   // Append children to article
   article.appendChild(imgWrapper);
   article.appendChild(name);
   article.appendChild(role);
   article.appendChild(desc);
+  article.appendChild(removeUser);
 
   // Append article to the section container
+
   container.appendChild(article);
         })
     },
-    removeUser : function(){},
+    removeUser : function(){
+        removeUser.addEventListener('click', function(){})
+    },
 }
 
 userManagementBoard.init();
