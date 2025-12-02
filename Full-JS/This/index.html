@@ -80,6 +80,31 @@
         // This in event: on which event firect contain that value
         // This in class: blank obj with new keyword
         console.log(cls);
+
+
+
+
+
+
+
+
+
+
+
+        ///////////////// Call apply bind
+
+        // When we want that function "this" shiould have custom value itead of window then we can use call
+
+        let obj1 = {
+          name: 'Shubham', 
+          rollNo : 101
+        }
+
+        function abc (){
+          console.log(this);
+        }
+
+        abc.call(obj1);
     </script>
   </body>
 </html>
