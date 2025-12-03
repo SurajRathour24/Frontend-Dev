@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dark Boilerplate — Tailwind</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: small custom styles -->
+  <style>
+    /* Keep subtle smoothing for text on dark backgrounds */
+    html, body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center p-6">
+
+  <!-- Centered container -->
+  <main class="w-full max-w-2xl mx-auto">
+    <div class="bg-gray-800/60 border border-gray-700 rounded-3xl shadow-2xl p-8 backdrop-blur-sm">
+      <header class="text-center">
+        <h1 class="text-3xl sm:text-4xl font-semibold mb-2">Dark Boilerplate</h1>
+      </header>
+
+      <section id="content" class="text-center py-3">
+        <h2 class="text-2xl">Content Here</h2>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    console.log('OOPS IN JS')
+
+    function factory(){
+        this.clothType = 'T-Shirt',
+        this.brand = 'Jockey',
+        this.cost = 1100,
+        this.type = 'Adult'
+        this.color = function(){
+            let container = document.querySelector("#content")
+            let themeColor = document.createElement('p');
+            themeColor.innerText = "Hey There i am colored";
+            themeColor.style.color = color;
+            themeColor.appendChild();
+        }
+    }
+    let item = new factory();
+    console.log(item)
+  </script>
+</body>
+</html>
