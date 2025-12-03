@@ -36,21 +36,22 @@
   <script>
     console.log('OOPS IN JS')
 
-    function factory(){
+    function factory(clothType, brand, cost, type, color){
         this.clothType = 'T-Shirt',
         this.brand = 'Jockey',
         this.cost = 1100,
         this.type = 'Adult'
-        this.color = function(){
+        this.content = function(customText){
             let container = document.querySelector("#content")
-            let themeColor = document.createElement('p');
-            themeColor.innerText = "Hey There i am colored";
-            themeColor.style.color = color;
-            themeColor.appendChild();
+            let p = document.createElement('p');
+            p.innerText = customText;
+            p.style.color = color;
+            container.appendChild(p);
         }
     }
-    let item = new factory();
-    console.log(item)
+    let brand1 = new factory("Jean", 'Adidas', 1670, 'Adult', 'yellow');
+    brand1.content("Hey there I am dynamically types here.....");
+
   </script>
 </body>
 </html>
