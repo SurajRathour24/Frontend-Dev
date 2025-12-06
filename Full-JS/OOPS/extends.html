@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dark Boilerplate — Tailwind</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Optional: small custom styles -->
+    <style>
+      /* Keep subtle smoothing for text on dark backgrounds */
+      html,
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center p-6"
+  >
+  <h1>OOPS - Extend Concept</h1>
+
+ <script>
+    console.log('Let\'s start Extends');
+
+
+    class User{
+        constructor(name, address, email, phone, role){
+            this.haed1 = document.querySelector('h1');
+            this.name = name;
+            this.address = address;
+            this.email = email;
+            this.phone = phone;
+            this.role = role;
+        }
+
+        write(postHeading, postContent){
+            let blogHeading = document.createElement("h2");
+            let content = document.createElement("p");
+            blogHeading.innerText = postHeading;
+            content.innerText = postContent;
+            let bond = this.haed1 
+           bond.appendChild(blogHeading);
+bond.appendChild(content);
+        }
+    }
+
+    let userItem = new User();
+    userItem.write('This is heaidng', 'This is your post content');
+
+ </script>
+</body>
+</html>
