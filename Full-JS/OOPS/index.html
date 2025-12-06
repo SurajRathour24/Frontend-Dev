@@ -36,23 +36,43 @@
   <script>
     console.log('OOPS IN JS')
 
-    function factory(clothType, brand, cost, type, color){
-        this.clothType = 'T-Shirt',
-        this.brand = 'Jockey',
-        this.cost = 1100,
-        this.type = 'Adult'
-        this.content = function(customText){
-            let container = document.querySelector("#content")
-            let p = document.createElement('p');
-            p.innerText = customText;
-            p.style.color = color;
-            container.appendChild(p);
-        }
-    }
-    factory.prototype.buildBy = 'Engineer';
-    let brand1 = new factory("Jean", 'Adidas', 1670, 'Adult', 'yellow');
-    brand1.content("Hey there I am dynamically types here.....");
- let brand2 = new factory("Jean", 'Adidas', 1670, 'Adult', 'red');
+//     function factory(clothType, brand, cost, type, color){
+//         this.clothType = 'T-Shirt',
+//         this.brand = 'Jockey',
+//         this.cost = 1100,
+//         this.type = 'Adult'
+//         this.content = function(customText){
+//             let container = document.querySelector("#content")
+//             let p = document.createElement('p');
+//             p.innerText = customText;
+//             p.style.color = color;
+//             container.appendChild(p);
+//         }
+//     }
+//     factory.prototype.buildBy = 'Engineer';
+//     let brand1 = new factory("Jean", 'Adidas', 1670, 'Adult', 'yellow');
+//     brand1.content("Hey there I am dynamically types here.....");
+//  let brand2 = new factory("Jean", 'Adidas', 1670, 'Adult', 'red');
+  
+  
+// Class 
+  
+class MyClass{
+  constructor(name, ID, profile){
+    let myName = 'developer';
+  }
+
+  attendece(attendence){
+    console.log(`I am present and reached at ${attendence}`);
+  }
+
+  absent(){
+    console.log('Absent');
+  }
+}
+
+  let emp = new MyClass();
+  emp.attendece('10:30');
   </script>
 </body>
 </html>
