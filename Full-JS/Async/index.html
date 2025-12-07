@@ -9,36 +9,46 @@
     <h1>Heading</h1>
 
     <script>
-        console.log('Test')
-        console.log('Test2')
-        console.log('Test3')
-        setTimeout(()=>{
-            console.log('Test4')
-        }, 4000);
-        console.log('Test5');
+        // console.log('Test')
+        // console.log('Test2')
+        // console.log('Test3')
+        // setTimeout(()=>{
+        //     console.log('Test4')
+        // }, 4000);
+        // console.log('Test5');
 
 
         // Code which is running line by line called SYNC code
 
 // EXample 
-        console.log('Test1');
-        console.log('Test2');
-        console.log('Test3');
-        console.log('Test4');
+        // console.log('Test1');
+        // console.log('Test2');
+        // console.log('Test3');
+        // console.log('Test4');
 
 
 
         // Code which waits for his turne to run call ASYNC
 
         // Example 
-            console.log('dev1');
-            console.log('dev2');
-            console.log('dev3');
-            setTimeout(() => {
-                console.log('dev4')
-            }, 5000);
-            console.log('dev5');
+            // console.log('dev1');
+            // console.log('dev2');
+            // console.log('dev3');
+            // setTimeout(() => {
+            //     console.log('dev4')
+            // }, 5000);
+            // console.log('dev5');
 
+
+            function abc(num){
+                let randomNum = Math.floor( Math.random() * 5000);
+                console.log("Delay will be:", randomNum, "ms");
+                setTimeout(()=>{
+                    console.log(num);
+                },randomNum);
+            }
+
+            abc(13)
     </script>
 </body>
 </html>
