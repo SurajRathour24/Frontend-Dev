@@ -9,7 +9,17 @@
     <h1>This is Heading</h1>
 
     <script>
-        
+        function userProfile (userName, cb){
+            console.log('Fetching Profile...');
+            setTimeout(() =>{
+                console.log(`Profile fetched of ${userName}`);
+                cb(${profileData})
+            }, 3000)
+        }
+
+        userProfile('Shubham', function(profileData){
+            
+        })
     </script>
 </body>
 </html>
