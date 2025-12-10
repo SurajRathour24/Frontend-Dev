@@ -16,6 +16,43 @@
   </head>
 
   <body class="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
-    <h1 id="main-heading" class="text-4xl md:text-5xl font-extrabold">Simple Heading on Body</h1>
+    <h1 id="main-heading" class="text-4xl md:text-5xl font-extrabold">Async Await in JS</h1>
+
+
+
+    <script>
+        function FetchProfile(username, pf){
+            console.log('Fetching user Profile...');
+            setTimeout(()=>{
+               pf({_ID:24, username, age:25, email:'dev@test.com'});
+            }, 1000);
+        }
+
+        function showAllPosts(id, cb){
+            console.log('Fetching all Posts...');
+            setTimeout(()=>{
+                cb({_ID:id, posts:['Post1', 'post2', 'post3', 'post4']});
+            }, 3000);
+        }
+
+        function savedPosts(id, svdPost){
+            console.log('Fetching Saved Posts...');
+            setTimeout(()=>{
+                svdPost({_ID:id, savedpost:['SV1', 'SV2', 'SV3']});
+            }, 6000)
+        }
+
+        FetchProfile('Krishan',  function(profileData){
+            console.log(profileData);
+
+            showAllPosts(profileData._ID, function(posts){
+                console.log(posts);
+            });
+
+            savedPosts(profileData._ID, function(saved){
+                console.log(saved);
+            })
+        })
+    </script>
   </body>
 </html>
