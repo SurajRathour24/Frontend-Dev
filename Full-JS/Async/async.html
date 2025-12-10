@@ -1,25 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is Heading</h1>
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dark Theme Tailwind Boilerplate</title>
 
+    <!-- Tailwind CDN (script) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function userProfile (userName, cb){
-            console.log('Fetching Profile...');
-            setTimeout(() =>{
-                console.log(`Profile fetched of ${userName}`);
-                cb(${profileData})
-            }, 3000)
-        }
-
-        userProfile('Shubham', function(profileData){
-            
-        })
+      /* Enable class-based dark mode */
+      tailwind.config = { darkMode: 'class' }
     </script>
-</body>
+
+    <style>html,body{height:100%;}</style>
+  </head>
+
+  <body class="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
+    <h1 id="main-heading" class="text-4xl md:text-5xl font-extrabold">Simple Heading on Body</h1>
+  </body>
 </html>
