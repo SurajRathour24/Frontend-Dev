@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dark Theme Tailwind Boilerplate</title>
+
+    <!-- Tailwind CDN (script) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      /* Enable class-based dark mode */
+      tailwind.config = { darkMode: 'class' }
+    </script>
+
+    <style>html,body{height:100%;}</style>
+  </head>
+
+  <body class="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
+    <h1 id="main-heading" class="text-4xl md:text-5xl font-extrabold">API in JS</h1>
+
+
+    <script>
+        fetch('https://randomuser.me/api/?results=50')
+        .then(function(rawData){
+            return rawData.json();
+        })
+        .then(function(data){
+            console.log(data.results);
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+    </script>
+    </body>
+    </html>
