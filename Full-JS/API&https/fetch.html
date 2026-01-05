@@ -19,17 +19,24 @@
     <h1 id="main-heading" class="text-4xl md:text-5xl font-extrabold">API in JS</h1>
 
 
+   
     <script>
-        fetch('https://randomuser.me/api/?results=50')
+        // Fetching API
+        fetch('https://randomuser.me/api/?results=5')
         .then(function(rawData){
-            return rawData.json();
+            return rawData.json()
         })
         .then(function(data){
-            console.log(data.results);
+            // console.log(data.results[0].name.first)
+            data.results.forEach(function(user){
+                console.log(user);
+            })
         })
         .catch(function(err){
             console.log(err);
         })
+
+ 
     </script>
     </body>
     </html>

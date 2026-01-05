@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-gray-900 to-black min-h-screen p-6 text-white"
+  >
+    <!-- Refresh Button -->
+    <div class="max-w-7xl mx-auto mb-6">
+      <button
+        class="primary-btn group flex items-center gap-2 bg-indigo-600/20 border border-indigo-500/30 px-5 py-2.5 rounded-full text-indigo-400 font-medium hover:bg-indigo-600 hover:text-white transition shadow-lg"
+      >
+        <!-- Refresh Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 group-hover:rotate-180 transition-transform duration-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 4v6h6M20 20v-6h-6M5 19a9 9 0 0014-7M19 5a9 9 0 00-14 7"
+          />
+        </svg>
+
+        Refresh Now
+      </button>
+    </div>
+
+    <!-- Cards Wrapper -->
+    <div
+      id="cardContainer"
+      class="max-w-7xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
+    >
+      <!-- User Card -->
+      <!-- <div
+        class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            class="w-16 h-16 rounded-full border-2 border-indigo-500"
+          />
+
+          <div>
+            <h2 class="text-lg font-semibold">Rahul Sharma</h2>
+            <p class="text-sm text-gray-400">rahul@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="my-4 border-t border-white/10"></div>
+
+        <div class="space-y-2 text-sm">
+          <p class="flex justify-between">
+            <span class="text-gray-400">Gender</span>
+            <span>Male</span>
+          </p>
+          <p class="flex justify-between">
+            <span class="text-gray-400">User ID</span>
+            <span>#USR1023</span>
+          </p>
+          <p class="flex justify-between">
+            <span class="text-gray-400">DOJ</span>
+            <span>12 Aug 2024</span>
+          </p>
+        </div>
+      </div> -->
+    </div>
+
+    <script>
+      function userProfiles() {
+        
+        fetch("https://randomuser.me/api/?results=6")
+          .then((rawData) => {
+            return rawData.json();
+          })
+          .then((data) => {
+             let container = document.getElementById("cardContainer");
+         container.innerHTML = "";
+            data.results.forEach((user)=>{
+                // console.log(user)
+                
+
+            /* Card */
+            const card = document.createElement("div");
+            card.className =
+              "bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl hover:scale-[1.02] transition";
+
+            /* Top Section */
+            const top = document.createElement("div");
+            top.className = "flex items-center gap-4";
+
+            const img = document.createElement("img");
+            img.src = user.picture.medium;
+            
+            img.className = "w-16 h-16 rounded-full border-2 border-indigo-500";
+
+            const info = document.createElement("div");
+
+            const name = document.createElement("h2");
+            name.className = "text-lg font-semibold";
+            name.textContent = user.name.first + " " + user.name.last;
+
+            const email = document.createElement("p");
+            email.className = "text-sm text-gray-400";
+            email.textContent = user.email;
+
+            info.appendChild(name);
+            info.appendChild(email);
+
+            top.appendChild(img);
+            top.appendChild(info);
+
+            /* Divider */
+            const divider = document.createElement("div");
+            divider.className = "my-4 border-t border-white/10";
+
+            /* Details Section */
+            const details = document.createElement("div");
+            details.className = "space-y-2 text-sm";
+
+            /* Gender */
+            const genderRow = document.createElement("p");
+            genderRow.className = "flex justify-between";
+
+            const genderLabel = document.createElement("span");
+            genderLabel.className = "text-gray-400";
+            genderLabel.textContent = "Gender";
+
+            const genderValue = document.createElement("span");
+            genderValue.textContent = "Male";
+
+            genderRow.appendChild(genderLabel);
+            genderRow.appendChild(genderValue);
+
+            /* User ID */
+            const idRow = document.createElement("p");
+            idRow.className = "flex justify-between";
+
+            const idLabel = document.createElement("span");
+            idLabel.className = "text-gray-400";
+            idLabel.textContent = "User ID";
+
+            const idValue = document.createElement("span");
+            if(user.id.name && user.id.value ){
+                idValue.textContent = user.id.name;
+            }
+            else{
+                idValue.textContent = 'Waiting...'
+            }
+
+            idRow.appendChild(idLabel);
+            idRow.appendChild(idValue);
+
+            /* DOJ */
+            const dojRow = document.createElement("p");
+            dojRow.className = "flex justify-between";
+
+            const dojLabel = document.createElement("span");
+            dojLabel.className = "text-gray-400";
+            dojLabel.textContent = "Age";
+
+            const dojValue = document.createElement("span");
+            dojValue.textContent = user.dob.age;
+
+            dojRow.appendChild(dojLabel);
+            dojRow.appendChild(dojValue);
+
+            /* Append details */
+            details.appendChild(genderRow);
+            details.appendChild(idRow);
+            details.appendChild(dojRow);
+
+            /* Final Assembly */
+            card.appendChild(top);
+            card.appendChild(divider);
+            card.appendChild(details);
+
+            container.appendChild(card);
+            })
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      userProfiles();
+
+      let reloadBtn = document.querySelector('.primary-btn');
+      reloadBtn.addEventListener('click', function(){
+        userProfiles();
+      })
+      </script>
+  </body>
+</html>
