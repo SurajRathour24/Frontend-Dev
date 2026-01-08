@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    
+    <h1>Functions</h1>
+
+    <script>
+        // let myAddNum = (a,b) =>{
+        //     return a + b
+        // }
+
+        // let ans = myAddNum(10,5);
+        // console.log(ans);
+
+
+        //First Class Function 
+
+        let val1 = 23
+        function myFunc(val){
+            console.log('MyFunc');
+            val();
+        }
+
+        let funcAns = myFunc(function(){
+                console.log(val1 + 2);
+                
+        })
+        
+        
+    </script>
+
+</body>
+</html>
