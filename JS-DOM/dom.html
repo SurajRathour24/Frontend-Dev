@@ -9,7 +9,22 @@
     <h1>DOM</h1>
 
     <p class="paragraph"></p>
+    <img src="" alt="hey">
     <script>
+
+        let para = document.querySelector('.paragraph');
+        console.dir(para);
+        
+        let att = para.getAttribute('class');
+        console.log(att);
+        para.removeAttribute('class');
+
+        let img = document.querySelector('img');
+
+        img.setAttribute('src', "https://picsum.photos/200/300");
+
+        img.classList.toggle("custom-img");
+        
         
     </script>
 </body>
