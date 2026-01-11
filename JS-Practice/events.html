@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Events | JS </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | JS</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: #101010;
-            color: #fff;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #101010;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>JS Events</h1>
 
+    <form action="">
+      <select name="" id="">
+        <option value="--Chose your option--">--Chose your option--</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </select>
+      <input type="submit" value="Submit Form">
+    </form>
+
     <script>
-        let heading = document.querySelector('h1');
-        heading.style.cursor= "pointer"
-        let para = document.createElement("p");
-        
-        heading.addEventListener('click', function(){
-            para.textContent = 'This is custom paragraph'
-            heading.appendChild(para);
-        })
+        let form = document.querySelector('form');
+        let select = document.querySelector('select');
 
-        para.addEventListener('dblclick', function(){
-            console.log('clicked');
-           para.style.backgroundColor = "white";
-    para.style.color = "black";
-        })
+        select.addEventListener('change', function(e){
+            console.log(e.target.value);
 
-        
+            
+        })
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                let selectedItem = select.value;
+                let item = document.createElement('h2');
+                item.textContent = selectedItem;
+                form.appendChild(item);
+            })
+
+
+
+
+
+      let heading = document.querySelector("h1");
+      heading.style.cursor = "pointer";
+      let para = document.createElement("p");
+
+      heading.addEventListener("click", function () {
+        para.textContent = "This is custom paragraph";
+        heading.appendChild(para);
+      });
+
+      para.addEventListener("dblclick", function () {
+        console.log("clicked");
+        para.style.backgroundColor = "white";
+        para.style.color = "black";
+      });
     </script>
-</body>
+  </body>
 </html>
