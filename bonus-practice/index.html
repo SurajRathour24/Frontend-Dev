@@ -6,17 +6,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="search-wrapper">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search user by name or email..."
+        />
+      </div>
+
+      <button class="add-user-btn">Search User</button>
+    </div>
+
     <!-- CARD WRAPPER -->
     <div class="card-wrapper-box">
       <!-- CARD 1 -->
-      <div class="user-card">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" />
-        <div class="user-name">Aarav Sharma</div>
-        <div class="user-id">User ID: USR001</div>
-        <div class="user-info">Email: aarav@gmail.com</div>
-        <div class="user-info">Designation: Frontend Developer</div>
-        <div class="badge">Male</div>
-      </div>
     </div>
 
     <script>
@@ -70,6 +75,65 @@
           image: "https://randomuser.me/api/portraits/women/23.jpg",
         },
       ];
+
+      let cardWrapper = document.querySelector(".card-wrapper-box");
+
+      let showAllUsers = (show) => {
+        show.map(function (e) {
+          console.log(e);
+
+
+          const userCard = document.createElement("div");
+          userCard.classList.add("user-card");
+
+          const img = document.createElement("img");
+          img.src = e.image;
+          img.alt = "User";
+
+          const userName = document.createElement("div");
+          userName.classList.add("user-name");
+          userName.textContent = e.name;
+
+          const userId = document.createElement("div");
+          userId.classList.add("user-id");
+          userId.textContent = e.id;
+
+          const email = document.createElement("div");
+          email.classList.add("user-info");
+          email.textContent = e.email;
+
+          const designation = document.createElement("div");
+          designation.classList.add("user-info");
+          designation.textContent = `Designation: ${e.designation}`;
+
+          const badge = document.createElement("div");
+          badge.classList.add("badge");
+          badge.textContent = e.gender;
+
+          userCard.appendChild(img);
+          userCard.appendChild(userName);
+          userCard.appendChild(userId);
+          userCard.appendChild(email);
+          userCard.appendChild(designation);
+          userCard.appendChild(badge);
+
+
+          cardWrapper.appendChild(userCard);
+        });
+      };
+
+      showAllUsers(users);
+
+      let input = document.querySelector("#searchInput");
+      input.addEventListener('input', function(){
+            let filteredUsers = users.filter((user) =>{
+                return user.name.toLowerCase().startsWith(input.value.toLowerCase());
+            });
+            cardWrapper.innerHTML = "";
+            showAllUsers(filteredUsers);
+      })
+
+
     </script>
   </body>
 </html>
