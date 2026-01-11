@@ -1,0 +1,293 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Plus and arrows */
+    .card-controls {
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-controls button {
+      width: 35px;
+      height: 35px;
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    /* Profile picture */
+    .profile-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* Name */
+    .name {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Details */
+    .details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 8px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .call-btn {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .msg-btn {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    /* Color dots */
+    .color-dots {
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      right: 15px;
+      top: 20px;
+    }
+
+    .color-dots span {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .black { background-color: #000; }
+    .purple { background-color: #8e44ad; }
+    .orange { background-color: #f39c12; }
+    .teal { background-color: #1abc9c; }
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+#new-call-container {
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+#new-call-form {
+    width: 500px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 18px 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   TITLE
+========================= */
+#form-title {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* =========================
+   FORM GROUPS
+========================= */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.form-input:focus {
+  border-color: #999;
+}
+
+/* =========================
+   CATEGORY PILLS
+========================= */
+#category-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid;
+  user-select: none;
+}
+
+.category-pill input {
+  accent-color: currentColor;
+}
+
+/* Pill Variants */
+.pill-emergency {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.pill-important {
+  color: #f39c12;
+  border-color: #f39c12;
+}
+
+.pill-urgent {
+  color: #8e44ad;
+  border-color: #8e44ad;
+}
+
+.pill-normal {
+  color: #555;
+  border-color: #bbb;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+#btn-create-note {
+  width: 100%;
+  height: 42px;
+  margin-top: 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#btn-create-note:hover {
+  opacity: 0.9;
+}
+
+#btn-close {
+  width: 100%;
+  height: 42px;
+  margin-top: 10px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#btn-close:hover {
+  opacity: 0.9;
+}
