@@ -130,14 +130,20 @@
 
     <script>
       let addNote = document.querySelector(".add-card-btn");
-      console.log(addNote);
+      let closeForm = document.querySelector("#btn-close");
       
       let formContainer = document.querySelector("#new-call-container");
 
       addNote.addEventListener("click", function () {
         formContainer.style.display = "block";
+        // closeForm.style.display = 'none';
         console.log('Clicked');
+
       });
+
+      closeForm.addEventListener('click', function(){
+         formContainer.style.display = "none";
+      })
     </script>
   </body>
 </html>
