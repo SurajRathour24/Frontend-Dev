@@ -14,7 +14,8 @@
         <!-- Image URL -->
         <div class="form-group">
           <label for="image-url" class="form-label">Image URL</label>
-          <input required
+          <input
+            required
             type="url"
             id="image-url"
             class="form-input"
@@ -25,7 +26,8 @@
         <!-- Full Name -->
         <div class="form-group">
           <label for="full-name" class="form-label">Full Name</label>
-          <input required
+          <input
+            required
             type="text"
             id="full-name"
             class="form-input"
@@ -36,7 +38,8 @@
         <!-- Home Town -->
         <div class="form-group">
           <label for="home-town" class="form-label">Home Town</label>
-          <input required
+          <input
+            required
             type="text"
             id="home-town"
             class="form-input"
@@ -47,7 +50,8 @@
         <!-- Purpose -->
         <div class="form-group">
           <label for="purpose" class="form-label">Purpose</label>
-          <input required
+          <input
+            required
             type="text"
             id="purpose"
             class="form-input"
@@ -129,21 +133,58 @@
     </div>
 
     <script>
+
+      // All Variables and Doc Selection
+
       let addNote = document.querySelector(".add-card-btn");
       let closeForm = document.querySelector("#btn-close");
-      
+
       let formContainer = document.querySelector("#new-call-container");
+      // Form
+      const newCallForm = document.querySelector("#new-call-form");
+
+      // Heading
+      const formTitle = document.querySelector("#form-title");
+
+      // Inputs
+      const imageUrlInput = document.querySelector("#image-url");
+      const fullNameInput = document.querySelector("#full-name");
+      const homeTownInput = document.querySelector("#home-town");
+      const purposeInput = document.querySelector("#purpose");
+
+      // Category (radio buttons)
+      const categoryInputs = document.querySelectorAll(
+        'input[name="category"]'
+      );
+
+      // Buttons
+      const createNoteBtn = document.querySelector("#btn-create-note");
+
+
+      // CODE STARTS HERE 
 
       addNote.addEventListener("click", function () {
         formContainer.style.display = "block";
         // closeForm.style.display = 'none';
-        console.log('Clicked');
-
+        console.log("Clicked");
       });
 
-      closeForm.addEventListener('click', function(){
-         formContainer.style.display = "none";
+      closeForm.addEventListener("click", function () {
+        formContainer.style.display = "none";
+      });
+
+
+      newCallForm.addEventListener('submit', function(evnt){
+        evnt.preventDefault();
+        if(imageUrlInput.value.trim() !== ""){
+          console.log('Working');
+        }
+        else{
+          console.log("Not Working");
+          
+        }
       })
+      
     </script>
   </body>
 </html>
