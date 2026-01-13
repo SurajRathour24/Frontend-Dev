@@ -169,6 +169,10 @@
         console.log("Clicked");
       });
 
+      createNoteBtn.addEventListener('submit',function(e){
+            e.preventDefault();
+        } )
+
       closeForm.addEventListener("click", function () {
         formContainer.style.display = "none";
       });
