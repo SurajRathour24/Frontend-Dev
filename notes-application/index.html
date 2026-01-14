@@ -133,7 +133,6 @@
     </div>
 
     <script>
-
       // All Variables and Doc Selection
 
       let addNote = document.querySelector(".add-card-btn");
@@ -160,8 +159,7 @@
       // Buttons
       const createNoteBtn = document.querySelector("#btn-create-note");
 
-
-      // CODE STARTS HERE 
+      // CODE STARTS HERE
 
       addNote.addEventListener("click", function () {
         formContainer.style.display = "block";
@@ -169,26 +167,103 @@
         console.log("Clicked");
       });
 
-      createNoteBtn.addEventListener('submit',function(e){
-            e.preventDefault();
-        } )
+      createNoteBtn.addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
 
       closeForm.addEventListener("click", function () {
         formContainer.style.display = "none";
       });
 
-
-      newCallForm.addEventListener('submit', function(evnt){
+      newCallForm.addEventListener("submit", function (evnt) {
         evnt.preventDefault();
-        if(imageUrlInput.value.trim() !== "" & fullNameInput.value.trim() === ""){
-          console.log('Working');
+
+        let isValid = true;
+        // ===============================
+        // Image URL Validation
+        // ===============================
+        if (imageUrlInput.value.trim() === "") {
+          showError(imageUrlInput, "Image URL is required");
+          isValid = false;
+        } else if (!isValidURL(imageUrlInput.value.trim())) {
+          showError(imageUrlInput, "Enter a valid image URL");
+          isValid = false;
         }
-        else{
-          console.log("Not Working");
-          
+
+        // ===============================
+        // Full Name Validation
+        // ===============================
+        if (fullNameInput.value.trim() === "") {
+          showError(fullNameInput, "Full name is required");
+          isValid = false;
+        } else if (fullNameInput.value.trim().length < 3) {
+          showError(fullNameInput, "Name must be at least 3 characters");
+          isValid = false;
         }
-      })
-      
+
+        // ===============================
+        // Home Town Validation
+        // ===============================
+        if (homeTownInput.value.trim() === "") {
+          showError(homeTownInput, "Home town is required");
+          isValid = false;
+        }
+
+        // ===============================
+        // Purpose Validation
+        // ===============================
+        if (purposeInput.value.trim() === "") {
+          showError(purposeInput, "Purpose is required");
+          isValid = false;
+        }
+
+        // ===============================
+        // Category (Radio Button) Validation
+        // ===============================
+        let categorySelected = false;
+
+        categoryInputs.forEach((radio) => {
+          if (radio.checked) categorySelected = true;
+        });
+
+        if (!categorySelected) {
+          showError(categoryInputs[0], "Please select a category");
+          isValid = false;
+        }
+
+        // ===============================
+        // If All Valid
+        // ===============================
+        if (isValid) {
+          console.log("Form Submitted Successfully ✅");
+
+          // Optional: Reset form
+          newCallForm.reset();
+          formContainer.style.display = "none";
+        }
+      });
+
+      // ===============================
+      // HELPER FUNCTIONS
+      // ===============================
+      function showError(input, message) {
+        const error = document.createElement("small");
+        error.className = "error-text";
+        error.style.color = "red";
+        error.style.display = "block";
+        error.innerText = message;
+
+        input.parentElement.appendChild(error);
+      }
+
+      function isValidURL(url) {
+        try {
+          new URL(url);
+          return true;
+        } catch {
+          return false;
+        }
+      }
     </script>
   </body>
 </html>
