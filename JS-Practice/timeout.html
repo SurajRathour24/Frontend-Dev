@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Theme Boilerplate</title>
+
+    <style>
+      /* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Body Dark Theme */
+      body {
+        background-color: #0f0f0f; /* dark background */
+        height: 100vh;
+        width: 100vw;
+      }
+
+      /* Full Screen Div */
+      .app {
+        height: 100%;
+        width: 100%;
+        background-color: #1e1e1e; /* grey dark */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfcfcf;
+      }
+
+      /* Optional Center Text */
+      .content {
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="content">
+        0
+      </div>
+    </div>
+
+    <script>
+        let content = document.querySelector('.content');
+
+        let count = 5
+
+        setInterval(function(){
+            content.textContent = count;
+            if (count > 0){
+                 count --;
+            if (count === 0){
+                let newELem = document.createElement('div');
+                newELem.textContent = "Congratulations"
+                content.append(newELem);
+            }
+            }
+           
+        }, 1000)
+
+
+    </script>
+  </body>
+</html>

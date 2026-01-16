@@ -10,21 +10,38 @@
     <h1>Array test</h1>
 
     <script>
-        let nums = [23,2,23,34,76]
+        let nums = [23,2,3,34,76]
+
+
+        let filteredArr = nums.filter(function(num){
+            return (num > 5) ? true : false; 
+        })
+
+        console.log(filteredArr);
+        
 
         // nums.forEach(function(val){
         //     console.log(val+2);
         // })
 
-        let newArr = nums.map(function(val){
-            return val + 1;
-        })
+        // let newArr = nums.map(function(val){
+        //     return val + 1;
+        // })
 
-        console.log(nums);
+        // console.log(nums);
         
-        console.log(newArr);
+        // console.log(newArr);
         
 
+
+        let findSum = [50,50,50,50,50];
+
+        let sum = findSum.reduce(function(acc, num){
+            return acc+num;
+        }, 0)
+
+        console.log(sum);
+        
         
         
     </script>

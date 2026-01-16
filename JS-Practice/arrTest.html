@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Array</h1>
+
+    <script>
+
+        // Q1
+        let fruitsBag = ['Apple', 'Banana', 'Grapes', 'Orange', 'Guava'];
+        // console.log(fruitsBag[1]);
+
+        fruitsBag.push("Mango");
+        fruitsBag.unshift("Pineapple");
+        fruitsBag[1] = 'Kiwi'
+        // console.log(fruitsBag);
+
+
+        // Q2 
+        let colors = ['red', 'yellow'];
+        colors.splice(1,0, "Blue", "Wine" );
+        // console.log(colors);
+        
+        let items = [1,3,5,7,9,11];
+
+        // console.log(items.slice(2, 4));
+        
+
+        fruitsBag.sort().reverse();
+
+        // console.log(fruitsBag);
+        
+
+        let sq = [1,2,3,4];
+        
+        let outp = sq.map(function(val){
+            return val**2;
+        })
+
+        let filteredOpt = outp.filter(function(num){
+            return (num > 10) ? true : false
+        })
+        
+        // console.log(filteredOpt);
+        
+
+        let allVal = [10,20,30];
+
+        let sum = allVal.reduce((acc, num) =>{
+            return acc + num;
+        }, 0)
+
+        // console.log(sum);
+
+
+        let findArr = [11,22,33,4,55];
+
+        let value = findArr.find(function(val){
+            return val < 10;
+        })
+        
+        // console.log(value);
+
+        let fullName = ["JS", "Developer"];
+
+        let [firstName, lastName] = fullName;
+
+        console.log(firstName);
+
+        let countries = ['USA', 'UK'];
+        countries = ["India", ...countries];
+
+        console.log(countries);
+        
+        
+
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>
