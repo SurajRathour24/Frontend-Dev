@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    <script>
+        localStorage.clear()
+        localStorage.setItem("Name", "Developer");
+        let dets = localStorage.getItem("Name");
+        if (dets !== ""){
+            console.log("Current Name is", dets);
+        }
+        else{
+            console.log("Data Not Found");
+            
+        }
+        // let dets = localStorage.getItem("Name");
+
+        localStorage.removeItem("Name")
+
+        console.log(dets);
+        
+    </script>
+</body>
+</html>
