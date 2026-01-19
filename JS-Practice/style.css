@@ -1,0 +1,57 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default Light Theme */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #111;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Center Content */
+.container {
+  text-align: center;
+}
+
+/* Button Styling */
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+
+  background-color: #111;
+  color: #fff;
+
+  transition: all 0.3s ease;
+}
+
+/* Button style in dark mode */
+body.dark button {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Hover effect */
+button:hover {
+  transform: scale(1.05);
+}

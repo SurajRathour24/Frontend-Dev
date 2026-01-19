@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+
+    <h1>Cookies</h1>
+    
+    <script>
+        let ck = document.cookie = "email=dev@test.com";
+        console.log(ck);
+
+        let ck2 = document.cookie = "age=26";
+
+
+        // Important 
+
+        localStorage.setItem("Friends", JSON.stringify(["Aman", "Akash", "Avinash"]));
+        let lc =  localStorage.getItem("Friends");
+        console.log(JSON.parse(lc));
+        
+
+    </script>
+
+</body>
+</html>
