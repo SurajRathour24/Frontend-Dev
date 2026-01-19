@@ -6,6 +6,32 @@
     <title>This Key</title>
 </head>
 <body>
-    
+    <h1>This KeyWord</h1>
+
+    <script>
+        console.log("This Keyword");
+
+        // In function value of this is window
+        // In global value of this is window
+        // In methods value of this is obj
+        // in events value of this is elemnt on which event added
+        
+        let obj = {
+            'name' : 'shubham',
+            'designation' : 'developer'
+        }
+
+        function myFnc(){
+            console.log(this);
+        }
+
+        // We can tie up this wiht our own obj in any fnc
+
+        // Call Apply Bind
+
+        myFnc.call(obj);
+        
+        
+    </script>
 </body>
 </html>
