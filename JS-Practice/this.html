@@ -21,15 +21,31 @@
             'designation' : 'developer'
         }
 
-        function myFnc(){
-            console.log(this);
+        function myFnc(a,b){
+            console.log(this, a, b);            
         }
 
         // We can tie up this wiht our own obj in any fnc
 
         // Call Apply Bind
 
-        myFnc.call(obj);
+        myFnc.call(obj, 1,2);
+
+
+        // Apply 
+
+        let obj2 = {
+            'name' : 'Deepak',
+            'age': 25
+        }
+
+        function fnc2(des1, des2){
+            console.log(`${this.name} is ${des1}`);
+        }
+
+        fnc2.apply(obj2, ["Developer", "Designer"])
+
+
         
         
     </script>

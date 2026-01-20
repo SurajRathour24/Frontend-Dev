@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add User UI</title>
+    <link rel="stylesheet" href="practice1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Add User Card -->
+      <div class="card form-card">
+        <h2>Add User</h2>
+
+        <form action="">
+          <label>Name</label>
+          <input type="text" />
+
+          <label>Role</label>
+          <input type="text" />
+
+          <label>Bio</label>
+          <textarea rows="3"></textarea>
+
+          <label>Photo URL</label>
+          <input type="text" />
+
+          <button>Submit</button>
+        </form>
+      </div>
+
+      <!-- Users -->
+      <div class="users">
+        <div class="user-card">
+          <img
+            src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+            alt=""
+          />
+          <h3>John Doe</h3>
+          <span>Frontend Developer</span>
+          <p>Loves building beautiful UIs and learning new technologies.</p>
+        </div>
+
+        <div class="user-card">
+          <img
+            src="https://images.unsplash.com/photo-1636664561425-637dc66446de"
+            alt=""
+          />
+          <h3>Jane Smith</h3>
+          <span>Backend Engineer</span>
+          <p>Enjoys solving complex problems and optimizing APIs.</p>
+        </div>
+
+        <div class="user-card">
+          <img
+            src="https://images.unsplash.com/photo-1687976474495-392791a78ab4"
+            alt=""
+          />
+          <h3>Alex Lee</h3>
+          <span>UI/UX Designer</span>
+          <p>Passionate about user experience and clean design.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let form = document.querySelector("form");
+      const userManager = {
+        users: [],
+        init: function () {
+          form.addEventListener('submit', this.submitForm.bind(this));
+        },
+        submitForm : function(e){
+            e.preventDefault();
+            console.log(this);
+            
+        },
+        addUser: function () {},
+        removeUser: function () {},
+      };
+
+      userManager.init();
+    </script>
+  </body>
+</html>

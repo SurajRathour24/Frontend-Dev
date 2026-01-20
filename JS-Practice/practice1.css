@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 50px;
+}
+
+/* Card base */
+.card {
+  background: #1e1e1e;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* Form Card */
+.form-card {
+  width: 360px;
+  padding: 25px;
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 13px;
+  color: #aaa;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 6px 0 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2b2b2b;
+  color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #555;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2b2b2b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3a3a3a;
+}
+
+/* Users */
+.users {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card {
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #737373;
+    border-radius: 7px;
+}
+
+.user-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-position: top;
+}
+
+.user-card h3 {
+  margin: 8px 0 2px;
+}
+
+.user-card span {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.user-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 8px;
+}
