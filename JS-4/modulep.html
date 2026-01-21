@@ -1,28 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <h1>Design Pattern</h1>
 
     <script>
-        console.log('Module Pattern');
-        
-        let fnc = (function(){
+      console.log('Module Pattern');
 
-            let bankBalance = 10;
+      let bank = (function(){
 
-            return bankBalance;
+          let bankBalance = 100;
 
-        })();
+          function checkBalance(){
+              console.log(`Current Balance is: ${bankBalance}`);
+          }
 
-        console.log(fnc);
-        
+          function withdraw(reqAmount){
+              if(reqAmount <= bankBalance){
+                  bankBalance = bankBalance - reqAmount;
+                  console.log(reqAmount, "is Withdraw");
+              }
+              else if(reqAmount === undefined){
+                  console.log("Please enter amount");
+              }
+              else{
+                  console.log("Not enuogh balance");
+              }
+          }
+
+          return {
+              checkBalance,
+              withdraw
+          }
+      })();
+
+
+      bank.checkBalance();
+      bank.withdraw(10);
+      bank.checkBalance();
     </script>
-
-</body>
+  </body>
 </html>
