@@ -13,16 +13,16 @@
 
         <form action="">
           <label>Name</label>
-          <input type="text" />
+          <input class="name" type="text" />
 
           <label>Role</label>
-          <input type="text" />
+          <input class="role" type="text" />
 
           <label>Bio</label>
-          <textarea rows="3"></textarea>
+          <textarea class="bio" rows="3"></textarea>
 
           <label>Photo URL</label>
-          <input type="text" />
+          <input class="image" type="text" />
 
           <button>Submit</button>
         </form>
@@ -64,6 +64,11 @@
 
     <script>
       let form = document.querySelector("form");
+      let userName = document.querySelector(".name")
+      let userRole = document.querySelector(".role")
+      let userBio = document.querySelector(".bio")
+      let userImage = document.querySelector(".image")
+
       const userManager = {
         users: [],
         init: function () {
@@ -71,8 +76,13 @@
         },
         submitForm : function(e){
             e.preventDefault();
-            console.log(this);
-            
+            this.users.push({
+              name : userName.value,
+              role : userRole.value,
+              bio : userBio.value,
+              image : userImage.value
+            });
+            form.reset();
         },
         addUser: function () {},
         removeUser: function () {},
