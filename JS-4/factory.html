@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Factory</h1>
+
+    <script>
+      function createProduct(name, price) {
+        let stock = 12;
+
+        return {
+          name,
+          price,
+          buy(qty) {
+            if (qty <= stock) {
+              stock = stock - qty;
+              console.log(`${qty} items sold & ${stock} left in stock`);
+            }
+          },
+
+          refill(qty) {
+            stock += qty;
+            console.log(`${qty} added to stock`);
+          },
+        };
+      }
+
+
+      let mob = createProduct("Iphone", 80000);
+      
+      mob.buy(5);
+
+    </script>
+  </body>
+</html>
