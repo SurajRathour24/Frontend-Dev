@@ -16,9 +16,23 @@
 
 
     <script>
+
+        function debounce(fnc, delay){
+            let timer;
+
+            return function(...arg){
+                clearTimeout(timer);
+                timer = setTimeout(function (){
+                    fnc(...arg);
+                }, delay)
+            }
+        }
+        
         let inp = document.querySelector('.user-input');
 
-        
+        inp.addEventListener('input', debounce(function(e){
+            console.log(e.target.value);
+        }, 2000))
     </script>
 </body>
 </html>
