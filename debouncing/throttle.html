@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle in JS</title>
+</head>
+<body>
+    <h1>Throttle</h1>
+
+    <input type="text" id="throttle" placeholder="Type something..." style="padding:10px 20px 10px 10px">
+
+    <script>
+       let inpt = document.querySelector('#throttle');
+       
+       function thrtl(fnc, delay){
+        let timer = 0;
+
+        return function(...agr){
+           let currentTime = Date.now();
+           if(currentTime - timer >= delay){
+            timer = currentTime;
+            fnc(...agr)
+           }
+        }
+       }
+
+
+       inpt.addEventListener("input", thrtl(function(){
+        console.log("Performing Throttling");
+        
+       }, 1000))
+    </script>
+</body>
+</html>
