@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+.sip-wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  border-radius: 20px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.sip-wrapper h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.sip-inputs label {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.sip-inputs input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.sip-results {
+  margin-top: 25px;
+  display: grid;
+  gap: 15px;
+}
+
+.sip-results div {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sip-chart {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+@media(max-width:768px){
+  .sip-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+
+    <div class="sip-wrapper">
+  <h2>SIP Calculator</h2>
+
+  <div class="sip-grid">
+    <div class="sip-inputs">
+      <label>Monthly Investment (₹)</label>
+      <input type="number" id="monthly" value="5000">
+
+      <label>Expected Annual Return (%)</label>
+      <input type="number" id="rate" value="12">
+
+      <label>Investment Duration (Years)</label>
+      <input type="number" id="years" value="10">
+
+      <div class="sip-results">
+        <div>
+          <p>Total Invested</p>
+          <h3 id="invested">₹0</h3>
+        </div>
+        <div>
+          <p>Estimated Returns</p>
+          <h3 id="returns">₹0</h3>
+        </div>
+        <div>
+          <p>Total Value</p>
+          <h3 id="total">₹0</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="sip-chart">
+      <canvas id="sipChart"></canvas>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+let chart;
+
+function calculateSIP() {
+  let monthly = parseFloat(document.getElementById("monthly").value);
+  let annualRate = parseFloat(document.getElementById("rate").value) / 100;
+  let years = parseFloat(document.getElementById("years").value);
+
+  let months = years * 12;
+  let monthlyRate = annualRate / 12;
+
+  let invested = monthly * months;
+  let futureValue = monthly * 
+      ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) 
+      * (1 + monthlyRate);
+
+  let returns = futureValue - invested;
+
+  document.getElementById("invested").innerText = 
+    "₹" + invested.toLocaleString();
+  document.getElementById("returns").innerText = 
+    "₹" + returns.toLocaleString();
+  document.getElementById("total").innerText = 
+    "₹" + futureValue.toLocaleString();
+
+  generateChart(monthly, monthlyRate, months);
+}
+
+function generateChart(monthly, monthlyRate, months) {
+  let investedData = [];
+  let valueData = [];
+  let labels = [];
+
+  let total = 0;
+  let invested = 0;
+
+  for (let i = 1; i <= months; i++) {
+    invested += monthly;
+    total = (total + monthly) * (1 + monthlyRate);
+
+    if (i % 12 === 0) {
+      investedData.push(invested);
+      valueData.push(total);
+      labels.push("Year " + (i / 12));
+    }
+  }
+
+  if (chart) chart.destroy();
+
+  const ctx = document.getElementById("sipChart").getContext("2d");
+
+  chart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Total Invested",
+          data: investedData,
+          borderWidth: 2,
+          tension: 0.4
+        },
+        {
+          label: "Total Value",
+          data: valueData,
+          borderWidth: 2,
+          tension: 0.4
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      animation: {
+        duration: 1500
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: "#fff"
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: "#fff" }
+        },
+        y: {
+          ticks: { color: "#fff" }
+        }
+      }
+    }
+  });
+}
+
+document.querySelectorAll("input").forEach(input => {
+  input.addEventListener("input", calculateSIP);
+});
+
+calculateSIP();
+</script>
+
+    
+</body>
+</html>
