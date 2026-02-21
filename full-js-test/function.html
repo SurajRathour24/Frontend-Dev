@@ -13,9 +13,70 @@
         <!-- // Function declearation  -->
 
         function myFunc(){
-            console.log("Function Decleration");
+            // console.log("Function Decleration");
         }
         myFunc();
+
+        // Function Exp 
+
+        let addNumbers = function(val1, val2){
+            // console.log("Add Number user Function Exp", val1 + val2);
+        }
+        addNumbers(1,2);
+
+        //fat arrow fnc
+
+        let multNum = () =>{
+            // console.log("Fat Arrow Fnc");
+        }
+
+        multNum();
+
+        let otherFnc = (...values) =>{
+            // console.log("Rest Parameter", values);
+        }
+
+        otherFnc(1,2,3,4,5,22,6,7,7,34,88,8)
+
+
+        // First Class Fnc 
+
+        let fnc = function (val){
+            // console.log("First Class Fnc");
+            val();
+        }
+
+        fnc(function(){
+            // console.log("Value");
+        })
+
+        // Higher Order Fnc , If in value function will have an function in parameter or return a function 
+        
+        let hof = function(ac){
+            console.log("hey this is a HOF");
+            // return function(){
+            //         console.log("Returned from HOF");
+            // }
+            ac();
+        }
+
+        hof(function(){
+            console.log("Accepting a function");
+        });
+
+
+        let customVal = 12;
+
+        function test(){
+            customVal+=5
+            console.log(customVal);
+        }
+        test();
+
+        (function(){
+            console.log("IIFEE");
+            
+        })();
     </script>
 </body>
 </html>
