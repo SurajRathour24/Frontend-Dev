@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f5f7fb;
+      }
+
+      .section {
+        padding: 80px 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .content {
+        flex: 1 1 500px;
+      }
+
+      .content h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #222;
+      }
+
+      .content p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background: #4f46e5;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #3730a3;
+      }
+
+      .image {
+        flex: 1 1 500px;
+      }
+
+      .image img {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* second section background */
+      .section.dark {
+        background: #111827;
+        color: #fff;
+      }
+
+      .section.dark .content h2,
+      .section.dark .content p {
+        color: #fff;
+      }
+
+      .section.dark .btn {
+        background: #22c55e;
+      }
+
+      .section.dark .btn:hover {
+        background: #16a34a;
+      }
+
+      /* mobile */
+      @media (max-width: 768px) {
+        .content h2 {
+          font-size: 28px;
+        }
+
+        .section {
+          padding: 60px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="content">
+          <h2>Grow Your Business</h2>
+          <p>
+            Build modern, fast, and responsive websites that help your brand
+            stand out. We create solutions that convert visitors into customers.
+          </p>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <div class="image">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt="business"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section dark">
+      <div class="container">
+        <div class="image">
+          <img
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+            alt="development"
+          />
+        </div>
+
+        <div class="content">
+          <h2>Modern Development</h2>
+          <p>
+            Using the latest technologies, we craft scalable and
+            high-performance digital products tailored for your business needs.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let heading = document.querySelectorAll("h2");
+
+      heading.forEach(function (head) {
+        let subheading = document.createElement("h4");
+        subheading.textContent = "I am subheading and added though JS";
+        subheading.style.fontSize = "16px"
+        subheading.style.paddingTop = "15px"
+        subheading.style.color = "#CF2500"
+        head.textContent = "Hey I have changed through Dom";
+        head.appendChild(subheading);
+      });
+
+      let btn = document.querySelectorAll(".btn");
+
+      btn.forEach(function (bt) {
+        bt.href = "https://boycat.io/";
+        console.log(bt);
+        bt.setAttribute("target", "_blank");
+      });
+    </script>
+  </body>
+</html>
