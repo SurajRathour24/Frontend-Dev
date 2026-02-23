@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Sections Layout</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* SECTION COMMON */
+.section {
+    padding: 80px 20px;
+}
+
+/* SECTION 1 */
+.section-one {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+}
+
+.section-one h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.section-one p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* SECTION 2 */
+.section-two {
+    background: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2c5364;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-one h1 {
+        font-size: 30px;
+    }
+}
+
+.contact-section {
+  padding: 70px 20px;
+  background: #f6f8fb;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.contact-subtitle {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 15px;
+  transition: 0.25s ease;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 25px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1 -->
+<section class="section section-one">
+    <h1>Welcome to Ananta Hikes</h1>
+    <p>
+        Discover breathtaking Himalayan adventures with our professionally guided
+        treks, camping experiences, and comfortable resort stays designed for
+        nature lovers and thrill seekers.
+    </p>
+</section>
+
+<!-- SECTION 2 -->
+<section class="section section-two">
+    <div class="container">
+        <div class="card">
+            <h3>Guided Treks</h3>
+            <p>Explore scenic mountain trails with our experienced local trek leaders.</p>
+        </div>
+
+        <div class="card">
+            <h3>Camping Experience</h3>
+            <p>Enjoy safe and comfortable camping under the beautiful Himalayan sky.</p>
+        </div>
+
+        <div class="card">
+            <h3>Resort Stay</h3>
+            <p>Relax in our premium mountain resort with modern amenities and views.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT FORM SECTION START ===== -->
+<section class="contact-section">
+  <div class="contact-container">
+    
+    <h2 class="contact-title">Get In Touch</h2>
+    <p class="contact-subtitle">Fill the form and our team will contact you soon.</p>
+
+    <form class="contact-form">
+      
+      <div class="form-group">
+        <input type="text" placeholder="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Email Address" required>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" placeholder="Phone Number" required>
+      </div>
+
+      <div class="form-group">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+
+    </form>
+  </div>
+</section>
+
+
+    <script>
+        console.log("Events");
+        let card = document.querySelector(".card");
+        card.addEventListener("mouseenter", function(){
+            // console.log("Mouse Enter");
+        })
+
+        let input = document.querySelectorAll("input");
+        input.forEach(function(inp){
+            inp.addEventListener("input", function(e){
+                console.log("changed", e.target.value);  
+            })
+        })
+    </script>
+</body>
+</html>
