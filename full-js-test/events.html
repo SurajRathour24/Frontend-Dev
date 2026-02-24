@@ -159,6 +159,21 @@
   }
 }
 
+.lt{
+    text-decoration: line-through;
+    color: #f00;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+ul li{
+    list-style: none;
+    padding: 10px 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
 </style>
 </head>
 
@@ -172,6 +187,17 @@
         treks, camping experiences, and comfortable resort stays designed for
         nature lovers and thrill seekers.
     </p>
+     <div class="list-item">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>React</li>
+            <li>Node</li>
+            <li>SqL</li>
+            <li>Git</li>
+        </ul>
+    </div>
 </section>
 
 <!-- SECTION 2 -->
@@ -190,8 +216,11 @@
         <div class="card">
             <h3>Resort Stay</h3>
             <p>Relax in our premium mountain resort with modern amenities and views.</p>
+            
         </div>
+        
     </div>
+
 </section>
 
 <!-- ===== CONTACT FORM SECTION START ===== -->
@@ -227,6 +256,13 @@
 
 
     <script>
+
+        let ul = document.querySelector("ul");
+        
+        ul.addEventListener("click", function(evt){
+            evt.target.classList.toggle("lt");
+        })
+
         console.log("Events");
         let card = document.querySelector(".card");
         card.addEventListener("mouseenter", function(){
@@ -239,6 +275,8 @@
                 console.log("changed", e.target.value);  
             })
         })
+
+        
     </script>
 </body>
 </html>
