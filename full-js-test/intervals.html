@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Intervals</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .wrapper{
+            width: 300px;
+        }
+        .download-bar{
+            width: 100%;
+            background-color: #000;
+            border: 1px solid #f2f2f2;
+            border-radius: 50px;
+            height: 50px;
+            position: relative;
+        }
+        .wrapper p{
+            padding-left: 20px;
+            position: absolute;
+            background-color: aqua;
+            width: 15%;
+            border: 1px solid #f2f2f2;
+            border-radius: 50px;
+            height: 30px;
+            top: -16px;
+            padding-top: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Intervals of JS</h1>
+<div class="wrapper">
+    <div class="download-bar">
+        <p><span>0</span>%</p>
+    </div>
+</div>
+
+
+    <script>
+
+        let downlaodBar = document.querySelector("p");
+        downlaodBar.setInterval(() => {
+            downlaodBar.style.width = "100px"
+        }, 1000);
+
+        console.log("Intervals");
+
+        setTimeout(function(){
+            console.log("Logging");
+            
+        }, 2000)
+    </script>
+</body>
+</html>
