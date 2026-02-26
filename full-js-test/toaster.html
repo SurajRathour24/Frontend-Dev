@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Toaster UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 min-h-screen flex items-start justify-end p-6">
+
+  <!-- Toast Container -->
+  <div class="space-y-4 w-full max-w-sm">
+
+    <!-- Success Toast -->
+    <div class="group relative flex items-start gap-4 p-4 rounded-2xl 
+                bg-slate-900/80 backdrop-blur-xl border border-emerald-500/20
+                shadow-lg shadow-black/40 hover:scale-[1.02] transition-all duration-300">
+
+      <!-- Icon -->
+      <div class="flex-shrink-0 w-10 h-10 rounded-xl 
+                  bg-emerald-500/10 flex items-center justify-center">
+        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1">
+        <h4 class="text-white font-semibold">Success</h4>
+        <p class="text-slate-400 text-sm">Your changes have been saved successfully.</p>
+      </div>
+
+      <!-- Close -->
+      <button class="text-slate-500 hover:text-white transition">
+        ✕
+      </button>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="group relative flex items-start gap-4 p-4 rounded-2xl 
+                bg-slate-900/80 backdrop-blur-xl border border-red-500/20
+                shadow-lg shadow-black/40 hover:scale-[1.02] transition-all duration-300">
+
+      <div class="flex-shrink-0 w-10 h-10 rounded-xl 
+                  bg-red-500/10 flex items-center justify-center">
+        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </div>
+
+      <div class="flex-1">
+        <h4 class="text-white font-semibold">Error</h4>
+        <p class="text-slate-400 text-sm">Something went wrong. Please try again.</p>
+      </div>
+
+      <button class="text-slate-500 hover:text-white transition">
+        ✕
+      </button>
+    </div>
+
+    <!-- Warning Toast -->
+    <div class="group relative flex items-start gap-4 p-4 rounded-2xl 
+                bg-slate-900/80 backdrop-blur-xl border border-yellow-500/20
+                shadow-lg shadow-black/40 hover:scale-[1.02] transition-all duration-300">
+
+      <div class="flex-shrink-0 w-10 h-10 rounded-xl 
+                  bg-yellow-500/10 flex items-center justify-center">
+        <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86l-7.4 12.8A1 1 0 003.75 18h16.5a1 1 0 00.86-1.34l-7.4-12.8a1 1 0 00-1.72 0z"/>
+        </svg>
+      </div>
+
+      <div class="flex-1">
+        <h4 class="text-white font-semibold">Warning</h4>
+        <p class="text-slate-400 text-sm">Please check your input values.</p>
+      </div>
+
+      <button class="text-slate-500 hover:text-white transition">
+        ✕
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>
