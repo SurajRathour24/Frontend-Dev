@@ -143,9 +143,29 @@
           <a href="#" class="btn">Learn More</a>
         </div>
       </div>
+
+
+      
+    </section>
+
+    <section>
+      <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Guava</li>
+      </ul>
     </section>
 
     <script>
+
+
+      let list = document.querySelectorAll("li");
+
+      list.forEach(function(a){
+        a.style.color = "red";
+      });
+
+
       let heading = document.querySelectorAll("h2");
 
       heading.forEach(function (head) {
