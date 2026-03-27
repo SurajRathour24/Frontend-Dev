@@ -10,15 +10,26 @@
     <h1>This Keyword</h1>
 
     <script>
-        console.log(this)
+        console.log(this) // Value will be window
 
         function callName (){
             console.log(this);
-            
         }
-        callName();
+        callName();   // Value will be window 
 
         // Method
+
+        let obj = {
+            name: "dev",
+            sayName: function(){
+                console.log(this);   // Here now value of this will be obj or item on which this is used
+            }
+        }
+
+        let heading = document.querySelector("h1");
+        heading.addEventListener("click" , function(item){
+            console.log(this);  // Here this will be item on which user has been clicked
+        });
     </script>
 </body>
 </html>
