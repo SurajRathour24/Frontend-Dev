@@ -10,11 +10,16 @@
     <h1>This Keyword</h1>
     
     <form action="">
+        
+        <input type="text" placeholder="username" class="username">
+        
         <select name="" id="">
             <option value="apple">Apple</option>
             <option value="Banana">Banana</option>
             <option value="Other">Other</option>
         </select>
+
+
     </form>
 
     <script>
@@ -42,6 +47,13 @@
         let select = document.querySelector("select");
         select.addEventListener("change", function(e){
             console.log(e.target.value);
+        })
+
+
+        let userName = document.querySelector(".username");
+
+        userName.addEventListener("input", function(e){
+            console.log(e);
         })
 
 
