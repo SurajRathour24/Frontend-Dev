@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Events Practice</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#hoverBox {
+  width: 200px;
+  height: 100px;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input, select {
+  padding: 8px;
+  margin-top: 10px;
+}
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Events Practice Area</h1>
+
+  <!-- Click Events -->
+  <section>
+    <h2>Click Events</h2>
+    <button id="clickBtn">Click Me</button>
+    <button id="dblClickBtn">Double Click Me</button>
+  </section>
+
+  <!-- Mouse Events -->
+  <section>
+    <h2>Mouse Events</h2>
+    <div id="hoverBox">Hover Over Me</div>
+  </section>
+
+  <!-- Keyboard Events -->
+  <section>
+    <h2>Keyboard Events</h2>
+    <input type="text" id="keyInput" placeholder="Type something...">
+  </section>
+
+  <!-- Form Events -->
+  <section>
+    <h2>Form Events</h2>
+    <form id="myForm">
+      <input type="text" placeholder="Your Name" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Focus & Blur -->
+  <section>
+    <h2>Focus / Blur</h2>
+    <input type="text" id="focusInput" placeholder="Click here">
+  </section>
+
+  <!-- Change Event -->
+  <section>
+    <h2>Change Event</h2>
+    <select id="dropdown">
+      <option value="">Select</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JS">JavaScript</option>
+    </select>
+  </section>
+
+  <!-- Scroll Event -->
+  <section style="height: 800px;">
+    <h2>Scroll Down</h2>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
