@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Bubbling Example</title>
+  <style>
+    .grandparent {
+      padding: 30px;
+      background: lightblue;
+    }
+    .parent {
+      padding: 30px;
+      background: lightgreen;
+    }
+    .child {
+      padding: 30px;
+      background: lightcoral;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grandparent">
+    Grandparent
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child (Click Me)
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let grandparent = document.querySelector(".grandparent");
+    let parent = document.querySelector(".parent");
+    let child = document.querySelector(".child");
+
+    grandparent.addEventListener("click", function() {
+      console.log("Grandparent clicked");
+    });
+
+    parent.addEventListener("click", function() {
+      console.log("Parent clicked");
+    });
+
+    child.addEventListener("click", function() {
+      console.log("Child clicked");
+    });
+  </script>
+
+</body>
+</html>
