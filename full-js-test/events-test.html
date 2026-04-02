@@ -47,6 +47,12 @@ input, select {
   padding: 8px;
   margin-top: 10px;
 }
+li{
+  cursor: pointer;
+}
+.strk{
+  text-decoration: line-through;
+}
   </style>
 </head>
 <body>
@@ -119,6 +125,10 @@ input, select {
   <script>
 
     let usersList = document.querySelector("ul");
+
+    usersList.addEventListener("click", function(dets){
+      dets.target.classList.toggle("strk");
+    })
 
     let clickBtn = document.querySelector("#clickBtn");
     clickBtn.addEventListener("click", function(e){
