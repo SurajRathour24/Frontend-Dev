@@ -14,6 +14,10 @@ h1 {
   text-align: center;
 }
 
+
+.red{
+    background-color: #fcc03d;
+}
 section {
   background: #fff;
   padding: 20px;
@@ -94,11 +98,61 @@ input, select {
     </select>
   </section>
 
+
   <!-- Scroll Event -->
   <section style="height: 800px;">
     <h2>Scroll Down</h2>
   </section>
 
-  <script src="script.js"></script>
+
+
+  <section class="users-list">
+    <ul>
+      <li>Aman</li>
+      <li>Shubham</li>
+      <li>Kartik</li>
+      <li>Vikrant</li>
+      <li>Rahul</li>
+    </ul>
+  </section>
+
+  <script>
+
+    let usersList = document.querySelector("ul");
+
+    let clickBtn = document.querySelector("#clickBtn");
+    clickBtn.addEventListener("click", function(e){
+        // console.log(e);
+       this.classList.toggle("red");
+        
+    })
+
+    let dblClick = document.querySelector("#dblClickBtn");
+
+    dblClick.addEventListener("dblclick", function(db){
+        // console.log(this);
+        
+    })
+
+    let hoverBox = document.querySelector("#hoverBox");
+    hoverBox.addEventListener("mouseover", function(e){
+        // console.log(e);
+        this.style.background = "red";
+    })
+
+    let keyBoard = document.querySelector("#keyInput");
+    keyBoard.addEventListener("keydown", function(e){
+        // console.log(e.key);
+        
+    })
+
+    let formData = document.querySelector("form")
+
+    formData.addEventListener("submit", function(e){
+        // console.log(e);
+        e.preventDefault();
+
+    })
+  </script>
 </body>
 </html>
