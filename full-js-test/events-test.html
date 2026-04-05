@@ -14,7 +14,6 @@ h1 {
   text-align: center;
 }
 
-
 .red{
     background-color: #fcc03d;
 }
@@ -82,7 +81,7 @@ li{
   <section>
     <h2>Form Events</h2>
     <form id="myForm">
-      <input type="text" placeholder="Your Name" required>
+      <input id="userName" type="text" placeholder="Your Name" required>
       <button type="submit">Submit</button>
     </form>
   </section>
@@ -159,9 +158,12 @@ li{
     let formData = document.querySelector("form")
 
     formData.addEventListener("submit", function(e){
-        // console.log(e);
+        console.log(e);
         e.preventDefault();
-
+        let userName = document.querySelector("#userName");
+        userName.addEventListener("input", function(e){
+          console.log(e);
+        })
     })
   </script>
 </body>
