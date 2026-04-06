@@ -63,7 +63,50 @@
       localStorage.removeItem("myData");
       alert("Removed from LocalStorage");
     }
+ // ======================
+    // SESSION STORAGE
+    // ======================
+    function saveSession() {
+      sessionStorage.setItem("myData", input.value);
+      alert("Saved in SessionStorage");
+    }
 
+    function getSession() {
+      let data = sessionStorage.getItem("myData");
+      output.innerText = "SessionStorage: " + data;
+    }
+
+    function removeSession() {
+      sessionStorage.removeItem("myData");
+      alert("Removed from SessionStorage");
+    }
+
+    // ======================
+    // COOKIES
+    // ======================
+    function setCookie() {
+      document.cookie = "myData=" + input.value + "; path=/; max-age=3600";
+      alert("Cookie Set");
+    }
+
+    function getCookie() {
+      let cookies = document.cookie.split("; ");
+      let value = "Not Found";
+
+      cookies.forEach(c => {
+        let [key, val] = c.split("=");
+        if (key === "myData") {
+          value = val;
+        }
+      });
+
+      output.innerText = "Cookie: " + value;
+    }
+
+    function deleteCookie() {
+      document.cookie = "myData=; path=/; max-age=0";
+      alert("Cookie Deleted");
+    }
   </script>
 
 </body>
