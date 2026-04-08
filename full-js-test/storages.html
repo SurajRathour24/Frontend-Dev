@@ -66,6 +66,7 @@
  // ======================
     // SESSION STORAGE
     // ======================
+
     function saveSession() {
       sessionStorage.setItem("myData", input.value);
       alert("Saved in SessionStorage");
@@ -84,6 +85,7 @@
     // ======================
     // COOKIES
     // ======================
+    
     function setCookie() {
       document.cookie = "myData=" + input.value + "; path=/; max-age=3600";
       alert("Cookie Set");
