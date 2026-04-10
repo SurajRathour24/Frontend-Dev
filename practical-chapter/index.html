@@ -1,36 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Variables</h1>
 
     <script>
-        var name = "dev";   // old way (avoid mostly)
-let age = 25;         // modern (can change value)
-const pi = 3.14;      // constant (cannot change)
+      var name = "dev"; // old way (avoid mostly)
+      let age = 25; // modern (can change value)
+      const pi = 3.14; // constant (cannot change)
 
+      let city = "Chandigarh";
+      city = "Delhi"; // allowed
 
-let city = "Chandigarh";
-city = "Delhi";  // allowed
+      const country = "India";
+      // country = "USA"; // ❌ error
 
-const country = "India";
-// country = "USA"; // ❌ error
+      let a = 10;
+      let b = 5;
+      console.log(a + b);
 
+      let userName = "dev";
+      let userAge = 25;
 
-let a = 10;
-let b = 5;
-console.log(a + b);
+      console.log("Name: " + username);
+      console.log("Age: " + userage);
 
+      // ==========================
+      // USER PROFILE DATA
+      // ==========================
 
-let userName = "dev";
-let userAge = 25;
+      // Variables (Different Data Types)
+      let userName = "Suraj"; // string
+      let userAge = 25; // number
+      let isLoggedIn = false; // boolean
+      let city = "Chandigarh"; // string
 
-console.log("Name: " + username);
-console.log("Age: " + userage);
+      const appName = "MyApp"; // constant
+
+      // ==========================
+      // UPDATE USER STATUS
+      // ==========================
+
+      isLoggedIn = true; // user logged in
+
+      // ==========================
+      // USER EXPENSE CALCULATOR
+      // ==========================
+
+      // Numbers (data type)
+      let foodExpense = 500;
+      let travelExpense = 300;
+      let shoppingExpense = 700;
+
+      // Total Calculation
+      let totalExpense = foodExpense + travelExpense + shoppingExpense;
+
+      // ==========================
+      // OUTPUT (REAL RESULT)
+      // ==========================
+
+      console.log("Welcome to " + appName);
+      console.log("Hello " + userName);
+      console.log("Age: " + userAge);
+      console.log("City: " + city);
+      console.log("Logged In: " + isLoggedIn);
+
+      console.log("------ Expenses ------");
+      console.log("Total Expense: " + totalExpense);
+      
     </script>
-</body>
+  </body>
 </html>
