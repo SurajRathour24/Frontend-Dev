@@ -1,11 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>Loops Test</h1>
+
+    <script>
+      let randomNum = Math.floor(Math.random() * 10) + 1;
+      let guess;
+
+      while (guess !== randomNum) {
+        guess = Number(prompt("Guess a number (1-10):"));
+
+        if (guess > randomNum) {
+          console.log("Too high!");
+        } else if (guess < randomNum) {
+          console.log("Too low!");
+        } else {
+          console.log("Correct 🎉");
+        }
+      }
+
+
+      // Print star pattern 
+
+      for (let i = 1; i <= 5; i++) {
+  let pattern = "";
+
+  for (let j = 1; j <= i; j++) {
+    pattern += "*";
+  }
+
+  console.log(pattern);
+}
+    </script>
+  </body>
 </html>
