@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pattern Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Pattern Generator</h1>
+
+  <div class="controls">
+    <input type="number" id="rows" placeholder="Enter number of rows" />
+
+    <select id="patternType">
+      <option value="triangle">Star Triangle</option>
+      <option value="number">Number Triangle</option>
+      <option value="floyd">Floyd's Triangle</option>
+      <option value="pyramid">Number Pyramid</option>
+    </select>
+
+    <button onclick="generatePattern()">Generate</button>
+  </div>
+
+  <pre id="output"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
