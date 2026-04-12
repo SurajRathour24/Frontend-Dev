@@ -78,6 +78,75 @@ pre {
   <pre id="output"></pre>
 </div>
 
-<script src="script.js"></script>
+<script>
+    function generatePattern() {
+  const rows = parseInt(document.getElementById("rows").value);
+  const type = document.getElementById("patternType").value;
+  const output = document.getElementById("output");
+
+  let result = "";
+
+  if (!rows || rows <= 0) {
+    output.textContent = "Please enter valid rows!";
+    return;
+  }
+
+  switch (type) {
+
+    // ⭐ Star Triangle
+    case "triangle":
+      for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+          result += "*";
+        }
+        result += "\n";
+      }
+      break;
+
+    // 🔢 Number Triangle
+    case "number":
+      for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+          result += j;
+        }
+        result += "\n";
+      }
+      break;
+
+    // 🧠 Floyd’s Triangle
+    case "floyd":
+      let num = 1;
+      for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+          result += num + " ";
+          num++;
+        }
+        result += "\n";
+      }
+      break;
+
+    // 🔺 Number Pyramid
+    case "pyramid":
+      for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= rows - i; j++) {
+          result += " ";
+        }
+
+        for (let j = 1; j <= i; j++) {
+          result += j;
+        }
+
+        for (let j = i - 1; j >= 1; j--) {
+          result += j;
+        }
+
+        result += "\n";
+      }
+      break;
+  }
+
+  output.textContent = result;
+}
+</script>
 </body>
 </html>
