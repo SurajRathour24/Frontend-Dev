@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Notes</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* DARK THEME */
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* NOTE CARD */
+    .note {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #58a6ff;
+    }
+
+    .answer {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    /* CODE BLOCK */
+    pre {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    code {
+      color: #c9d1d9;
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>JavaScript Interview Notes</h1>
+
+  <!-- NOTE 1 -->
+  <div class="note">
+    <div class="question">Q1: What are Variables?</div>
+
+    <div class="answer">
+      Variables are like containers used to store data values in JavaScript. We can create variales with three types 
+      <ul style="margin-left:20px">
+        <li>Var - Can redeclear and reinitialize</li>
+        <li>Let - can reinitialize but can't declare ❌</li>
+        <li>Const - can't reinitalize ❌ or redeclear ❌</li>
+      </ul>
+    </div>
+
+    <pre><code>
+// Example
+var a = 10;
+let name = "Suraj";
+const pi = 3.14;
+    </code></pre>
+  </div>
+
+  <!-- NOTE 2 -->
+  <div class="note">
+    <div class="question">Q2: Difference between var, let, and const?</div>
+
+    <div class="answer">
+      var: function scoped  
+      let: block scoped  
+      const: block scoped and cannot be reassigned
+    </div>
+
+    <pre><code>
+// var
+var x = 10;
+x = 20; // allowed
+
+// let
+let y = 30;
+y = 40; // allowed
+
+// const
+const z = 50;
+// z = 60; ❌ error
+    </code></pre>
+  </div>
+
+  <!-- NOTE 3 -->
+  <div class="note">
+    <div class="question">Q3: Example of HTML + JS together?</div>
+
+    <div class="answer">
+      You can use JavaScript inside HTML to make it interactive.
+    </div>
+
+    <pre><code>
+&lt;button onclick="showMsg()"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+function showMsg() {
+  alert("Hello World!");
+}
+&lt;/script&gt;
+    </code></pre>
+  </div>
+
+</body>
+</html>
