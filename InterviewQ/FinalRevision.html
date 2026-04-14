@@ -189,5 +189,116 @@ const z = 50;
     </code></pre>
   </div>
 
+
+<h2 style="margin-bottom: 20px; padding-top: 20px;">Data Types</h2>
+
+    <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: Data Types</div>
+
+    Primitive = During copy of these type of data types we got a new copy 
+    NULL: Means we have not given any value in starting because we dont know , so we hav given null for initial stage
+    undefined: When we have not given any value to any variable then its default value will be undefined 
+
+    Reference : We got ref during thr copying of these type of data types
+
+    <div class="answer">
+    </div>
+
+    <pre><code>
+
+        let a = "string"
+        let num = 12 // Number 
+        let nl = null;
+        let boln = true;
+        let nm = 23423423423423423423423n // This is bigInt
+        let other = undefined; 
+        let sym = Symbole("uid");
+        let sym2 = Symbole("uid");
+
+
+        // Ref 
+
+        let arr = [1,2,4,5];
+
+        let obj = {
+            "name" : "dev",
+            "item" : 10;
+        }
+
+        let fnc = (test) =>{
+            console.log(test);
+        }
+
+    </code></pre>
+  </div>
+
+
+
+    <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: Dynamic Typing </div>
+
+    JS is a dyanmic so its suport that we can change the data type in the code  
+
+    <div class="answer">
+    </div>
+
+    <pre><code>
+
+       //Example 
+
+       let a = 12; 
+
+       a = true;
+       a = undefined;
+       a="string";
+       . 
+       . 
+       So On
+
+    </code></pre>
+  </div>
+
+
+  <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: Typeof Quirks </div>
+
+     We can check the type of value 
+
+    <div class="answer">
+    </div>
+
+    <pre><code>
+
+       //Example 
+
+       typeof 12;
+       typeof NaN;  // Number
+
+    </code></pre>
+  </div>
+
+  <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: Truthy & Falsy</div>
+
+     Falsy = 0, object , false , Null, "" , undefined , NaN , document.all 
+
+     Apart from this all values will true;
+
+    <div class="answer">
+    </div>
+
+    <pre><code>
+
+       //Example 
+
+       typeof 12;
+
+    </code></pre>
+  </div>
+
 </body>
 </html>
