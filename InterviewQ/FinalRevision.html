@@ -82,7 +82,7 @@
     <pre><code>
 // Example
 var a = 10;
-let name = "Suraj";
+let name = "dev";
 const pi = 3.14;
     </code></pre>
   </div>
@@ -99,7 +99,8 @@ const pi = 3.14;
 
     <pre><code>
 // var
-var x = 10;
+  var x = 10;
+var x = "dev" //Allowed
 x = 20; // allowed
 
 // let
@@ -114,20 +115,77 @@ const z = 50;
 
   <!-- NOTE 3 -->
   <div class="note">
-    <div class="question">Q3: Example of HTML + JS together?</div>
+    <div class="question">Q3: TDZ</div>
 
     <div class="answer">
-      You can use JavaScript inside HTML to make it interactive.
+      The area or space in whic JS knows that variables is exist but can't access that variables and showing eror which is // can't access before initialize
+
+        NOTE: This is happening only in let and const not with var , in var for its showing undefined , because var is hoist // initial value of var is undefined
     </div>
 
     <pre><code>
-&lt;button onclick="showMsg()"&gt;Click Me&lt;/button&gt;
+     console.log(carName);
 
-&lt;script&gt;
-function showMsg() {
-  alert("Hello World!");
-}
-&lt;/script&gt;
+     .
+     .
+     .
+     . 
+     . 
+     . 
+     . 
+     . 
+
+     Whole this area is a TDZ for carName Variable
+
+     let carName = "BMW";
+    </code></pre>
+  </div>
+
+
+
+  <!-- NOTE 4 -->
+  <div class="note">
+    <div class="question">Q4: Hoisting</div>
+
+    <div class="answer">
+      Created variables breaks in two parts // initalize part gone to top and initalize stay there where its created 
+
+      NOTE: Hoisting happening in all three types of variables 
+    </div>
+
+    <pre><code>
+
+        console.log(test);   // Output will "can't access before initalize not before declear."
+        . 
+        . 
+        . 
+        . 
+
+        let test = 1 // This will break in two parts , initialize part gone to top and declear part will stay here
+    </code></pre>
+  </div>
+
+
+  <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: NOTES FOR VARIABLES</div>
+
+    <div class="answer">
+    </div>
+
+    <pre><code>
+
+        1. Var leaks outside the {} curly braces , because avar only respect the fnc 
+        2. Const value/property can be update but can't re-initlalize
+        3. TDZ happening only in let and const 
+        4. Hoisting happening in all three types of variables
+        
+        Example :
+
+        const obj = {
+            "name" : "Shubham";
+        }
+        obj.name = "Navdeep";  // Allowed ✅
     </code></pre>
   </div>
 
