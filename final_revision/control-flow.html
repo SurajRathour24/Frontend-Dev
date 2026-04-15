@@ -57,6 +57,7 @@
 
         case 4:
             console.log("4 Getting Now");
+            break;
             
     }
 
@@ -66,10 +67,18 @@
         else if (val> 85) { return "A+";}
     }
 
-
     // Write code for Rock Paper scissor 
     
 
+    function playGame(user, computer){
+      if(user === "paper" && computer === "scissor") return "Computer Win";
+      else if(user === "scissor" && computer === "paper") return "User Win";
+      else return "Draw";
+    }
+
+    let winner = playGame("scissor",  "scissor");
+    console.log(winner);
+    
 
 
 </script>   
