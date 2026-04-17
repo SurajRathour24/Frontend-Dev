@@ -450,5 +450,54 @@ const z = 50;
     </code></pre>
   </div>
 
+
+
+  <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: First Class FNC</div>
+    <div class="answer">
+       Javascript contains first class fnc => Those functions which can be use like values 
+    </div>
+
+    <pre><code>
+
+        ========================== Can treat fnc like value ================================= 
+        
+        function abc(other){
+          console.log("test")
+        }
+
+        
+
+        abc(function(){
+          console.log("Running")
+        })
+
+
+    </code></pre>
+  </div>
+
+  <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: Higher Order FNC</div>
+    <div class="answer">
+       Function which accept a fnc in its parameter or return a fnc => Called HOF
+    </div>
+
+    <pre><code>
+
+        ========================== HOF ================================= 
+        
+        function abc(getSum){    // Its accepting fnc so its a HOF
+          getSum(10,10)
+        }
+
+        abc(function(a,b){
+          a+b;
+        })
+
+    </code></pre>
+  </div>
+
 </body>
 </html>

@@ -49,7 +49,7 @@
     // Function dec
 
     function getSum(val1, val2){
-        console.log(val1+val2);
+        // console.log(val1+val2);
     }
 
 
@@ -58,7 +58,7 @@
     // Fnc expression 
 
     let getMultiply = function(v1, v2){
-        console.log(v1+v2);
+        // console.log(v1+v2);
     }
 
     getMultiply(5, 5);
@@ -70,10 +70,36 @@
     }
 
     let ans = devideVal(10);
-    console.log(typeof ans, ans);
+    // console.log(typeof ans, ans);
 
     // Which listed in function opening are called parameters
     // Which values given during call the fnc are argument
+    
+
+    // Return 
+
+    let multi = function(item){
+      return item;
+    }
+
+    let opt = multi(10)
+    // console.log(opt);
+    
+
+
+    // First Class Functions 
+
+    let myFunc = (test) =>{
+        test(1,2);
+    }
+
+    myFunc(function(a,b){
+      console.log(a*b);
+    })
+
+
+    // Higher Order Function 
+
     
 
 </script>   
