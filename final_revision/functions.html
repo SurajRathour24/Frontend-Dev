@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Boilerplate</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* DARK THEME VARIABLES */
+    :root {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --accent: #4f46e5;
+    }
+
+    /* BASE STYLES */
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1> Functions in JS </h1>
+
+<script>
+
+    // Function dec
+
+    function getSum(val1, val2){
+        console.log(val1+val2);
+    }
+
+
+    getSum(10,11);
+
+    // Fnc expression 
+
+    let getMultiply = function(v1, v2){
+        console.log(v1+v2);
+    }
+
+    getMultiply(5, 5);
+
+    //Fat Arrow fnc 
+
+    let devideVal = (num1 = 5, num2) =>{
+        return num1*num2;
+    }
+
+    let ans = devideVal(10);
+    console.log(typeof ans, ans);
+
+    // Which listed in function opening are called parameters
+    // Which values given during call the fnc are argument
+    
+
+</script>   
+
+</body>
+</html>
+
+
+
+
+
