@@ -94,13 +94,50 @@
     }
 
     myFunc(function(a,b){
-      console.log(a*b);
+      // console.log(a*b);
     })
 
 
     // Higher Order Function 
 
-    
+    let myfnc = (abc) =>{
+      abc()
+    }
+
+    myfnc(function(){
+      // console.log("HOF");
+    })
+
+    // Closure 
+
+    let fnc2 = function(){
+      let num1 = 10;
+
+      return function(a,b){
+        console.log(num1+a+b);
+      }
+    }
+
+    let cal = fnc2();
+    cal(1,2);
+
+
+    // Counter using closure
+
+    // let counter = () =>{
+    //   // let count = 0;
+
+    //   return function(){
+    //     setInterval(function(){
+    //       // count++;
+    //       console.log(count);
+    //     }, 1000)
+    //   }
+    // }
+
+    // let runCount = counter();
+    // runCount();
+
 
 </script>   
 
