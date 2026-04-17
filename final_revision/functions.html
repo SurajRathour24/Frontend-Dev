@@ -114,7 +114,7 @@
       let num1 = 10;
 
       return function(a,b){
-        console.log(num1+a+b);
+        // console.log(num1+a+b);
       }
     }
 
@@ -138,6 +138,38 @@
     // let runCount = counter();
     // runCount();
 
+    // 
+    function userScores(...scores){
+      let passedScores= [];
+      scores.forEach(function(score){
+        if(score > 40){
+          passedScores.push(score);
+          // console.log(passedScores);
+        }
+        else{
+          // console.log(`${score} has failed`);
+        }
+      })
+    }
+
+    userScores(12,23,34,53,14,16,53,87,54)
+
+
+    // Discount cal 
+
+    let calculator = (discount) =>{
+
+      return function(price){
+        return price - price * (discount / 100);
+      }
+
+    }
+
+    let ten = calculator(10);
+    let twenty = calculator(20);
+    let thirty = calculator(30);
+
+    console.log(ten(100));
 
 </script>   
 

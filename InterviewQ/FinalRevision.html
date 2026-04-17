@@ -499,5 +499,40 @@ const z = 50;
     </code></pre>
   </div>
 
+
+  <!-- NOTE 5 -->
+  <div class="note">
+    <div class="question">Q5: Array</div>
+    <div class="answer">
+      Push = Add value  at end 
+      pop =  Remove value from end 
+      Unshift = Add value at start 
+      Shift = Remove value from start
+      Splice (2,1) = 2> Index, 1> how many elements    [Its changed actual array]
+      slice =  returned new copy [It will get the element and returned]  (1,2)   > Removed from index 1 and 2 elems copy
+    </div>
+
+    <pre><code>
+
+        ========================== Splice ================================= 
+        
+        let arr = [1,2,3,4,5];
+
+        arr.splice(2,1)
+
+        output = [1,2,4,5]   > 3 Removed 
+
+
+        ========================== Slice ================================= 
+        
+        let arr2 = [1,2,3,4,5];
+
+        arr2.slice(2,3)   // Start - end 
+
+        output = [3,4]   > 2 copied 
+
+    </code></pre>
+  </div>
+
 </body>
 </html>
