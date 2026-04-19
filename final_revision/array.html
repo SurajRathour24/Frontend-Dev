@@ -54,13 +54,23 @@
 
         arr.splice(2,4);
 
-        console.log(arr);  // 3,4,5,6 will remove
+        // console.log(arr);  // 3,4,5,6 will remove
         
 
         let arr2 = [10,11,12,13,14,15];
 
         let newArr = arr2.slice(3,5);   //start - end
-        console.log(newArr);
+        // console.log(newArr);
+        
+
+        //sort 
+
+        let accArr =  arr2.sort(function(a,b){
+            return a - b;
+        })
+        console.log(accArr);
+
+        
         
 
     </script>
