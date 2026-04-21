@@ -57,6 +57,10 @@
             Experience: {
                 Autb: 2024,
                 myExp: 2025,
+                 promotion:{
+                    pr: 1,
+                    pb: 2
+                 },
                 markInfo: 2026
             },
             techs: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Bootstrap", "Figma", "WordPress", "Webflow"] 
@@ -73,13 +77,17 @@
 
         let user2 = {...myObject};
 
-        console.log(user2)
+        // console.log(user2)
         
         user2["name"] = "Suraj";
         
-        console.log(user2)
+        // console.log(user2)
 
-        
+        let {pr, pb} = myObject.Experience.promotion
+
+        console.log(pr , pb)
+
+
     </script>
   </body>
 </html>
