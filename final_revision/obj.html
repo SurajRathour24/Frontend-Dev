@@ -48,7 +48,7 @@
 
 
     <script>
-        console.log("Age");
+        console.log("abc");
 
         let myObject = {
             name: "Harsh",
@@ -62,12 +62,23 @@
             techs: ["HTML", "CSS", "JS", "React JS", "Tailwind CSS", "Bootstrap", "Figma", "WordPress", "Webflow"] 
         }
 
-        console.log(myObject.Experience.markInfo);
+        // console.log(myObject.Experience.markInfo);
 
         console.log(myObject.techs.forEach(function(tech){
-                console.log("Familier with", tech);
+                // console.log("Familier with", tech);
         }));
         
+
+        // Copy the object with spread opr
+
+        let user2 = {...myObject};
+
+        console.log(user2)
+        
+        user2["name"] = "Suraj";
+        
+        console.log(user2)
+
         
     </script>
   </body>
