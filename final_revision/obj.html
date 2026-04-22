@@ -105,6 +105,30 @@ delete user.name;
 
 console.log(user);
 
+
+const product = {
+  name: "Laptop",
+  price: 50000,
+  brand: "HP"
+};
+
+for (let key in product) {
+  console.log(key + ": " + product[key]);
+}
+
+
+const employee = {
+  name: "Ravi",
+  salary: 30000,
+  bonus: 5000
+};
+
+// Task: calculate total salary
+const total = employee.salary + employee.bonus;
+
+console.log("Total Salary:", total);
+
+
     </script>
   </body>
 </html>
