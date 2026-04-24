@@ -216,6 +216,90 @@ console.log("Product Names:", productNames);
 console.log("Total Stock Value:", totalStockValue);
 console.log("Sorted Products:", sortedProducts);
 console.log("Most Expensive:", expensiveProduct);
+
+
+
+
+
+
+
+
+
+
+
+// Student data maunpulation 
+
+// -------------------- DATA --------------------
+let students = [
+  { id: 1, name: "Rahul", marks: [80, 70, 90] },
+  { id: 2, name: "Priya", marks: [60, 75, 85] },
+  { id: 3, name: "Amit", marks: [90, 95, 92] }
+];
+
+// -------------------- GET AVERAGE --------------------
+function getAverage(marks) {
+  let total = marks.reduce((sum, m) => sum + m, 0);
+  return total / marks.length;
+}
+
+// -------------------- ADD STUDENT --------------------
+function addStudent(name, marks) {
+  let newId = students.length + 1;
+  students.push({ id: newId, name, marks });
+  console.log("✅ Student added");
+}
+
+// -------------------- FIND TOPPER --------------------
+function findTopper() {
+  return students.reduce((top, curr) => {
+    let currAvg = getAverage(curr.marks);
+    let topAvg = getAverage(top.marks);
+    return currAvg > topAvg ? curr : top;
+  });
+}
+
+// -------------------- GET GRADE --------------------
+function getGrade(avg) {
+  if (avg >= 90) return "A";
+  if (avg >= 75) return "B";
+  if (avg >= 60) return "C";
+  return "D";
+}
+
+// -------------------- GENERATE REPORT --------------------
+function generateReport() {
+  console.log("📊 Student Report:");
+
+  students.forEach(student => {
+    let avg = getAverage(student.marks).toFixed(2);
+    let grade = getGrade(avg);
+
+    console.log(`${student.name} - Avg: ${avg} - Grade: ${grade}`);
+  });
+}
+
+// -------------------- ADVANCED --------------------
+
+// Students with avg > 80
+let highPerformers = students.filter(s => getAverage(s.marks) > 80);
+
+// Only names
+let names = students.map(s => s.name);
+
+// Class average
+let classAverage =
+  students.reduce((sum, s) => sum + getAverage(s.marks), 0) / students.length;
+
+// -------------------- TEST --------------------
+addStudent("Neha", [88, 77, 66]);
+
+generateReport();
+
+console.log("🏆 Topper:", findTopper());
+
+console.log("⭐ High Performers:", highPerformers);
+console.log("📛 Names:", names);
+console.log("📈 Class Average:", classAverage.toFixed(2));
     </script>
     
 </body>
