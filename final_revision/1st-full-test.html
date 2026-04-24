@@ -51,7 +51,171 @@
     <script>
         // Cart System 
 
-        
+        // -------------------- PRODUCTS --------------------
+const products = [
+  { id: 1, name: "T-shirt", price: 500, stock: 10 },
+  { id: 2, name: "Shoes", price: 1500, stock: 5 },
+  { id: 3, name: "Cap", price: 300, stock: 20 }
+];
+
+// -------------------- CART --------------------
+let cart = [];
+
+// -------------------- ADD TO CART --------------------
+function addToCart(productId, quantity) {
+  let product = products.find(p => p.id === productId);
+
+  if (!product) {
+    console.log("❌ Product not found");
+    return;
+  }
+
+  if (product.stock < quantity) {
+    console.log("❌ Not enough stock");
+    return;
+  }
+
+  let item = cart.find(c => c.id === productId);
+
+  if (item) {
+    item.quantity += quantity;
+  } else {
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: quantity
+    });
+  }
+
+  product.stock -= quantity;
+  console.log("✅ Added to cart");
+}
+
+// -------------------- REMOVE FROM CART --------------------
+function removeFromCart(productId) {
+  let index = cart.findIndex(item => item.id === productId);
+
+  if (index === -1) {
+    console.log("❌ Item not in cart");
+    return;
+  }
+
+  let removedItem = cart[index];
+
+  // restore stock
+  let product = products.find(p => p.id === productId);
+  product.stock += removedItem.quantity;
+
+  cart.splice(index, 1);
+  console.log("🗑 Removed from cart");
+}
+
+// -------------------- UPDATE QUANTITY --------------------
+function updateQuantity(productId, newQty) {
+  let item = cart.find(c => c.id === productId);
+  let product = products.find(p => p.id === productId);
+
+  if (!item) {
+    console.log("❌ Item not in cart");
+    return;
+  }
+
+  let diff = newQty - item.quantity;
+
+  if (diff > product.stock) {
+    console.log("❌ Not enough stock to update");
+    return;
+  }
+
+  product.stock -= diff;
+  item.quantity = newQty;
+
+  console.log("🔄 Quantity updated");
+}
+
+// -------------------- DISPLAY CART --------------------
+function displayCart() {
+  console.log("🛒 Cart Items:");
+
+  let total = 0;
+
+  cart.forEach(item => {
+    let subtotal = item.price * item.quantity;
+    total += subtotal;
+    console.log(`${item.name} x ${item.quantity} = ₹${subtotal}`);
+  });
+
+  console.log("-------------------");
+  console.log(`Total = ₹${total}`);
+}
+
+// -------------------- CALCULATE TOTAL --------------------
+function calculateTotal() {
+  let total = cart.reduce((sum, item) => {
+    return sum + item.price * item.quantity;
+  }, 0);
+
+  let gst = total * 0.18;
+  let finalAmount = total + gst;
+
+  console.log("💰 Bill Summary:");
+  console.log(`Subtotal: ₹${total}`);
+  console.log(`GST (18%): ₹${gst}`);
+  console.log(`Final Amount: ₹${finalAmount}`);
+
+  return { total, gst, finalAmount };
+}
+
+// -------------------- DISCOUNT (CLOSURE) --------------------
+function createDiscount(discountPercent) {
+  return function (amount) {
+    return amount - (amount * discountPercent / 100);
+  };
+}
+
+// -------------------- ARRAY TASKS --------------------
+
+// 1. Products under ₹1000
+let under1000 = products.filter(p => p.price < 1000);
+
+// 2. Product names
+let productNames = products.map(p => p.name);
+
+// 3. Total stock value
+let totalStockValue = products.reduce((sum, p) => {
+  return sum + (p.price * p.stock);
+}, 0);
+
+// -------------------- BONUS --------------------
+
+// Sort by price
+let sortedProducts = [...products].sort((a, b) => a.price - b.price);
+
+// Most expensive product
+let expensiveProduct = products.reduce((max, p) => {
+  return p.price > max.price ? p : max;
+}, products[0]);
+
+// -------------------- TEST CASE --------------------
+addToCart(1, 2);   // T-shirt
+addToCart(2, 1);   // Shoes
+updateQuantity(1, 3);
+removeFromCart(2);
+
+displayCart();
+calculateTotal();
+
+// Discount usage
+let discount10 = createDiscount(10);
+console.log("After Discount:", discount10(1000));
+
+// Debug outputs
+console.log("Under ₹1000:", under1000);
+console.log("Product Names:", productNames);
+console.log("Total Stock Value:", totalStockValue);
+console.log("Sorted Products:", sortedProducts);
+console.log("Most Expensive:", expensiveProduct);
     </script>
     
 </body>
