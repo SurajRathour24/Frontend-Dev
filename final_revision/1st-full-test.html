@@ -311,6 +311,46 @@ const salaries = {
   Sara: 40000
 };
 
+let max = 0;
+let person = "";
+
+for (let key in salaries) {
+  if (salaries[key] > max) {
+    max = salaries[key];
+    person = key;
+  }
+}
+
+console.log(person, max); // Amit 50000
+
+// Convert obj to arr 
+
+const obj = { a: 1, b: 2 };
+
+const arr = Object.entries(obj);
+console.log(arr); // [["a",1],["b",2]]
+
+
+
+// Remove duplicates
+const data = {
+  a: 1,
+  b: 2,
+  c: 1,
+  d: 3
+};
+
+const unique = {};
+const seen = new Set();
+
+for (let key in data) {
+  if (!seen.has(data[key])) {
+    unique[key] = data[key];
+    seen.add(data[key]);
+  }
+}
+
+console.log(unique);
 
     </script>
     
