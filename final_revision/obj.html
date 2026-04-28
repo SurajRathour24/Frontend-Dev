@@ -137,6 +137,26 @@ objAr.forEach(function(key){
 // console.log("Total Salary:", total);
 
 
+
+// Deep Clone
+
+const mainUser = {
+  id: 101,
+  name: "Suraj Rathaur",
+  email: "suraj@email.com",
+
+  address: {
+    country: "India",
+    state: "Punjab",
+    city: "Karimpur",
+    pincode: 140001
+  },
+  skills: ["HTML", "CSS", "JavaScript", "WordPress"],
+};
+
+  let copyObj = JSON.parse(JSON.stringify(mainUser));
+
+  console.log(copyObj);
     </script>
   </body>
 </html>
