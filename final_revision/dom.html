@@ -60,7 +60,15 @@
         let list = document.querySelectorAll("ul");
         console.log(list);
         
+        heading.setAttribute("href", "#");
 
+        let newElem = document.createElement("p");
+        newElem.textContent = "Got it—here’s clean, professional dummy content you can directly paste into your dermatology service page (left content area). It’s written to feel premium but still realistic for a clinic like yours."
+
+        newElem.style.fontSize = "12px";
+        newElem.style.fontWeight = "400";
+
+        heading.appendChild(newElem);
 
     </script>
     </body>
