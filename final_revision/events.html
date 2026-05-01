@@ -125,6 +125,13 @@
         btn2.addEventListener("mouseover", function(e){
             name.style.background = "red";
         })
+
+        window.addEventListener("keydown", function(e){
+            if(e.key === " "){
+                console.log("Empty Value");
+            }
+            console.log(e.key);
+        })
         
     </script>
 
