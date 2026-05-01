@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Boilerplate</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* DARK THEME VARIABLES */
+        :root {
+            --bg: #121212;
+            --text: #e0e0e0;
+            --accent: #4f46e5;
+        }
+
+        /* BASE STYLES */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .hide{
+            display: none;
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1>Events in JS</h1>
+
+    <button>Click Me</button>
+    <p class="btn-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit eius soluta eligendi odio tempora laudantium voluptas iste repellendus ea doloribus?</p>
+
+
+    <form action="">
+        <input class="username" type="text" placeholder="Enter Your Name">   
+
+        <h3>My Fav Language is <span>?</span></h3>
+        <select name="fruits" id="">
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="Rubby on Rails">Rubby on Rails</option>
+        </select>
+
+        <button type="submit">Submit Now</button>
+    </form>
+
+    <script>
+
+
+        let favLang = document.querySelector("span");
+
+        let slct = document.querySelector("select");
+
+        slct.addEventListener("change", function(e){
+            if(e.target.value === "Rubby on Rails"){
+                favLang.style.color = "red";
+                favLang.textContent = e.target.value;
+            }
+            favLang.textContent = e.target.value;
+        })
+
+
+
+
+
+
+
+
+
+        let btn = document.querySelector("button");
+        let para = document.querySelector(".btn-para")
+        let showPara = () =>{
+            para.classList.toggle("hide");
+            para.style.transition = ".5s"
+        }
+        // btn.addEventListener("click", showPara);
+
+        let name = document.querySelector(".username");
+
+        let userName = (e) => {
+            console.log(e.target.value);
+        }
+        name.addEventListener("input", userName)
+
+        // let select = document.querySelector("select");
+
+        // function selectItem(e){
+        //     console.log(e.target.value);
+        // }
+        // select.addEventListener("change", selectItem)
+
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            console.log("Form Submitted");
+        })
+
+        let btn2 = document.querySelector("button");
+        btn2.addEventListener("mouseover", function(e){
+            name.style.background = "red";
+        })
+        
+    </script>
+
+
+</body>
+
+</html>
