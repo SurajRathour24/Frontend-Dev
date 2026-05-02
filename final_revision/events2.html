@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Boilerplate</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* DARK THEME VARIABLES */
+        :root {
+            --bg: #121212;
+            --text: #e0e0e0;
+            --accent: #4f46e5;
+        }
+
+        /* BASE STYLES */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .hide{
+            display: none;
+            transition: .5s;
+        }
+        li{
+            list-style: none;
+            ul{
+                list-style: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="lines">
+        <ul>
+            <li>.</li>
+            <li>..</li>
+            <li>...</li>
+        </ul>
+    </div>
+
+
+    <script>
+        let cursor = document.querySelector("ul");
+        window.addEventListener("mousemove", function(dets){
+            cursor.style.position = "absolute";
+            cursor.style.top = dets.clientY + "px";
+            cursor.style.left = dets.clientX + "px";
+        })
+    </script>
+    </body>
+    </html>
+
