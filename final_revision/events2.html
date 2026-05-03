@@ -50,8 +50,23 @@
         }
         ul{
             overflow: hidden;
-            background-color: #505050;
+            background-color: #f71515;
             padding: 20px;
+        }
+        .a{
+            width: 80%;
+            height: 500px;
+            background-color: #4f46e5;
+        }
+        .b{
+             width: 80%;
+            height: 400px;
+            background-color:aqua;
+        }
+        .c{
+             width: 80%;
+            height: 300px;
+            background-color:bisque;
         }
     </style>
 </head>
@@ -59,22 +74,52 @@
 <body>
 
 
-    <div class="lines">
+    <!-- <div class="lines">
         <ul>
             <li>.</li>
             <li>..</li>
             <li>...</li>
         </ul>
+    </div> -->
+
+    <div class="event-cap">
+        <div class="a">
+            <div class="b">
+                <div class="c">
+                    <button>Click Me</button>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 
     <script>
-        let cursor = document.querySelector("ul");
+        let btn = document.querySelector("button");
+
+        let c = document.querySelector(".c");
+        
         window.addEventListener("mousemove", function(dets){
-            cursor.style.position = "absolute";
-            cursor.style.top = dets.clientY + "px";
-            cursor.style.left = dets.clientX + "px";
+            btn.style.position = "absolute";
+            btn.style.top = dets.clientY + "px";
+            btn.style.left = dets.clientX + "px";
         })
+
+
+        btn.addEventListener("click", function(){
+            console.log("Button Clicked");
+        })
+
+        c.addEventListener("click", function(){
+            console.log("c clicked");
+        })
+
+
+
+        // Events capture
+
+
     </script>
     </body>
     </html>
