@@ -87,6 +87,13 @@
             <div class="b">
                 <div class="c">
                     <button>Click Me</button>
+
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
                 </div>
             </div>
 
@@ -97,6 +104,15 @@
 
 
     <script>
+        let ul = document.querySelector("ul");
+        let btn = document.querySelector("button");
+
+        let react = document.createElement("li");
+        react.textContent = "React JS";
+
+        btn.addEventListener("click", function(){
+            ul.append(react);
+        })
 
         let img = document.querySelector("img");
         // img.removeAttribute("alt");
@@ -105,7 +121,6 @@
         console.log(imgPath);
         
 
-        let btn = document.querySelector("button");
 
         let c = document.querySelector(".c");
 
@@ -126,7 +141,7 @@
 
         c.addEventListener("click", function(){
             console.log("c clicked");
-        })
+        }, true)
 
         a.addEventListener("click", function(){
             console.log("a clicked");
