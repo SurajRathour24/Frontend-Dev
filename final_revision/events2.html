@@ -93,13 +93,26 @@
         </div>
 
     </div>
+    <img src="https://images.pexels.com/photos/33402136/pexels-photo-33402136.jpeg" alt="girl-sitting-for-shoot" width="500" height="500" style="object-fit: cover;">
 
 
     <script>
+
+        let img = document.querySelector("img");
+        // img.removeAttribute("alt");
+        img.setAttribute("title", "Hey Title");
+        let imgPath = img.getAttribute("src");
+        console.log(imgPath);
+        
+
         let btn = document.querySelector("button");
 
         let c = document.querySelector(".c");
-        
+
+        let b = document.querySelector(".b");
+
+        let a = document.querySelector(".a");
+
         window.addEventListener("mousemove", function(dets){
             btn.style.position = "absolute";
             btn.style.top = dets.clientY + "px";
@@ -113,6 +126,10 @@
 
         c.addEventListener("click", function(){
             console.log("c clicked");
+        })
+
+        a.addEventListener("click", function(){
+            console.log("a clicked");
         })
 
 
