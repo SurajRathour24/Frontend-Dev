@@ -118,6 +118,39 @@
 
     <script>
 
+        // Global -> This = Window 
+
+        console.log(this)
+
+        // Function -> This = Window
+
+        function dev(){
+            console.log(this);
+        }
+        dev();
+
+
+        // Method -> This  = Obj   NOTE: Function decleration
+
+        let obj = {
+            name: "dev",
+            profile: "Frontend Developer",
+            tech_stacks: ["HTML", "CSS" ,"JS", "React JS", "Python", "Tailwind CSS", "WordPress"],
+            print_name : function(){
+                console.log(`He is ${this.name} and he is working with us as ${this.profile}. He has good knowledge about ${this.tech_stacks}`);
+            }
+        }
+
+        obj.print_name();
+
+        // Event Handler -> This = 
+
+        let heading = document.querySelector("h1");
+        heading.addEventListener("click", function(){
+            console.log(this);;
+        })
+
+
     </script>
 
 </body>
