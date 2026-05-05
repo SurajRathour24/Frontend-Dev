@@ -120,12 +120,12 @@
 
         // Global -> This = Window 
 
-        console.log(this)
+        // console.log(this)
 
         // Function -> This = Window
 
         function dev(){
-            console.log(this);
+            // console.log(this);
         }
         dev();
 
@@ -141,16 +141,43 @@
             }
         }
 
-        obj.print_name();
+        // obj.print_name();
 
         // Event Handler -> This = 
 
         let heading = document.querySelector("h1");
         heading.addEventListener("click", function(){
-            console.log(this);;
+            // console.log(this);
         })
 
 
+        /// Bind call Aplly 
+
+        let obj2 = {
+            name: "Javascript",
+            category: "Vanilla JS"
+        }
+
+        function myFunc(){
+            console.log(this.name);
+        }
+
+        function users(a,b){
+            console.log(this, a, b);  
+        }
+        // myFunc();
+        // Call 
+        myFunc.call(obj)
+
+
+        // apply 
+
+        // users.apply(obj2,[1,2]);
+
+        // Bind 
+
+        let user = users.bind(obj, 3,4);
+        user(this);
     </script>
 
 </body>
